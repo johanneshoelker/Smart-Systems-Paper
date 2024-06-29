@@ -1,8 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.29)  29 JUN 2024 13:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.29)  29 JUN 2024 14:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
+**main.tex -aux-directory=./Workspace/temp -output-directory=./Workspace/Output
+
 (./main.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (./setup.tex
@@ -1352,8 +1353,11 @@ LaTeX Font Info:    Trying to load font information for OT1+phv on input line 3
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
-)
-No file main.aux.
+) (./main.aux
+(./chapter/01_Introduction.aux) (./chapter/02_Theory.aux)
+(./chapter/03_Methods.aux) (./chapter/04_Concept.aux)
+(./chapter/05_Realization.aux) (./chapter/06_Function_Validation.aux)
+(./chapter/07_Discussion_Outlook.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -1375,6 +1379,7 @@ LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 Package hyperref Info: Link coloring OFF on input line 3.
+
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1392,8 +1397,10 @@ LaTeX Info: Redefining \nameref on input line 3.
 LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
 LaTeX Info: Redefining \nameref on input line 3.
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
+
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1444,43 +1451,40 @@ lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `german'. on input line 3.
- [1
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 \openout2 = `chapter/01_Introduction.aux'.
 
+ (./chapter/01_Introduction.tex
 
-(./chapter/01_Introduction.tex
-
-LaTeX Warning: Reference `intro:motivation' on page 2 undefined on input line 2
+LaTeX Warning: Reference `intro:motivation' on page 1 undefined on input line 2
 .
 
 
-LaTeX Warning: Reference `intro:ziel' on page 2 undefined on input line 2.
+LaTeX Warning: Reference `intro:ziel' on page 1 undefined on input line 2.
 
 
-LaTeX Warning: Reference `intro:ueberblick' on page 2 undefined on input line 2
+LaTeX Warning: Reference `intro:ueberblick' on page 1 undefined on input line 2
 .
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 2--15
+Underfull \hbox (badness 10000) in paragraph at lines 2--14
 
  []
 
-[2
+[1
 
-]
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 \openout2 = `chapter/02_Theory.aux'.
 
- (./chapter/02_Theory.tex) [3
+ (./chapter/02_Theory.tex) [2
 
 
 
 ]
 \openout2 = `chapter/03_Methods.aux'.
 
- (./chapter/03_Methods.tex) [4
+ (./chapter/03_Methods.tex) [3
 
 
 
@@ -1497,7 +1501,7 @@ No file chapter/05_Realization.tex.
 No file chapter/06_Function_Validation.tex.
 \openout2 = `chapter/07_Discussion_Outlook.aux'.
 
-(./chapter/07_Discussion_Outlook.tex) [5
+(./chapter/07_Discussion_Outlook.tex) [4
 
 
 
@@ -1523,33 +1527,24 @@ This document will not have a glossary.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  F457431601C673C1F64567BB521BD55F;520.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: F457431601C673C1F64567BB521BD55F;520.
  ) 
 Here is how much of TeX's memory you used:
- 48082 strings out of 478287
- 1088787 string characters out of 5849289
- 1506828 words of memory out of 5000000
- 65555 multiletter control sequences out of 15000+600000
+ 48115 strings out of 478287
+ 1089469 string characters out of 5849289
+ 1516939 words of memory out of 5000000
+ 65569 multiletter control sequences out of 15000+600000
  475490 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 119i,11n,111p,1151b,818s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 119i,11n,111p,1220b,817s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on main.pdf (5 pages, 20646 bytes).
+Output written on main.pdf (4 pages, 20659 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
