@@ -35,4 +35,41 @@ Kutbi, M.%
 \begin{APACrefDOI} \doi{10.1109/TPAMI.2021.3061204} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
+\bibitem [\protect \citeauthoryear {%
+Nivarthi%
+, Vogt%
+\BCBL {}\ \BBA {} Sick%
+}{%
+Nivarthi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2023}}%
+}]{%
+nivarthi_multi-task_2023}
+\APACinsertmetastar {%
+nivarthi_multi-task_2023}%
+\begin{APACrefauthors}%
+Nivarthi, C\BPBI P.%
+, Vogt, S.%
+\BCBL {}\ \BBA {} Sick, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{{\APACmonth{09}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Multi-{Task} {Representation} {Learning} for
+  {Renewable}-{Power} {Forecasting}: {A} {Comparative} {Analysis} of {Unified}
+  {Autoencoder} {Variants} and {Task}-{Embedding} {Dimensions}} {Multi-{Task}
+  {Representation} {Learning} for {Renewable}-{Power} {Forecasting}: {A}
+  {Comparative} {Analysis} of {Unified} {Autoencoder} {Variants} and
+  {Task}-{Embedding} {Dimensions}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Machine Learning and Knowledge
+  Extraction}{5}{3}{1214--1233}.
+\newblock
+\begin{APACrefURL} [{2024-06-27}]\url{https://www.mdpi.com/2504-4990/5/3/62}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.3390/make5030062} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
 \end{thebibliography}
