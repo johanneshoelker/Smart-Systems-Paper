@@ -1,0 +1,38 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Kutbi%
+, Peng%
+\BCBL {}\ \BBA {} Wu%
+}{%
+Kutbi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2021}}%
+}]{%
+kutbi_zero-shot_2021}
+\APACinsertmetastar {%
+kutbi_zero-shot_2021}%
+\begin{APACrefauthors}%
+Kutbi, M.%
+, Peng, K\BHBI C.%
+\BCBL {}\ \BBA {} Wu, Z.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Zero-shot {Deep} {Domain} {Adaptation} with {Common}
+  {Representation} {Learning}} {Zero-shot {Deep} {Domain} {Adaptation} with
+  {Common} {Representation} {Learning}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}{}{}{1--1}.
+\newblock
+\begin{APACrefURL}
+  [{2024-06-28}]\url{https://ieeexplore.ieee.org/document/9361131/}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1109/TPAMI.2021.3061204} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
