@@ -32,7 +32,7 @@
     ## Einleitung
         Hintergrund: Einführung in Representation Learning und Zero Shot Anomaly Detection.
         Ziel der Recherche: Klarstellung der Forschungsfrage und Zielsetzung der Literaturrecherche.
-        **what are the different types of rl possible for zero shot anomaly detection**
+        **what are the different types of rl possible for zero shot anomaly detection** 
         Focus on time series applications and sensor apps
     ## Theoretischer Rahmen
         Definitionen und Konzepte: Detaillierte Erklärungen zu Representation Learning, Zero Shot Learning und Anomaly Detection.

@@ -1,9 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.29)  1 JUL 2024 20:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.29)  9 JUL 2024 12:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex -aux-directory=./Workspace/temp -output-directory=./Workspace/Output
-
+**main.tex
 (./main.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (./setup.tex
@@ -1354,6 +1353,7 @@ LaTeX Font Info:    Trying to load font information for OT1+phv on input line 3
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 ) (./main.aux
+(./chapter/00_Cover.aux) (./chapter/00_Abstract.aux)
 (./chapter/01_Introduction.aux) (./chapter/02_Theory.aux)
 (./chapter/03_Review.aux) (./chapter/04_Application.aux)
 (./chapter/05_Implementation.aux) (./chapter/07_Discussion_Outlook.aux))
@@ -1450,24 +1450,77 @@ lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `german'. on input line 3.
+\openout2 = `chapter/00_Cover.aux'.
+
+ (./chapter/00_Cover.tex
+<./images//Logo_Uni-Kassel.png, id=75, 2007.5pt x 433.62pt>
+File: ./images//Logo_Uni-Kassel.png Graphic file (type png)
+<use ./images//Logo_Uni-Kassel.png>
+Package pdftex.def Info: ./images//Logo_Uni-Kassel.png  used on input line 2.
+(pdftex.def)             Requested size: 140.53935pt x 30.35649pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)) [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images//Logo_Uni-Kassel.
+png>]
+\openout2 = `chapter/00_Abstract.aux'.
+
+
+(./chapter/00_Abstract.tex) [2
+
+
+
+] (./main.toc) [3
+
+
+]
 \openout2 = `chapter/01_Introduction.aux'.
 
- (./chapter/01_Introduction.tex) [1
+ (./chapter/01_Introduction.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--5
+
+ []
+
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14 \include{chapter/01_Introduction}
+                                       [1
 
 
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+]
 \openout2 = `chapter/02_Theory.aux'.
 
- (./chapter/02_Theory.tex) [2
+ (./chapter/02_Theory.tex)pdfTeX warning (ext4): destination with the same iden
+tifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15 \include{chapter/02_Theory}
+                                 [2
 
 
 
 ]
 \openout2 = `chapter/03_Review.aux'.
 
-
-(./chapter/03_Review.tex) [3
+ (./chapter/03_Review.tex)pdfTeX warning (ext4): destination with the same iden
+tifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.16 \include{chapter/03_Review}
+                                 [3
 
 
 
@@ -1497,17 +1550,7 @@ or `german'. on input line 3.
 ] (./main.bbl
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 29.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
-
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
 
 Package glossaries Warning: No \printnoidxglossary or \printnoidxglossaries
  found. (Remove \makenoidxglossaries if you don't want any glossaries.)
@@ -1516,29 +1559,34 @@ This document will not have a glossary.
 [7
 
 
-] (./main.aux (./chapter/01_Introduction.aux) (./chapter/02_Theory.aux)
+]
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+ (./main.aux (./chapter/00_Cover.aux) (./chapter/00_Abstract.aux)
+(./chapter/01_Introduction.aux) (./chapter/02_Theory.aux)
 (./chapter/03_Review.aux) (./chapter/04_Application.aux)
 (./chapter/05_Implementation.aux) (./chapter/07_Discussion_Outlook.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 76FB93505A3FC07A0A328A02A8C49C28;2108.
+(rerunfilecheck)             Checksum: 41E1BAC1060C9DA93F9C5784A2D9EFC4;2000.
  ) 
 Here is how much of TeX's memory you used:
- 48179 strings out of 478287
- 1089662 string characters out of 5849289
- 1517014 words of memory out of 5000000
- 65594 multiletter control sequences out of 15000+600000
- 480259 words of font info for 55 fonts, out of 8000000 for 9000
+ 48265 strings out of 478287
+ 1092096 string characters out of 5849289
+ 1522249 words of memory out of 5000000
+ 65656 multiletter control sequences out of 15000+600000
+ 486830 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 119i,11n,111p,1220b,818s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 119i,11n,111p,1151b,818s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
 elvetic/uhvro8a.pfb>
-Output written on main.pdf (7 pages, 47426 bytes).
+Output written on main.pdf (10 pages, 90210 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 154 words of extra memory for PDF output out of 10000 (max. 10000000)
 
