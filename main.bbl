@@ -1,3 +1,69 @@
 \begin{thebibliography}{}
 
+\bibitem [\protect \citeauthoryear {%
+Bengio%
+, Courville%
+\BCBL {}\ \BBA {} Vincent%
+}{%
+Bengio%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+bengio_representation_2013}
+\APACinsertmetastar {%
+bengio_representation_2013}%
+\begin{APACrefauthors}%
+Bengio, Y.%
+, Courville, A.%
+\BCBL {}\ \BBA {} Vincent, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Representation Learning: A Review and New Perspectives}
+  {Representation learning: A review and new perspectives}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{}{35}{8}{1798--1828}.
+\newblock
+\begin{APACrefURL}
+  [{2024-07-03}]\url{http://ieeexplore.ieee.org/document/6472238/}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1109/TPAMI.2013.50} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lavrač%
+, Podpečan%
+\BCBL {}\ \BBA {} Robnik-Šikonja%
+}{%
+Lavrač%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+lavrac_representation_2021}
+\APACinsertmetastar {%
+lavrac_representation_2021}%
+\begin{APACrefauthors}%
+Lavrač, N.%
+, Podpečan, V.%
+\BCBL {}\ \BBA {} Robnik-Šikonja, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{{\protect \bibnodate {}}}.
+\newblock
+\APACrefbtitle {Representation Learning: Propositionalization and Embeddings}
+  {Representation learning: Propositionalization and embeddings}.
+\newblock
+\APACaddressPublisher{}{Springer International Publishing}.
+\newblock
+\begin{APACrefURL}
+  [{2024-07-09}]\url{https://link.springer.com/10.1007/978-3-030-68817-2}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1007/978-3-030-68817-2} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
 \end{thebibliography}
