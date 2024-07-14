@@ -12,6 +12,9 @@
 \contentsline {section}{\numberline {4.3}Representation Learning Strategies}{3}{section.4.3}%
 \contentsline {chapter}{\chapternumberline {5}Application}{4}{chapter.5}%
 \contentsline {chapter}{\chapternumberline {6}Implementation}{5}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Data Set}{5}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Anomalies}{5}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Results}{5}{section.6.3}%
 \contentsline {chapter}{\chapternumberline {7}Summary}{6}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Discussion}{6}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Future Work}{6}{section.7.2}%
