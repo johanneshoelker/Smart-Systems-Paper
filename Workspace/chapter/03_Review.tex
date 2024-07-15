@@ -7,6 +7,10 @@ Sometimes it is possible for a human to see some patterns in the data when obser
 These variations in data are not always visible for a human and even less possible to label them accordingly. Like \cite{bengio_representation_2013} mentioned it is important for artificial intelligence to detect these representations in data by machines. A machine should be able to extract information hidden in the low-level sensor measurings and continue working with the representations instead of the raw data. This is according to the paper the main requirement for a good representation, to be able using it as an input to a supervised predictor.\\
 Since the paper came out in 2013, several representation learning techniques were developed and some of them are directly applicable for time series data. In \cite{sun_survey_2021} the importance of machine learning in sensor data is emphasized. They sum up several deep learning techniques on data-driven soft-sensors. Soft-sensors represent hard to measure variables by adapting available sensor data. Their observation of industry processes is a rapidly changing field which demands data processing for a huge amount of data.
 \section{Trends}
+Based on the presented fundamental literature the up-to-date papers are presented in the chapter.
 %         Aktuelle Entwicklungen: Überblick über die neuesten Forschungsergebnisse und Trends.
 \section{Representation Learning Strategies}
-The different RL strategies are explained and compared.
+The different RL strategies are listed, explained and compared.\\
+TODO\\
+% Paper Debiased Contrastive Learning
+Learning representations in time series data is tackled in a variety of ways. One solution according to \citeA{zhang_debiased_2024} is debiased contrastive learning. By comparing pairs of data points and rating the similarities as distances between the two, contrastive learning gets less dependant on labeled data. The data can be more general and the extracted representations are more robust. The pairs of data points are labeled as positive and negative pairs with a distance according to their similarities. With this distance they are put into a feature space where they form groups of data points. To minimize the bias between representations multigranularity augmented view generation and expert knowledge are used during training. \\
