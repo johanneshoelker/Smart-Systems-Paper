@@ -18,3 +18,4 @@
 \contentsline {chapter}{\chapternumberline {7}Summary}{6}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Discussion}{6}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Future Work}{6}{section.7.2}%
+\contentsline {chapter}{References}{7}{chapter*.2}%
