@@ -1,34 +1,32 @@
 \input{setup.tex}
+\input{chapter/00_Cover}
 
 \begin{document}
-
-% \frontmatter
-\include{chapter/00_Cover}
-\include{chapter/00_Abstract}
+\maketitle              % typeset the header of the contribution
+\input{chapter/00_Abstract}
 % \tableofcontents
 % \listoffigures \newpage
 % \listoftables \newpage
 % \printnoidxglossary[type=acronym, title=Abkürzungsverzeichnis]
-\mainmatter
-\include{chapter/01_Introduction}
-\include{chapter/02_Theory}
-\include{chapter/03_Review}
-\include{chapter/04_Application}
-\include{chapter/05_Implementation}
-\include{chapter/07_Discussion_Outlook}
+\input{chapter/01_Introduction}
+\input{chapter/02_Theory}
+\input{chapter/03_Review}
+\input{chapter/04_Application}
+\input{chapter/05_Implementation}
+\input{chapter/07_Discussion_Outlook}
 \bibliography{bibs/main.bib}
 % \printglossary[type=\acronymtype,title=Abkürzungsverzeichnis,style=long]
 
 % \appendix
-% \include{appendix/code/data_to_servo_menu_ros}
-% \include{appendix/code/udplistener}
+% \input{appendix/code/data_to_servo_menu_ros}
+% \input{appendix/code/udplistener}
 
-% \includepdf[pages=-,
+% \inputpdf[pages=-,
 %   addtotoc={1,section,1,Aufnahme Kugelgelenk,app:techn_Zeichnungen:aufnahme_kugelgelenk},
 %   addtolist={1,figure,Aufnahme Kugelgelenk,fig:techn_Zeichnungen:aufnahme_kugelgelenk}]
 %   {./appendix/technische_Zeichnungen/Aufnahme_Kugelgelenk.pdf}
 
-% \include{appendix/funval/questionnaire}
-% \include{appendix/funval/datenschutz}
-\include{chapter/10_statement}
+% \input{appendix/funval/questionnaire}
+% \input{appendix/funval/datenschutz}
+\input{chapter/10_statement}
 \end{document}
