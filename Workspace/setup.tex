@@ -1,29 +1,16 @@
 % used class: memoir and in article form for headers etc.
-% \documentclass[11pt, a4paper, oneside, article]{memoir}
 \documentclass[runningheads]{llncs}
 
 % Inhaltsverzeichnis:
-\usepackage{hyperref} %for hyperlinks
-% \maxtocdepth{subsection} %for depth in contents
 \usepackage{amssymb}
+\usepackage{hyperref} %for hyperlinks
 
-%subsection numbering showed:
-% \setsecnumdepth{subsection}
-
-% Font: Arial
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+% Font from LLNCS
+\usepackage[T1]{fontenc}
+% \renewcommand{\familydefault}{\sfdefault}
 
 % wenn unbekannte Silbentrennung dann in nächste zeile und große abstände
 \sloppy
-
-%Zeilenabstand:
-% \OnehalfSpacing
-
-%Abstände zum Rand: (gestochen scharf will 2cm)
-% \setlrmarginsandblock{2.5cm}{2cm}{*}
-% \setulmarginsandblock{2cm}{*}{1}
-% \checkandfixthelayout
 
 %Inserting Images:
 \usepackage{graphicx}
@@ -64,6 +51,7 @@
 \input{chapter/00_glossary}
 \renewcommand{\acronymname}{Abkürzungsverzeichnis}
 \glstoctrue
+
 
 %Tables:
 % \renewcommand{\arraystretch}{1.5} %Für mehr Abstand in Tabellen
