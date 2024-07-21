@@ -2,6 +2,83 @@
 The best fitting strategies are implemented on a small test data set in order to demonstrate how it works: Proof of Concept\\
 \subsection{Data Set}
 In the test data the learning data is seperate from the data including anomalies. The important thing about Zero Shot Learning is that a specific anomaly never occured like this before. In the test data, all chosen representation learning techniques are applied using the same data for learning and afterwards testing the anomaly detection with the same anomalies. According to chapter (Evaluation) the characteristics are evaluated for each rl technique.\\
+% Implementation Steps for CARLA
+%
+%     Data Preparation:
+%         Partition the time series into overlapping windows with a fixed stride. Each window will be treated as an individual data sample for the model.
+%
+%     Anomaly Injection:
+%         Introduce synthetic anomalies into the dataset. This involves modifying the normal data to create anomalies such as spikes or pattern shifts. This step ensures the model is exposed to both normal and anomalous patterns during training.
+%
+%     Model Architecture:
+%         Pretext Network: Design a network that can take in the time series windows and learn meaningful representations. This typically involves a sequence of convolutional or recurrent layers followed by a projection head for contrastive learning.
+%         Contrastive Loss: Implement a contrastive loss function (e.g., InfoNCE) to train the model. The loss function should encourage the model to bring similar samples closer in the embedding space and push dissimilar samples apart.
+%
+%     Training the Pretext Stage:
+%         Train the model using the normal and injected anomaly data. Use the contrastive loss to adjust the model weights, ensuring that normal samples are clustered together and anomalies are separated.
+%
+%     Neighborhood Classification:
+%         Once the model is trained, compute the embeddings for all windows in the dataset. Identify the nearest and furthest neighbors for each window to establish a prior.
+%         Implement a classifier that uses these neighbor relationships to classify new windows as normal or anomalous. The classifier should determine if a new window is anomalous based on its distance from normal windows in the embedding space.
+%
+% Practical Implementation
+%
+% To implement CARLA, you can follow these steps using Python and libraries like PyTorch:
+%
+% python
+%
+% import torch
+% import torch.nn as nn
+% import torch.optim as optim
+%
+% class PretextNetwork(nn.Module):
+%     def __init__(self, input_size, hidden_size, output_size):
+%         super(PretextNetwork, self).__init__()
+%         self.conv1 = nn.Conv1d(input_size, hidden_size, kernel_size=3)
+%         self.conv2 = nn.Conv1d(hidden_size, hidden_size, kernel_size=3)
+%         self.fc = nn.Linear(hidden_size, output_size)
+%
+%     def forward(self, x):
+%         x = torch.relu(self.conv1(x))
+%         x = torch.relu(self.conv2(x))
+%         x = x.mean(dim=2)  # Global average pooling
+%         x = self.fc(x)
+%         return x
+%
+% def contrastive_loss(output1, output2, label, margin=1.0):
+%     distance = (output1 - output2).pow(2).sum(1)
+%     loss = label * distance + (1 - label) * torch.relu(margin - distance).pow(2)
+%     return loss.mean()
+%
+% # Example training loop
+% model = PretextNetwork(input_size=1, hidden_size=64, output_size=128)
+% optimizer = optim.Adam(model.parameters(), lr=0.001)
+%
+% for epoch in range(num_epochs):
+%     for data in dataloader:
+%         inputs, labels = data
+%         outputs = model(inputs)
+%         loss = contrastive_loss(outputs, labels)
+%
+%         optimizer.zero_grad()
+%         loss.backward()
+%         optimizer.step()
+%
+% # Neighborhood classification
+% def classify(sample, embeddings, k=5):
+%     distances = torch.cdist(sample.unsqueeze(0), embeddings)
+%     nearest_neighbors = torch.topk(distances, k, largest=False)
+%     return nearest_neighbors
+%
+% # Assuming `test_sample` is the new data point and `train_embeddings` are precomputed
+% classification = classify(test_sample, train_embeddings)
+%
+% This is a simplified example. In practice, you will need to handle data preprocessing, anomaly injection, and more sophisticated model architectures depending on your specific use case.
+%
+% For more details, you can refer to the original CARLA paper​ (ar5iv)​.
+%
+% Like our GPT? Try our full AI-powered search engine and academic features for free at consensus.app.
+% Neue Version von GPT verfügbar – Chatte weiter mit der alten Version oder beginne einen neuen Chat, um die neueste Version zu erhalten.
 \subsection{Anomalies}
 \subsection{Results}
 Maybe like in \citeA[p. 19]{darban_carla_2024}
