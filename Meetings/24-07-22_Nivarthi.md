@@ -1,11 +1,73 @@
-# Meeting 28.06.24 Nivarthi
+# Meeting 22.07.24 Nivarthi
 
-Arbeitet seit 3 Jahren mit SMA. Daniel Clemens
+- neueste Version vorstellen
 
-Idee ist frühzeitige Erkennung von Fehlerfällen (maintenance). Arbeitet mit SMA Daten von Wechselrichtern.
+- bisher gefundene Paper vorstellen
 
-focus on time series applications and sensor apps
-internet of things
-**what are the different types of rl possible for zero shot anomaly detction**
-proof of concept which methods are doing well (für implementation möglich)
+- Fragen:
+  
+  - Structure OK? ja aber formulierung zu unwissenschaftlich
+  - Focus in Review completely on Zero Shot Anomaly Detection? no
+  - 
 
+Notizen:
+
+
+
+- new one looks more formal 
+
+- formulation not formal 
+
+- content is good
+
+- suggestion previous 
+
+- are there similar 
+
+chrome extension catalyzex for code open source availability
+
+
+
+struktur passt soweit
+
+neat datasets from the carla paper
+
+smd data is a good starting point
+
+
+
+data set bei sma finden
+
+es muss nicht unbedingt von sma sein
+
+as many models with representation learning 
+
+
+
+
+
+@inproceedings{su2019robust,
+
+title={Robust anomaly detection for multivariate time series through stochastic recurrent neural network},
+
+author={Su, Ya and Zhao, Youjian and Niu, Chenhao and Liu, Rong and Sun, Wei and Pei, Dan},
+
+booktitle={Proceedings of the 25th ACM SIGKDD international conference on knowledge discovery \& data mining},
+
+pages={2828--2837},
+
+year={2019}
+
+}
+
+
+
+what else could be done except of autoencoders and contrastive learning
+
+overlapping possible
+
+transformers gpt ? bold statement
+
+alternatives to that
+
+good classification : CL, autoencoders, gpt, alternatives
