@@ -30,10 +30,10 @@ A Autoencoder is used by \cite{pranavan_contrastive_2022} \\\\% TODO
 \subsubsection{GPT based}
 test
 \subsubsection{Shapelet Learning}
-\subsection{Shapelet Learning}
+% Shapelets: Shapelets are short, representative subsequences extracted from time series data.
+% Shapelet Learning: Extraction, Evaluation and Selection of shapelets. Medling 
 \citeA{beggel_time_2019} address the problem of detecting anomalies in time series data using a novel unsupervised method based on shapelet learning. This approach is particularly useful in scenarios where labeling data is difficult and expensive.
 Their method learns representative features that describe the shape of time series data from the normal class and simultaneously learns to accurately detect anomalies. The objective function encourages the learning of a feature representation in which normal time series lie within a compact hypersphere, while anomalous observations lie outside the decision boundary. This is achieved through a block-coordinate descent procedure.
 The advantage of their approach is that it can efficiently detect anomalies in unseen test data without retraining the model, by reusing the learned feature representation. Experimental results on multiple benchmark datasets demonstrate the robustness and reliability of the method in detecting anomalous time series, outperforming competing methods when the training data contains anomalies \cite{beggel_time_2019}.\\\\
-\cite{alshaer_detecting_2020}\\\\
-\subsubsection{Alternatives}
-test
+In contrast, Alshaer et al. (2022) propose a method combining matrix profiles with shapelet learning to handle streaming time series data. The matrix profile efficiently identifies potential anomalies in real-time, and shapelet learning characterizes these anomalies accurately. This approach is particularly suited for environments requiring immediate anomaly detection, such as finance, healthcare, and industrial monitoring \cite{alshaer_detecting_2020}.\\\\
+While both methods utilize shapelet learning, Beggel et al. focus on static datasets and robust feature representation, whereas Alshaer et al. emphasize real-time detection in dynamic, streaming environments.
