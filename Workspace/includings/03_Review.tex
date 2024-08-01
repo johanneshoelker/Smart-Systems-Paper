@@ -10,8 +10,8 @@ Since the paper came out in 2013, several representation learning techniques wer
 The different RL strategies are listed, explained and compared. The strategies are organized by their underlying concept. We begin with straight-forward methods which are based on one concept and increase the complexity throughout the chapter. In the end methods which use combinations of different concepts are presented.
 \subsubsection{MLP}
 % INRAD
-Starting with a method using a simple Multi Layer Perceptron (MLP) to detect anomalies in time series data. The input variable for the MLP is time and the output variable represents the value at that exact time. With a trained model, the values in a live scenario are predicted and the difference to the current real values is measured. If the distance is exceeding a threshold, a anomaly is found \cite{jeong_time-series_2022}. % TODO Check for correctness
-The model is trained with data including anomalies so it is not suitable for Zero-Shot Learning. It is theoretically possible to adapt the model for Zero-Shot Anomaly Detection but no further publications based on a MLP are found.% TODO Check with connected papers
+Starting  with a method using a simple Multi Layer Perceptron (MLP) to detect anomalies in time series data. The input variable for the MLP is time and the output variable represents the value at that time. The model is trained to learn this mapping. With the trained model, the values in a live scenario are predicted and the difference to the actual values is measured. If tis representation error exceeds a certain threshold, an anomaly is found \cite{jeong_time-series_2022}.
+The model is trained with data including anomalies so it is not suitable for Zero-Shot Learning. It is theoretically possible to adapt the model for Zero-Shot Anomaly Detection but no further publications based on a MLP are found.
 \subsubsection{Contrastive Learning}
 \cite{ngu_cl-tad_2023}\\\\%TODO gpt based?
 \cite{lee_time_2023}\\\\%TODO gpt based?
