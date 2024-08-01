@@ -1,3 +1,3 @@
-Method Name,Author,Possible for Implementation,Underlying Concept
-INRAD,Jeong et al.,good,MLP
-CL-TAD,Ngu et al.,d.k.,
+Method Name,Author,Underlying Concept,Possible for Implementation,Possible for Zero-Shot Learning
+INRAD,Jeong et al.,MLP,good,no
+CL-TAD,Ngu et al.,,d.k.,
