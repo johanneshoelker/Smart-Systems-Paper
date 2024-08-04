@@ -4,9 +4,18 @@ INRAD,Jeong et al.,MLP,good,no
 CARLA,Darban et al.,CL,,no
 CL-TAD,Ngu et al.,CL,,yes
 ,Lee et al.,CL,,
+TS2Vec,Yue et al.,CL,,
 UCAE-TENN,Nivarthi et al.,AE,,
-,,,,
-MAEDAY,Schwartz et al.,,,
-,Pereira et al.,,,
+MAEDAY,Schwartz et al.,AE,,
+,Pereira et al.,AE,,
+,Ramirez et al.,AE,,
+TRL-CPC,Pranavan et al.,AE,,
+OmniAnomaly,Su et al.,Stochastic RNN,,
 MOMENT,Goswami et al.,Transformer,python library,yes
-TS2Vec,Yue et al.,AE,,
+TimeAutoAD,Jiao et al.,,,
+AnomalyCLIP,Zhou et al.,,,
+,Li et al.,,,
+,Beggel  et al.,Shapelet Learning,,
+,Alshaer  et al.,Shapelet Learning,,
+,Aota  et al.,,,
+,Li et al.,,,
