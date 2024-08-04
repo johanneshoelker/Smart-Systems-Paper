@@ -1,3 +1,6 @@
-Method Name,Author,Underlying Concept,Possible for Implementation,Possible for Zero-Shot Learning
+Method Name,Author,Underlying Concept,Possible for Implementation,Tested onZero-Shot Learning
 INRAD,Jeong et al.,MLP,good,no
-CL-TAD,Ngu et al.,,d.k.,
+,Zhang et al.,CL,,no
+CARLA,Darban et al.,CL,,no
+CL-TAD,Ngu et al.,CL,,yes
+,Lee et al.,CL,,
