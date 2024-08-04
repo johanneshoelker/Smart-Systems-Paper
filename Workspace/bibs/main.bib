@@ -1,4 +1,19 @@
 
+@misc{yue_ts2vec_2022,
+	title = {{TS2Vec}: {Towards} {Universal} {Representation} of {Time} {Series}},
+	shorttitle = {{TS2Vec}},
+	url = {http://arxiv.org/abs/2106.10466},
+	abstract = {This paper presents TS2Vec, a universal framework for learning representations of time series in an arbitrary semantic level. Unlike existing methods, TS2Vec performs contrastive learning in a hierarchical way over augmented context views, which enables a robust contextual representation for each timestamp. Furthermore, to obtain the representation of an arbitrary sub-sequence in the time series, we can apply a simple aggregation over the representations of corresponding timestamps. We conduct extensive experiments on time series classiﬁcation tasks to evaluate the quality of time series representations. As a result, TS2Vec achieves signiﬁcant improvement over existing SOTAs of unsupervised time series representation on 125 UCR datasets and 29 UEA datasets. The learned timestamp-level representations also achieve superior results in time series forecasting and anomaly detection tasks. A linear regression trained on top of the learned representations outperforms previous SOTAs of time series forecasting. Furthermore, we present a simple way to apply the learned representations for unsupervised anomaly detection, which establishes SOTA results in the literature. The source code is publicly available at https://github.com/yuezhihan/ts2vec.},
+	language = {en},
+	urldate = {2024-08-03},
+	publisher = {arXiv},
+	author = {Yue, Zhihan and Wang, Yujing and Duan, Juanyong and Yang, Tianmeng and Huang, Congrui and Tong, Yunhai and Xu, Bixiong},
+	month = feb,
+	year = {2022},
+	note = {arXiv:2106.10466 [cs]},
+	keywords = {Computer Science - Artificial Intelligence, Computer Science - Machine Learning},
+}
+
 @misc{li_anomaly_2024,
 	title = {Anomaly {Detection} of {Tabular} {Data} {Using} {LLMs}},
 	url = {http://arxiv.org/abs/2406.16308},
@@ -166,33 +181,4 @@
 	year = {2013},
 	note = {arXiv:1301.3666 [cs]},
 	keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Machine Learning},
-}
-
-@book{goodfellow_deep_2016,
-	address = {Cambridge, Massachusetts},
-	series = {Adaptive computation and machine learning},
-	title = {Deep learning},
-	isbn = {978-0-262-03561-3},
-	publisher = {The MIT Press},
-	author = {Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron},
-	year = {2016},
-	keywords = {Machine learning},
-}
-
-@article{sun_survey_2021,
-	title = {A {Survey} on {Deep} {Learning} for {Data}-{Driven} {Soft} {Sensors}},
-	volume = {17},
-	copyright = {https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html},
-	issn = {1551-3203, 1941-0050},
-	url = {https://ieeexplore.ieee.org/document/9329169/},
-	doi = {10.1109/TII.2021.3053128},
-	abstract = {Soft sensors are widely constructed in process industry to realize process monitoring, quality prediction, and many other important applications. With the development of hardware and software, industrial processes have embraced new characteristics, which lead to the poor performance of traditional soft sensor modeling methods. Deep learning, as a kind of data-driven approach, shows its great potential in many ﬁelds, as well as in soft sensing scenarios. After a period of development, especially in the last ﬁve years, many new issues have emerged that need to be investigated. Therefore, in this article, the necessity and signiﬁcance of deep learning for soft sensor applications are demonstrated ﬁrst by analyzing the merits of deep learning and the trends of industrial processes. Next, mainstream deep learning models, tricks, and frameworks/toolkits are summarized and discussed to help designers propel the developing progress of soft sensors. Then, existing works are reviewed and analyzed to discuss the demands and problems occurred in practical applications. Finally, outlook and conclusions are given.},
-	language = {en},
-	number = {9},
-	urldate = {2024-07-14},
-	journal = {IEEE Transactions on Industrial Informatics},
-	author = {Sun, Qingqiang and Ge, Zhiqiang},
-	month = sep,
-	year = {2021},
-	pages = {5853--5866},
 }
