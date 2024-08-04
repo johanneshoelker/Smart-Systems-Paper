@@ -1,6 +1,12 @@
-Method Name,Author,Underlying Concept,Possible for Implementation,Tested onZero-Shot Learning
+Method Name,Author,Concept,Implementation,Tested on ZSL
 INRAD,Jeong et al.,MLP,good,no
 ,Zhang et al.,CL,,no
 CARLA,Darban et al.,CL,,no
 CL-TAD,Ngu et al.,CL,,yes
 ,Lee et al.,CL,,
+UCAE-TENN,Nivarthi et al.,AE,,
+,,,,
+MAEDAY,Schwartz et al.,,,
+,Pereira et al.,,,
+MOMENT,Goswami et al.,Transformer,python library,yes
+TS2Vec,Yue et al.,AE,,
