@@ -2,11 +2,15 @@
 The best fitting strategies are implemented on a small test data set in order to demonstrate how it works.\\
 TODO Include Link to code repo
 \subsection{Data Set including Anomalies}
-Which data set to choose for a valid proof of concept. The structure of the chosen data set is described in this chapter.\\
-While NLP and image processing tasks are common and a variety of data sets exists, time series data sets are not available that much \cite{ma_survey_2023}. \\
-The transferability between time series datasets is difficult due to the fact that the data between domains is huge \cite{ma_survey_2023}\\
-In the test data the learning data is seperate from the data including anomalies. The important thing about Zero Shot Learning is that a specific anomaly never occured like this before. In the test data, all chosen representation learning techniques are applied using the same data for learning and afterwards testing the anomaly detection with the same anomalies. According to chapter (Evaluation) the characteristics are evaluated for each RL technique chosen in the previous chapter.\\\\
-To test the model with anomalies in a consistent data set the Server Machine Dataset (SMD) provided by \citeA{su_robust_2019} is used. The SMD (Server Machine Dataset) is a 5-week-long dataset made up by data from 28 different machines. The anomalies are pre labeled.\\\\
+Which data set to choose for a valid proof of concept. The structure of the chosen data set is described in this chapter.
+
+While NLP and image processing tasks are common and a variety of data sets exists, time series data sets are not available that much \cite{ma_survey_2023}. The transferability between time series datasets is difficult due to the fact that the data between domains is huge \cite{ma_survey_2023}
+
+In the test data the learning data is seperate from the data including anomalies. The important thing about Zero Shot Learning is that a specific anomaly never occured like this before. In the test data, all chosen representation learning techniques are applied using the same data for learning and afterwards testing the anomaly detection with the same anomalies. According to chapter (Evaluation) the characteristics are evaluated for each RL technique chosen in the previous chapter.
+
+% SMD
+To test the model with anomalies in a consistent data set the Server Machine Dataset (SMD) provided by \citeA{su_robust_2019} is used. The SMD is a 5-week-long dataset made up by data from 28 different machines. The anomalies are pre labeled.
+
 % Implementation Steps for CARLA
 %
 %     Data Preparation:
