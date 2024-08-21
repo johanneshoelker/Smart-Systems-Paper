@@ -1,4 +1,67 @@
 
+@misc{kravchik_detecting_2018,
+	title = {Detecting {Cyberattacks} in {Industrial} {Control} {Systems} {Using} {Convolutional} {Neural} {Networks}},
+	url = {http://arxiv.org/abs/1806.08110},
+	abstract = {This paper presents a study on detecting cyberattacks on industrial control systems (ICS) using unsupervised deep neural networks, specifically, convolutional neural networks. The study was performed on a Secure Water Treatment testbed (SWaT) dataset, which represents a scaled-down version of a real-world industrial water treatment plant. e suggest a method for anomaly detection based on measuring the statistical deviation of the predicted value from the observed value. We applied the proposed method by using a variety of deep neural networks architectures including different variants of convolutional and recurrent networks. The test dataset from SWaT included 36 different cyberattacks. The proposed method successfully detects the vast majority of the attacks with a low false positive rate thus improving on previous works based on this data set. The results of the study show that 1D convolutional networks can be successfully applied to anomaly detection in industrial control systems and outperform more complex recurrent networks while being much smaller and faster to train.},
+	language = {en},
+	urldate = {2024-08-21},
+	publisher = {arXiv},
+	author = {Kravchik, Moshe and Shabtai, Asaf},
+	month = dec,
+	year = {2018},
+	note = {arXiv:1806.08110 [cs]},
+	keywords = {Computer Science - Cryptography and Security, Computer Science - Machine Learning},
+}
+
+@article{sabokrou_deep-anomaly__2018,
+	title = {Deep-anomaly\_ {Fully} convolutional neural network for fast anomaly detection in crowded scenes},
+	abstract = {The detection of abnormal behaviour in crowded scenes has to deal with many challenges. This paper presents an eﬃcient method for detection and localization of anomalies in videos. Using fully convolutional neural networks (FCNs) and temporal data, a pre-trained supervised FCN is transferred into an unsupervised FCN ensuring the detection of (global) anomalies in scenes. High performance in terms of speed and accuracy is achieved by investigating the cascaded detection as a result of reducing computation complexities. This FCN-based architecture addresses two main tasks, feature representation and cascaded outlier detection. Experimental results on two benchmarks suggest that the proposed method outperforms existing methods in terms of accuracy regarding detection and localization.},
+	language = {en},
+	journal = {Computer Vision and Image Understanding},
+	author = {Sabokrou, Mohammad},
+	year = {2018},
+}
+
+@article{abdulaal_practical_2021,
+	title = {Practical {Approach} to {Asynchronous} {Multivariate} {Time} {Series} {Anomaly} {Detection} and {Localization}},
+	abstract = {Engineers at eBay utilize robust methods in monitoring IT system signals for anomalies. However, the growing scale of signals, both in volumes and dimensions, overpowers traditional statistical state-space or supervised learning tools. Thus, state-of-the-art methods based on unsupervised deep learning are sought in recent research. However, we experienced flaws when implementing those methods, such as requiring partial supervision and weaknesses to high dimensional datasets, among other reasons discussed in this paper. We propose a practical approach for inferring anomalies from large multivariate sets. We observe an abundance of time series in real-world applications, which exhibit asynchronous and consistent repetitive variations, such as IT, weather, utility, and transportation. Our solution is designed to leverage this behavior. The solution utilizes spectral analysis on the latent representation of a pre-trained autoencoder to extract dominant frequencies across the signals, which are then used in a subsequent network that learns the phase shifts across the signals and produces a synchronized representation of the raw multivariate. Random subsets of the synchronous multivariate are then fed into an array of autoencoders learning to minimize the quantile reconstruction losses, which are then used to infer and localize anomalies based on a majority vote. We benchmark this method against state-of-the-art approaches on public datasets and eBay’s data using their referenced evaluation methods. Furthermore, we address the limitations of the referenced evaluation methods and propose a more realistic evaluation method.},
+	language = {en},
+	author = {Abdulaal, Ahmed},
+	year = {2021},
+}
+
+@misc{tuli_tranad_2022,
+	title = {{TranAD}: {Deep} {Transformer} {Networks} for {Anomaly} {Detection} in {Multivariate} {Time} {Series} {Data}},
+	shorttitle = {{TranAD}},
+	url = {http://arxiv.org/abs/2201.07284},
+	abstract = {Efficient anomaly detection and diagnosis in multivariate timeseries data is of great importance for modern industrial applications. However, building a system that is able to quickly and accurately pinpoint anomalous observations is a challenging problem. This is due to the lack of anomaly labels, high data volatility and the demands of ultra-low inference times in modern applications. Despite the recent developments of deep learning approaches for anomaly detection, only a few of them can address all of these challenges. In this paper, we propose TranAD, a deep transformer network based anomaly detection and diagnosis model which uses attentionbased sequence encoders to swiftly perform inference with the knowledge of the broader temporal trends in the data. TranAD uses focus score-based self-conditioning to enable robust multi-modal feature extraction and adversarial training to gain stability. Additionally, model-agnostic meta learning (MAML) allows us to train the model using limited data. Extensive empirical studies on six publicly available datasets demonstrate that TranAD can outperform state-of-the-art baseline methods in detection and diagnosis performance with data and time-efficient training. Specifically, TranAD increases F1 scores by up to 17\%, reducing training times by up to 99\% compared to the baselines.},
+	language = {en},
+	urldate = {2024-08-21},
+	publisher = {arXiv},
+	author = {Tuli, Shreshth and Casale, Giuliano and Jennings, Nicholas R.},
+	month = may,
+	year = {2022},
+	note = {arXiv:2201.07284 [cs]},
+	keywords = {Computer Science - Machine Learning},
+}
+
+@article{he_temporal_2019,
+	title = {Temporal {Convolutional} {Networks} for {Anomaly} {Detection} in {Time} {Series}},
+	abstract = {Convolutional Networks have been demonstrated to be particularly useful for extracting high level feature in structural data. Temporal convolutional network (TCN) is a framework which employs casual convolutions and dilations so that it is adaptive for sequential data with its temporality and large receptive fields. In this paper, we apply TCN for anomaly detection in time series. We train the TCN on normal sequences and use it to predict trend in a number of time steps. Prediction errors are fitted by a multivariate Gaussian distribution and used to calculate the anomaly scores of points. In addition, a multi-scale feature mixture method is raised to promote performance. The validity of this method is confirmed on three real-world datasets.},
+	language = {en},
+	journal = {Journal of Physics},
+	author = {He, Yangdong and Zhao, Jiabao},
+	year = {2019},
+}
+
+@article{ye_multivariate_2023,
+	title = {Multivariate {Time} {Series} {Anomaly} {Detection} with {Fourier} {Time} {Series} {Transformer}},
+	abstract = {Anomaly detection in time series data plays a key role in automatic industrial operations. Due to the intricate temporal dependencies within time series data and the difficulty in obtaining labeled data, recent anomaly detection methods have primarily focused on the temporal domain features of time series data, neglecting the frequency domain features. However, spectral analysis can better utilize periodic information within time series data such as seasonal patterns, which helps capturing multiscale and multiple frequency features. In this paper, we present a Fourier Time Series Transformer model (FTST for short), which combines the features of both time and frequency domains for time series anomaly detection. Specifically, the attention mechanism is utilized for modeling the temporal domain, while the Fourier Transform is employed to transform time series data into frequency domain data. The frequency domain features are then modeled using a Temporal Convolutional Network. By making full use of the temporal and frequency domains of time series data, FTST can significantly enhance the performance of time series anomaly detection. Experimental results on popular benchmark datasets demonstrate the anomaly detection performance of the proposed method.},
+	language = {en},
+	author = {Ye, Yufeng and He, Qichao and Zhang, Peng and Xiao, Jie and Li, Zhao},
+	year = {2023},
+}
+
 @article{kitchenham_systematic_2009,
 	title = {Systematic literature reviews in software engineering – {A} systematic literature review},
 	volume = {51},
