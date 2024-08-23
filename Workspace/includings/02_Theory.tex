@@ -20,6 +20,12 @@ In the book of \citeA[p. 525]{goodfellow_deep_2016} a general detailed descripti
 % MLP
 The most straight-forward approach to detect representations are Multi Layer Perceptrons (MLP). A input vector is processed by artificial neurons passed through several layers of neurons, interconnected between each layer. The adjustment of the interconnections using weights and biases enables a learning process where labeled data is learned using backpropagation. The learns a training data set and is used to label unknown data afterwards \cite{nielsen_neural_2015}
 
+% CNN
+Convolutional Neural Networks (CNN) are a variation of MLP building subsets of the input vector. THis is mainly used in image processing.
+
+%RNN
+Recurrent neural networks (RNN) are another vairation of the tradition feed-forward MLP. Every neuron has a additional input containing the previous state. THis is useful for time series data.
+
 % Contrastive learning
 One solution to learn representations is contrastive learning. Pairs of data points are labeled as similar and dissimilar. These data points are put into a feature space where the distance between the two represents their similarity. With a contrastive loss function and a label of similarity between two points, the model is trained by putting the similar data Onepoints together and separating dissimilar points. Using this method groups of similar data points are formed.
 
