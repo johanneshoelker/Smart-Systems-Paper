@@ -1,25 +1,33 @@
-\section{Method}\label{method}
+\section{Systematic Literature Review}\label{methods}
 % Why is the literature research important
-A literature research to contribute in the development of an anomaly detection tool is presented in this paper. It provides an overview of the latest trends in representation learning and extracts the possible solutions addressing the problem described in \ref{intro}. The review conforms to the methodology presented by \citeA{kitchenham_systematic_2009}. First the research questions are formulated. The search process and the websites used are listed. Finally Inclusion and Exclusion Criteria are formulated in order to filter the found literature for the application.
+A literature review to contribute in the development of an anomaly detection tool is presented in this paper. It provides an overview of the latest trends in representation learning and extracts the possible solutions addressing the problem described in \ref{intro}. The review conforms to the methodology presented by \citeA{kitchenham_systematic_2009}. First the research questions are formulated. The search process and the websites used are listed. Finally Inclusion and Exclusion Criteria are formulated in order to filter the found literature for the application.
 \subsection{Research questions}
 The paper focuses on the following research question:\\\\
 % Research question
 RQ1: Which types of representation learning are possible for Zero Shot Anomaly Detection in multi variate time series applications?\\\\
 TODO maybe insert methods part like in \cite{su_large_2024}. Using paper inclusion and exclusion criteria.
 \subsection{Search process}
-TODO cite Consensus for finding the literature
+A manual search of specific conference proceedings and journal papers was made. Considering the pace on which new developments emerge in the area of machine learning the help of research tools was needed. Specifically in the field of anomaly detection the publications are made in recent years. This makes it difficult to assure finding every relevant paper.
+
+% Consensus
+The main tool used to find papers was Consensus, which is an academic search engine. They use large language models (LLMs) and purpose-built search technology. The chatbot is based on ChatGPT 4.0 and it should answer questions based on papers including their reference. For reassuring the existence of the paper the university bibliography KARLA is used to download and read the papers manually.
+
+TODO since when?
+
+TODO table 
 \subsection{Inclusion and Exclusion Criteria}
 This paper focuses on multi variate time series data. Anomaly detection in Zero Shot Scenarios in particular. To filter the found literature, the following Criteria are used later in \ref{application}.
 
-%TODO criteria tablet
-
-\label{tab_criteria}
+\label{list_criteria}
 \begin{itemize}
 % Inclusion
-\item IC1: Is the method using a representation learning concept. The focus is on methods learning representations in data using machine learning concepts.\\
-IC2: Is the method used for Anomaly Detection. Sometimes the proposed methods perform well on different use cases. If one of the use cases is Anomaly Detection, the paper is included in the review.\\
-IC3:
+\item IC1: Is the method using a representation learning concept. The focus is on methods learning representations in data using machine learning concepts.
+\item IC2: Is the method used for Anomaly Detection. Sometimes the proposed methods perform well on different use cases. If one of the use cases is Anomaly Detection, the paper is included in the review.
+\item IC3:
+\end{itemize}
+
+\begin{itemize}
 % Exclusion
-EC1: Open Source Availability \\
-EC2: tested on Zero-Shot Learning
+\item EC1: Open Source Availability
+\item EC2: tested on Zero-Shot Learning
 \end{itemize}
