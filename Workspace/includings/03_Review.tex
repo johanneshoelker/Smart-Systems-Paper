@@ -1,5 +1,5 @@
 \section{Representation Learning Methods}\label{review}
-In this chapter the found literature is put into context. Starting with classical literature about the fundamental findings followed by actual trends in the Area of Representation Learning with different Representation Learning Strategies listed and compared. Any paper proposing a representation learning strategy with adaptability on anomaly detection tasks is presented. The specific use case on Time Series Data is discussed. Here the inclusion criteria as described in \ref{criteria} are used to filter the found literature.
+In this chapter the found literature is put into context. Starting with classical literature about the fundamental findings followed by actual trends in the Area of Representation Learning with different RL Strategies listed and compared. Any paper proposing a representation learning strategy with adaptability on anomaly detection tasks is presented. The specific use case on Time Series Data is discussed. Here the inclusion criteria as described in \ref{criteria} are used to filter the found literature.
 
 % Sensors and comparable applications produce values which vary over time. Sometimes the values vary in an unforeseen way and for a short time window they may be completely random. We have to step back and observe longer time periods.
 % Sometimes it is possible for a human to see some patterns in the data when observing a long time window. In the measuring of a solar plant it is obvious that the sun rises and sets, depending on the voltage of the panels. Starting with 0 V at night the voltage is rising before noon, having its peak at midday and descending in the afternoon. This is one representation in the data. But there could be more represenations hidden, which are not likely to see. The shadow of a tree wandering over the panels happening every day or a one time event like the snow covering the plant. \\\\
@@ -110,7 +110,6 @@ In contrast, \citeA{alshaer_detecting_2020} propose a method combining matrix pr
 While both methods utilize shapelet learning, Beggel et al. focus on static datasets and robust feature representation, whereas Alshaer et al. emphasize real-time detection in dynamic, streaming environments.
 % TODO search for GAN based methods
 
-\subsubsection{combinations}
-
-
-TODO \cite{li_zero-shot_2023}  %TODO
+\subsubsection{Clustering}
+% Clustering
+\citeA{li_clustering_2021} propose a method for detecting anomalies in multivariate time series by combining clustering and reconstruction techniques. The authors use a sliding window approach to generate subsequences from the multivariate time series, then apply extended fuzzy clustering to reveal the underlying structure of the subsequences. By reconstructing these subsequences with optimal cluster centers, the method detects anomalies based on how well the reconstructed data fits the original subsequences. A confidence index quantifies the level of detected anomalies. The approach is shown to effectively detect anomalies related to amplitude and shape changes in various application domains, such as healthcare and finance, and is optimized using Particle Swarm Optimization.
