@@ -1,10 +1,19 @@
 \section{Systematic Literature Review}\label{methods}
 % Why is the literature research important
 A literature review to contribute in the development of an anomaly detection tool is presented in this paper. It provides an overview of the latest trends in representation learning and extracts the possible solutions addressing the problem described in \ref{intro}. The review conforms to the methodology presented by \citeA{kitchenham_systematic_2009}. First the research questions are formulated. The search process and the websites used are listed. Finally Inclusion and Exclusion Criteria are formulated in order to filter the found literature for the application.
+
+% Limitations
+Further analysis with a systematic quality assessment and data collection like in \citeA{kitchenham_systematic_2009} are excluded.
 \subsection{Research questions}
-The paper focuses on the following research question:\\\\
+The paper focuses on the following research question:
+
 % Research question
-RQ1: Which types of representation learning are possible for Zero Shot Anomaly Detection in multi variate time series applications?\\\\
+\begin{itemize}
+  \item RQ1: Which types of representation learning exist?
+  \item RQ2: How are the RL types implemented on handling multi variate time series data?
+  \item RQ3: Which of the recent methodologies can be used for anomaly detection?
+  \item RQ4: Are the methods useful for Zero Shot Learning Scenarios?
+\end{itemize}
 TODO maybe insert methods part like in \cite{su_large_2024}. Using paper inclusion and exclusion criteria.
 \subsection{Search process}
 A manual search of specific conference proceedings and journal papers was made. Considering the pace on which new developments emerge in the area of machine learning the help of research tools was needed. Specifically in the field of anomaly detection the publications are made in recent years. This makes it difficult to assure finding every relevant paper.
@@ -14,20 +23,19 @@ The main tool used to find papers was Consensus, which is an academic search eng
 
 TODO since when?
 
-TODO table 
-\subsection{Inclusion and Exclusion Criteria}
-This paper focuses on multi variate time series data. Anomaly detection in Zero Shot Scenarios in particular. To filter the found literature, the following Criteria are used later in \ref{application}.
-
-\label{list_criteria}
+TODO table
+\subsection{Inclusion and Exclusion Criteria}\label{criteria}
+This paper focuses on published methods for anomaly detection in Zero Shot Scenarios on multi variate time series data. In order to structure the search for and selection of relevant articles, the necessary guidelines are formulated below. Articles that are to be considered in more detail must meet the following inclusion criteria:
 \begin{itemize}
 % Inclusion
 \item IC1: Is the method using a representation learning concept. The focus is on methods learning representations in data using machine learning concepts.
-\item IC2: Is the method used for Anomaly Detection. Sometimes the proposed methods perform well on different use cases. If one of the use cases is Anomaly Detection, the paper is included in the review.
-\item IC3:
+\item IC2: 
+\item IC3: Is the method used for Anomaly Detection. Sometimes the proposed methods perform well on different use cases. If one of them is Anomaly Detection, the paper is included in the review.
 \end{itemize}
-
+The chosen articles are examined in more detail. They are described and explained in \ref{review}. Using the gained knowledge all described articles are filtered by the following exclusion criteria in \ref{application}.
 \begin{itemize}
 % Exclusion
 \item EC1: Open Source Availability
 \item EC2: tested on Zero-Shot Learning
+\item EC3: Multiple publications reporting the same methodologies. Only the latest and most promising method is used.
 \end{itemize}

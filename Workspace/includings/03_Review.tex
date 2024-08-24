@@ -20,7 +20,7 @@ Their method utilizes an SRNN to model the temporal dependencies and stochastici
 The key advantage of this method is its robustness to noisy and high-dimensional data. The SRNN learns to represent the normal patterns in the time series and identifies deviations from these patterns as anomalies. The model is evaluated on several benchmark datasets and demonstrates superior performance compared to state-of-the-art methods in terms of both precision and recall \cite{su_robust_2019}.
 
 \subsubsection{CNN}
-Mehtods based on Convolutional Neural Networks (CNN) are normally used to classify images and in recent papers they are used to detect anomalies in images. \citeA{aota_zero-shot_2023} develop a Texture Anomaly Detection and achieve a high performance in Zero Shot Learning. They compare Zero-Shot against Many-Shot Learning in their work. Several image anomaly detection tools can be found (\cite{sabokrou_deep-anomaly__2018}, \cite{aota_zero-shot_2023}) but can CNNs perform on time series data as well? 
+Mehtods based on Convolutional Neural Networks (CNN) are normally used to classify images and in recent papers they are used to detect anomalies in images. \citeA{aota_zero-shot_2023} develop a Texture Anomaly Detection and achieve a high performance in Zero Shot Learning. They compare Zero-Shot against Many-Shot Learning in their work. Several image anomaly detection tools can be found (\cite{sabokrou_deep-anomaly__2018}, \cite{aota_zero-shot_2023}) but can CNNs perform on time series data as well?
 
 The main idea of using CNNs is to predict a value based on the input frame. If the distance between the predicted and the actual value exceeds a predefined threshold, the anomaly can be detected \cite{kravchik_detecting_2018}.
 % CyberAttacks Kravchick
