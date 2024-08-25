@@ -2,8 +2,8 @@ Method Name,Author,Concept,ZSL,Implementation
 INRAD,Jeong et al.,MLP,no,good
 OmniAnomaly,Su et al.,RNN,no,github.com/smallcowbaby/OmniAnomaly
 ,Kravchik et al.,CNN,no,
-,He et al.,CNN,,
-,Zhang et al.,CL,no,
+,He et al.,CNN,may,difficult
+,Zhang et al.,CL,yes,difficult
 CARLA,Darban et al.,CL,no,
 CL-TAD,Ngu et al.,CL,yes,
 ,Lee et al.,CL,,
