@@ -27,7 +27,7 @@ Convolutional Neural Networks (CNN) are a variation of MLP building subsets of t
 Recurrent neural networks (RNN) are another vairation of the tradition feed-forward MLP. Every neuron has a additional input containing the previous state. THis is useful for time series data.
 
 % Contrastive learning
-One solution to learn representations is contrastive learning. Pairs of data points are labeled as similar and dissimilar. These data points are put into a feature space where the distance between the two represents their similarity. With a contrastive loss function and a label of similarity between two points, the model is trained by putting the similar data points together and separating dissimilar points. Using this method groups of similar data points are formed.
+One solution to learn representations is Contrastive Learning (CL). Pairs of data points are labeled as similar and dissimilar. These data points are put into a feature space where the distance between the two represents their similarity. With a contrastive loss function and a label of similarity between two points, the model is trained by putting the similar data points together and separating dissimilar points. Using this method groups of similar data points are formed.
 
 % Autoencoders
 Autoencoders are another important method in representation learning. An autoencoder is a type of neural network used to learn efficient codings of input data in an unsupervised manner. It consists of an encoder that compresses the input into a latent-space representation and a decoder that reconstructs the input from this representation. The goal is to minimize the difference between the input and the reconstructed output.
