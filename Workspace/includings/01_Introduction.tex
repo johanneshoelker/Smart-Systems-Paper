@@ -1,14 +1,14 @@
 \section{Introduction}\label{intro}
 % Occurence of sensors and their data
-At the time this paper is written sensors can be found everywhere and their usage is increasing in many fields. Gyroscopes, cameras, compasses and accelerometers are integrated in smartphones. Physical machines are tracking their movement through vibration sensors, health care systems in hospitals visualize the heart beat of a patience and voltmeters measure the generated power in a solar plant. Everytime sensor values are collected over time and time series data (TSD) is produced.
+Nowadays sensors can be found everywhere and their usage is increasing in many fields. Gyroscopes, cameras, compasses and accelerometers are integrated in smartphones. Physical machines are tracking their movement through vibration sensors, health care systems in hospitals visualize the heart beat of a patience and voltmeters measure the generated power in a solar plant. Everytime sensor values are collected, time series data (TSD) is produced.
 
 % Collections of sensors produce multi variate TSD
-In some scenarios the measurements of different sensors are combined. Physical machines sometimes track vibration and motor rotations, health care systems visualize heart beat and blood sugar level and solar plants measure voltage and current.
+In some scenarios the measurements of different sensors are combined. Physical machines sometimes track vibration and motor rotations, health care systems visualize the heart beat and solar plants measure voltage and current.
 Collections of different sensors measuring at a common time window produce Multi Variate Time Series Data (MVTSD).
 
 % dependance on MV-TSD
-Applications that produce MV-TSD evaluate the data and further decisions and actions depend on a correct analysis.
-Normally the data is consistent and values change constantly in repetetive patterns. This is when the machine, the patience health or the solar plant is functioning like it is supposed to. But sometimes the values change unpredicted because of differing surroundings or other influences. This can lead to serious situation, especially in the health scenario. When the patience's heart beat changes its pattern the health of the patience is endangered. Machine measurements can detect a fault and a solar plant may detect a decline in the generated power.
+Applications that produce MVTSD evaluate the data and further decisions and actions depend on a correct analysis.
+Normally the data is consistent and values change constantly in repetetive patterns. This is when the machine, the patience health or the solar plant is functioning like it is supposed to. But sometimes the values change unpredicted because of differing surroundings or other influences. This can lead to serious situation. Machine measurements detect a potential fault which may break the machine. When the patient's heart beat changes its pattern the health of the patient is seriously endangered. And a solar plant may detect a decline in the generated power which should further influence the power consumption for a better efficiency.
 
 % Importance of Anomaly Detection
 Recognising and reacting to these changes in MVTSD can therefore be very important% TODO\citeA.
@@ -18,4 +18,4 @@ Recognising and reacting to these changes in MVTSD can therefore be very importa
 % TODO
 
 % Structure of this paper
-A systematic literature research concerning the topic is conducted and the best choices are implemented on a test data set. In \ref{methods} the basic methodology used in this paper is described and the main research questions are formulated. First basic necessary terms are explained in \ref{theory}. In \ref{review} the found papers and their methodologies are presented and explained. The methodologies are compared and evaluated for usability in the context of Zero-Shot Anomaly Detection in \ref{application}. The implementation of suiting techniques is provided in \ref{implementation}. Finally the results are discussed and concluded in \ref{discussion}
+A systematic literature research concerning the topic is conducted and the best choices are implemented on a test data set. In section \ref{methods} the basic methodology used in this paper is described and the main research questions are formulated. First basic necessary terms are explained in section \ref{theory}. In section \ref{review} the found papers and their methodologies are presented and explained. The methodologies are compared and evaluated for usability in the context of Zero-Shot Anomaly Detection in section \ref{application}. The implementation of suitable techniques is provided in section \ref{implementation}. Finally the results are discussed and concluded in section \ref{discussion}
