@@ -5,7 +5,7 @@ The basic expressions used in this paper are explained in the following chapter.
 Representation Learning (RL) tries to detect meaningful interconnections in data relevant for further data analysis. These interconnections represent abstract information, so called background knowledge \shortcite{lavrac_representation_2021}.
 
 % cognitive representations
-In neural networks representations are learned in every layer. Considering hidden layers representations are hardly comprehensible for humans. They are stored in weights and biases and build so called neural representations. The next abstraction level are spatial representations which are represented as points or regions in conceptual spaces. Transforming the information from conceptual spaces into words forms symbolic representations. The three types build cognitive repesentations \shortcite{gardenfors_conceptual_2000}.
+In neural networks representations are learned in every layer. Considering hidden layers representations are hardly comprehensible for humans. They are stored in weights and biases and build so called neural representations. At a higher level of abstraction, these neural representations can be understood as spatial representations within a conceptual space, where concepts are represented as points or regions.   When these spatial representations are transformed into language, they become symbolic representations, which are used to convey meaning in a human-understandable form. Together, neural, spatial, and symbolic representations build cognitive repesentations \shortcite{gardenfors_conceptual_2000}.
 
 % Knowledge discovery process
 To extract symbolic or spatial features which are more comprehensible for humans a knowledge discovery process with different methods of machine learning and data mining methods are used. RL techniques are divided into Propositionalization as symbolic representations and Embeddings as numeric representations \shortcite[p. 4]{lavrac_representation_2021}.
@@ -18,16 +18,18 @@ In the book of \shortciteA[p. 525]{goodfellow_deep_2016} a general detailed desc
 
 \subsubsection{Concepts}
 % MLP
-The most straight-forward approach to detect representations are Multi Layer Perceptrons (MLP). A input vector is processed by artificial neurons passed through several layers of neurons, interconnected between each layer. The adjustment of the interconnections using weights and biases enables a learning process where labeled data is learned using backpropagation. The learns a training data set and is used to label unknown data afterwards \shortcite{nielsen_neural_2015}
+The most straight-forward approach to detect representations are Multi Layer Perceptrons (MLP). A input vector is processed by interconnected artificial neurons. The neurons build layers starting with an input layer, followed by hidden layers with a final output layer. The produced output layer typically classifies the input and predicts the label. The difference between predicted and labeled output indicates the performance of the network. Adjusting the interconnections using weights and biases of each neuron enables a learning process. \shortcite{nielsen_neural_2015}
 
 % CNN
-Convolutional Neural Networks (CNN) are a variation of MLP building subsets of the input vector. THis is mainly used in image processing.
+Convolutional Neural Networks (CNN) are a variation of the MLP building subsets of the input vector. This is mainly used in image processing.
 
 %RNN
-Recurrent neural networks (RNN) are another vairation of the tradition feed-forward MLP. Every neuron has a additional input containing the previous state. THis is useful for time series data.
+Recurrent neural networks (RNN) are another variation of the traditional feed-forward MLP. Every neuron has an additional input containing the previous state. This is especially useful for time series data.
+
+Traditional neural networks like MLP, RNN, and CNN have limitations in learning robust, generalizable, and semantically meaningful representations, especially with limited labeled data \shortcite{shi_trade-off_2023}. 
 
 % Contrastive learning
-One solution to learn representations is Contrastive Learning (CL). Pairs of data points are labeled as similar and dissimilar. These data points are put into a feature space where the distance between the two represents their similarity. With a contrastive loss function and a label of similarity between two points, the model is trained by putting the similar data points together and separating dissimilar points. Using this method groups of similar data points are formed.
+One solution to this is Contrastive Learning (CL). Pairs of data points are labeled as similar and dissimilar. These data points are put into a feature space where the distance between the two represents their similarity. With a contrastive loss function and a label of similarity between two points, the model is trained by putting the similar data points together and separating dissimilar points. Using this method groups of similar data points are formed \shortcite{shi_trade-off_2023}.
 
 % Autoencoders
 Autoencoders are another important method in representation learning. An autoencoder is a type of neural network used to learn efficient codings of input data in an unsupervised manner. It consists of an encoder that compresses the input into a latent-space representation and a decoder that reconstructs the input from this representation. The goal is to minimize the difference between the input and the reconstructed output.
