@@ -5,35 +5,37 @@ A literature review to contribute in the development of an anomaly detection too
 % Limitations
 Further analysis with a systematic quality assessment and data collection like in \citeA{kitchenham_systematic_2009} are excluded.
 \subsection{Research question}
-The topic covered includes different areas of machine learning, all being further developed in recent years.
-In order to break down the topic the following research questions are formulated:
+The covered topic includes different areas of machine learning, all being further developed in recent years.
+In order to break it down into separate concerns the following research questions are formulated:
 % Research questions
 \begin{itemize}
-  \item RQ1: What types of representation learning exist?
-  \item RQ2: Which RL types can be used for multi variate time series?
-  \item RQ3: Which of the recent methodologies can be used for anomaly detection?
+  \item RQ1: How can representations be learned using artificial intelligence?
+  \item RQ2: Which representation learning (RL) types can be used for multi variate time series?
+  \item RQ3: How to use RL for anomaly detection?
   \item RQ4: Are the methods useful for Zero Shot Learning Scenarios?
 \end{itemize}
-These question form a path for further chapters. They build the basis for the formulation of the following Criteria.
+These question form a path for further chapters. RQ1 and RQ2 are explained in section \ref{theory}. Answering RQ3 involves a literature review in section \ref{review} which presents useful methods. RQ4 is answered in section \ref{application}. The research questions build a basis for the formulation of the following Criteria.
 \subsection{Inclusion and Exclusion Criteria}\label{criteria}
-This paper focuses on published methods for anomaly detection in Zero Shot Scenarios on multi variate time series data. In order to structure the search for and selection of relevant articles, the necessary guidelines are formulated below. Articles that are to be considered in more detail must meet the following inclusion criteria:
+This paper focuses on published methods for anomaly detection in Zero Shot Scenarios on MVTSD. In order to structure the search for and selection of relevant articles, the necessary guidelines are formulated below. Articles that are considered in more detail must meet the following inclusion criteria:
 \begin{itemize}
 % Inclusion
 \item IC1: Is the method using a representation learning concept. The focus is on methods learning representations in data using machine learning concepts.
 \item IC2: Does the method handle time series data?
 \item IC3: Is the method used for Anomaly Detection. Sometimes the proposed methods perform well on different use cases. If one of them is Anomaly Detection, the paper is included in the review.
-\item IC4: Publicated in recent years (< 6 years)
+\item IC4: Published in recent years (< 6 years)
 \end{itemize}
 The chosen articles are examined in more detail. They are described and explained in \ref{review}. Using the gained knowledge all described articles are filtered by the following exclusion criteria in \ref{application}.
 \begin{itemize}
 % Exclusion
-\item EC1: Is the method tested on Zero-Shot Learning?
-\item EC2: Can the method handle multiple input variables?
-\item EC3: Multiple publications reporting the same methodologies. Only the latest and most promising methods are used.
-\item EC4: Open Source Availability. Is the method publicly available and does it contain a description on how to implement and reproduce the outcomes.
+\item EC1: Methods not tested on Zero-Shot Learning
+\item EC2: Methods designed for single input variables
+\item EC3: Multiple publications reporting the same methodologies
+\item EC4: Methods with restricted availability
 \end{itemize}
+Is the method publicly available and does it contain a description on how to implement and reproduce the outcomes.
+Using these exclusion criteria ensures to find methodologies that meet the desired use case described in the research questions.
 \subsection{Search process}
 A manual search of specific conference proceedings and journal papers was made. Considering the pace on which new developments emerge in the area of machine learning the help of research tools was needed. Specifically in the field of anomaly detection the publications are made in recent years. This makes it difficult to assure finding every relevant paper.
 
 % Consensus
-The main tool used to find papers was Consensus, which is an academic search engine. They use large language models (LLMs) and purpose-built search technology. The chatbot is based on ChatGPT 4.0 and it should answer questions based on papers including their reference. For reassuring the existence of the paper the university bibliography KARLA is used to download and read the papers manually.
+The main tool used to find papers was Consensus, which is an academic search engine. They use large language models (LLMs) and purpose-built search technology. The chatbot is based on ChatGPT 4.0 and should answer questions based on papers including their reference. For reassuring the existence of the papers conventional bibliographies are used.
