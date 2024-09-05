@@ -12,3 +12,12 @@
 - Are there too many CL methods?
 
 ## SMA data
+
+- What to proof?
+- anomalies ?
+
+## Notes
+- anomalies does not have to be completely novel
+is that model capable of another input data
+- the location of the inverters is different and thats the zero shot learning scenario
+
