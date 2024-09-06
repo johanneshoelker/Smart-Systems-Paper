@@ -2,8 +2,8 @@ Method Name,Author,Concept,MV,ZSL,OSA
 INRAD,Jeong et al.,MLP,,no,yes
 OmniAnomaly,Su et al.,RNN,,no,yes
 CNN based method,Kravchik et al.,CNN,,no,
-CNN based method,He et al.,CNN,,no,difficult
-CL based method,Zhang et al.,CL,,yes,difficult
+CNN based method,He et al.,CNN,,no,no
+CL based method,Zhang et al.,CL,,yes,no
 CARLA,Darban et al.,CL,,no,
 CL-TAD,Ngu et al.,CL,,yes,
 COCA,Wang et al.,CL,,no,
@@ -19,7 +19,7 @@ MGCLAD,Qin et al.,CL,,no,
 TriAD,Sun,CL,,no,
 UCAE-TENN,Nivarthi et al.,AE,,,
 MAEDAY,Schwartz et al.,AE,,,
-AE based method,Pereira et al.,AE,,,
+VRAE based method,Pereira et al.,AE,yes,yes,no
 AE based method,Ramirez et al.,AE,,,
 AE based method,,,,,
 MOMENT,Goswami et al.,T,,yes,yes
