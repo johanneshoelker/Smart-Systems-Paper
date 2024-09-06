@@ -1,15 +1,205 @@
 \section{Proof of Concept}\label{implementation}
-The best fitting strategies are implemented on a small test data set in order to demonstrate how it works.\\
-TODO Include Link to code repo
-\subsection{Data Set including Anomalies}
-Which data set to choose for a valid proof of concept. The structure of the chosen data set is described in this chapter.
+The best fitting strategies extracted in section \ref{application} are implemented on a small test data set in order to demonstrate how and if they work. First the used dataset ant the purpose of anomaly detection for the specific use case is described. Later the process of implemention and the results are presented.
+\subsection{Inverter data including Anomalies}
+While NLP and image processing tasks are common and a variety of data sets exists, time series data sets are not available that much \shortcite{ma_survey_2023}. Thanks to the employees of SMA a multivariate time series dataset is provided. The specific use case and the structure of the chosen data is described in this section.
 
-While NLP and image processing tasks are common and a variety of data sets exists, time series data sets are not available that much \shortcite{ma_survey_2023}. The transferability between time series datasets is difficult due to the fact that the data between domains is huge \shortcite{ma_survey_2023}
+% Use case for sma
+SMA developes and manufactures inverters for home and commercial use. The inverters convert direct to alternating current or vice versa depending on the use case. They also act as home managers controlling all energy flows in a power plant. Inverters are equipped with several sensors measuring the surroundings and internal states in order to maximize the efficency and to avoid system failures. Sometimes system failures appear still which raises the question if this could have been foreseen by analyzing the gathered sensor data during runtime. The first step to reach such a forecasting tool is to detect the anomalies in recorded sensor data. The implementation of the chosen methods is therefore done on inverter data provided by the company.
 
-In the test data the learning data is seperate from the data including anomalies. The important thing about Zero Shot Learning is that a specific anomaly never occured like this before. In the test data, all chosen representation learning techniques are applied using the same data for learning and afterwards testing the anomaly detection with the same anomalies. According to chapter (Evaluation) the characteristics are evaluated for each RL technique chosen in the previous chapter.
+% Features in data
+The variables contain measurements of current and voltage of all phases in AC and the generated DC sources. Additionally temperatures, CPU usage, internal parameter settings and many other measurements are included. The total number of features is 137.
+% Features,True/False,Description
+% AMaxSpt,FALSE,
+% AcSwStt,NotAvailable,becomes low at the error timestamp
+% BCErrCnt,FALSE,
+% BrkCtlStt,TRUE,becomes obviously high
+% CapacSwStt,NotAvailable,becomes high for a long duration like more than a day
+% Cnt_AcSw,FALSE,
+% Cnt_CapacSw,TRUE,
+% Cnt_DcSw1,TRUE,
+% Cnt_DcSw2,TRUE,
+% Cnt_DcSw3,TRUE,
+% Cnt_FanCab1Tm,FALSE,
+% Cnt_FanStkTm,FALSE,
+% Cnt_FrtDet,FALSE,
+% Cnt_GfdiSw,FALSE,
+% Cnt_TotAcWhOut,FALSE,
+% Cpu1Lod,Not Sure,there is some abnormality at the error timestamps
+% Cpu2_FstStop_ErrStt,FALSE,
+% Cpu2Lod,FALSE,
+% Cpu2OpStt,NotAvailable,there is a wide gap after the error timestamps
+% DcMs_Amp_Stk1,TRUE,there is a wide gap after the error timestamps
+% DcMs_Amp_Stk2,TRUE,there is a wide gap after the error timestamps
+% DcMs_Amp_Stk3,TRUE,there is a wide gap after the error timestamps
+% DcMs_TotAmp,TRUE,there is a wide gap after the error timestamps
+% DcMs_TotWatt,TRUE,there is a wide gap after the error timestamps
+% DcMs_Vol,FALSE,
+% DcMs_Vol_NegGnd,Not Sure,high for few files  and not sure for feww files
+% DcMs_Vol_PosGnd,Not Sure,high for few files  and not sure for feww files
+% DcMs_Watt_Stk1,TRUE,becomes low at errr timestamps
+% DcMs_Watt_Stk2,TRUE,becomes low at errr timestamps
+% DcMs_Watt_Stk3,TRUE,becomes low at errr timestamps
+% DcSw1Stt,NotAvailable,becomes low at errr timestamps
+% DcSw2Stt,NotAvailable,becomes low at errr timestamps
+% DcSw3Stt,NotAvailable,becomes low at errr timestamps
+% Dcc_Err_Fpga,FALSE,
+% Dcc_Err_FpgaCom,FALSE,
+% Dcc_Err_SwWd,FALSE,
+% Dcc_FsReason,TRUE,becomes high
+% Dcc_FstStop_Exl,TRUE,becomes high
+% DrtCabTmp,FALSE,
+% DrtIgbtTmp,FALSE,
+% DrtStt,FALSE,
+% ErrBits,FALSE,
+% ErrBitsIpc1,TRUE,
+% ErrBitsIpc2,FALSE,
+% ErrLcn,FALSE,
+% ErrLcnSma,FALSE,
+% ErrNo,FALSE,
+% ErrNoSma,FALSE,
+% ErrNoSmaMem1,FALSE,
+% ErrNoSmaMem2,FALSE,
+% ErrNoSmaMem3,FALSE,
+% ErrReg_Acc1,TRUE,
+% ErrReg_Fpga_Stop,FALSE,
+% ErrReg_Stk1,FALSE,
+% ErrReg_Stk1_PhsA_Bot,FALSE,
+% ErrReg_Stk1_PhsA_Top,FALSE,
+% ErrReg_Stk1_PhsB_Bot,FALSE,
+% ErrReg_Stk1_PhsB_Top,FALSE,
+% ErrReg_Stk1_PhsC_Bot,FALSE,
+% ErrReg_Stk1_PhsC_Top,FALSE,
+% ErrReg_Stk2,FALSE,
+% ErrReg_Stk2_PhsA_Bot,FALSE,
+% ErrReg_Stk2_PhsA_Top,FALSE,
+% ErrReg_Stk2_PhsB_Bot,FALSE,
+% ErrReg_Stk2_PhsB_Top,FALSE,
+% ErrReg_Stk2_PhsC_Bot,FALSE,
+% ErrReg_Stk2_PhsC_Top,FALSE,
+% ErrReg_Stk3,FALSE,
+% ErrReg_Stk3_PhsA_Bot,FALSE,
+% ErrReg_Stk3_PhsA_Top,FALSE,
+% ErrReg_Stk3_PhsB_Bot,FALSE,
+% ErrReg_Stk3_PhsB_Top,FALSE,
+% ErrReg_Stk3_PhsC_Bot,FALSE,
+% ErrReg_Stk3_PhsC_Top,FALSE,
+% ErrVecFrmExt,TRUE,becomes high
+% FanCab_SptPct,TRUE,becomes low and wide gap
+% FanCtl_Stt,NotAvailable,becomes low and wide gap
+% FanStk_Pct,TRUE,becomes low and wide gap
+% FanStk_SptPct,TRUE,becomes low and wide gap
+% GfdiSwStt,NotAvailable,
+% GriErr1,FALSE,
+% GriErr2,FALSE,
+% GriInf,FALSE,
+% GriMs_Hz,Not Sure,
+% GriMs_V_PhsAB,FALSE,
+% GriMs_V_PhsBC,FALSE,
+% GriMs_V_PhsCA,FALSE,
+% GriMs_Vol_PsD,FALSE,
+% InfBits,FALSE,
+% InvMs_A_AcGnd,TRUE,becomes high
+% InvMs_A_Stk1_PhsA,TRUE,becomes low and wide gap
+% InvMs_A_Stk1_PhsB,TRUE,becomes low and wide gap
+% InvMs_A_Stk1_PhsC,TRUE,becomes low and wide gap
+% InvMs_A_Stk2_PhsA,TRUE,becomes low and wide gap
+% InvMs_A_Stk2_PhsB,TRUE,becomes low and wide gap
+% InvMs_A_Stk2_PhsC,TRUE,becomes low and wide gap
+% InvMs_A_Stk3_PhsA,TRUE,becomes low and wide gap
+% InvMs_A_Stk3_PhsB,TRUE,becomes low and wide gap
+% InvMs_A_Stk3_PhsC,TRUE,becomes low and wide gap
+% InvMs_A_TrmsCap,TRUE,becomes low and wide gap
+% InvMs_DclVol_Stk1,TRUE,becomes low and wide gap
+% InvMs_DclVol_Stk2,TRUE,becomes low and wide gap
+% InvMs_DclVol_Stk3,TRUE,becomes low and wide gap
+% InvMs_Eff,TRUE,becomes low and wide gap
+% InvMs_PF,TRUE,becomes low and wide gap
+% InvMs_TotA_PhsA,TRUE,becomes low and wide gap
+% InvMs_TotA_PhsB,TRUE,becomes low and wide gap
+% InvMs_TotA_PhsC,TRUE,becomes low and wide gap
+% InvMs_TotVA,TRUE,becomes low and wide gap
+% InvMs_TotVAr,TRUE,becomes low and wide gap
+% InvMs_TotW,TRUE,becomes low and wide gap
+% InvMs_V_PhsAB,TRUE,becomes low and wide gap
+% InvMs_V_PhsBC,TRUE,becomes low and wide gap
+% InvMs_V_PhsCA,TRUE,becomes low and wide gap
+% InvMs_Vol_PsD,TRUE,becomes low and wide gap
+% Mpp_PvVolSpt,TRUE,becomes low and wide gap
+% MppStt,NotAvailable,becomes high and wide gap
+% OpStt,NotAvailable,becomes high and wide gap
+% PFSpt,FALSE,
+% PvGnd_RisIso,FALSE,
+% PvGndErr,FALSE,
+% Rio_Din_FbCbSup,FALSE,
+% Rio_Dout_DeHyd,FALSE,
+% Rio_Err_Exs,FALSE,
+% Rio_Err_SwWd,FALSE,
+% Rio_FsReason,FALSE,
+% Rio_FstStop_Emg,FALSE,
+% Rio_FstStop_Exl,TRUE,becomes high and wide gap
+% Rio_FstStop_UsrSpc,FALSE,
+% Rio_KeySw,NotAvailable,becomes high and wide gap
+% RlHmdtAcc,FALSE,
+% RlHmdtDcc,FALSE,
+% RlHmdtRio,FALSE,
+% SnsErr,FALSE,
+% StbyBits,TRUE,
+% TmpCab_Acc,TRUE,
+% TmpCab_Dcc,TRUE,
+% TmpCab_Max,TRUE,
+% TmpCab_Rio,TRUE,
+% TmpCab_Spt,FALSE,
+% TmpExl,TRUE,
+% TmpStk_IgbtMax,TRUE,
+% TmpStk_IgbtSpt,FALSE,
+% TmpStk_PcbMax,TRUE,
+% TmpStk1_Igbt,TRUE,
+% TmpStk1_Igbt_PhsA_Bot,TRUE,
+% TmpStk1_Igbt_PhsA_Top,TRUE,
+% TmpStk1_Igbt_PhsB_Bot,TRUE,
+% TmpStk1_Igbt_PhsB_Top,TRUE,
+% TmpStk1_Igbt_PhsC_Bot,TRUE,
+% TmpStk1_Igbt_PhsC_Top,TRUE,
+% TmpStk2_Igbt,TRUE,
+% TmpStk2_Igbt_PhsA_Bot,TRUE,
+% TmpStk2_Igbt_PhsA_Top,TRUE,
+% TmpStk2_Igbt_PhsB_Bot,TRUE,
+% TmpStk2_Igbt_PhsB_Top,TRUE,
+% TmpStk2_Igbt_PhsC_Bot,TRUE,
+% TmpStk2_Igbt_PhsC_Top,TRUE,
+% TmpStk3_Igbt,TRUE,
+% TmpStk3_Igbt_PhsA_Bot,TRUE,
+% TmpStk3_Igbt_PhsA_Top,TRUE,
+% TmpStk3_Igbt_PhsB_Bot,TRUE,
+% TmpStk3_Igbt_PhsB_Top,TRUE,
+% TmpStk3_Igbt_PhsC_Bot,TRUE,
+% TmpStk3_Igbt_PhsC_Top,TRUE,
+% TmpTrf,FALSE,
+% TrfPro_TmpTrp,FALSE,
+% VAMaxSpt,FALSE,
+% VArSpt,FALSE,
+% VolNomSpt,FALSE,
+% WSpt,FALSE,
+% WaitGriRsReas,FALSE,
+% WaitGriTm,FALSE,
 
-% SMD
-To test the model with anomalies in a consistent data set the Server Machine Dataset (SMD) provided by \shortciteA{su_robust_2019} is used. The SMD is a 5-week-long dataset made up by data from 28 different machines. The anomalies are pre labeled.
+The values are collectively stored at a 7 minute interval over several months. 19 inverters that had system failures at some point are taken into account. These failure time stamps are known and added as an additional feature with a binary value of 1. Every other error bit is 0. The data is collected between 2018 and 2020 and the locations of the inverters cannot be provided. 
+
+% TODO DEfiniton of training and test data 
+% In the test data the learning data is seperate from the data including anomalies. The important thing about Zero Shot Learning is that a specific anomaly never occured like this before. In the test data, all chosen representation learning techniques are applied using the same data for learning and afterwards testing the anomaly detection with the same anomalies. According to chapter (Evaluation) the characteristics are evaluated for each RL technique chosen in the previous chapter.
+
+\subsection{Implemented Methods}
+% TODO Include Link to code repo
+
+% TS2Vec
+\subsubsection{TS2Vec}
+The paper providing TS2Vec claims the model to be prepared for multiple variables. However the anomaly detection training data was univariate \shortcite{yue_ts2vec_2022}.
+
+% Moment
+\subsubsection{Moment}
+
+%Carla
+\subsubsection{CARLA}
 
 % Implementation Steps for CARLA
 %
@@ -86,8 +276,7 @@ To test the model with anomalies in a consistent data set the Server Machine Dat
 %
 % For more details, you can refer to the original CARLA paper​ (ar5iv)​.
 %
-% Like our GPT? Try our full AI-powered search engine and academic features for free at consensus.app.
-% Neue Version von GPT verfügbar – Chatte weiter mit der alten Version oder beginne einen neuen Chat, um die neueste Version zu erhalten.
-how to inject artificial \shortcite{darban_carla_2024} /real anomalies. Which real world scenarios do we have? Are there anomalies in SMA data?
+
+
 \subsection{Results}
 % TODO Maybe like in \shortciteA[p. 19]{darban_carla_2024}
