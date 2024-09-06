@@ -183,9 +183,9 @@ The variables contain measurements of current and voltage of all phases in AC an
 % WaitGriRsReas,FALSE,
 % WaitGriTm,FALSE,
 
-The values are collectively stored at a 7 minute interval over several months. 19 inverters that had system failures at some point are taken into account. These failure time stamps are known and added as an additional feature with a binary value of 1. Every other error bit is 0. The data is collected between 2018 and 2020 and the locations of the inverters cannot be provided. 
+The values are collectively stored at a 7 minute interval over several months. 19 inverters that had system failures at some point are taken into account. These failure time stamps are known and added as an additional feature with a binary value of 1. Every other error bit is 0. The data is collected between 2018 and 2020 and the locations of the inverters cannot be provided.
 
-% TODO DEfiniton of training and test data 
+% TODO DEfiniton of training and test data
 % In the test data the learning data is seperate from the data including anomalies. The important thing about Zero Shot Learning is that a specific anomaly never occured like this before. In the test data, all chosen representation learning techniques are applied using the same data for learning and afterwards testing the anomaly detection with the same anomalies. According to chapter (Evaluation) the characteristics are evaluated for each RL technique chosen in the previous chapter.
 
 \subsection{Implemented Methods}
@@ -193,6 +193,7 @@ The values are collectively stored at a 7 minute interval over several months. 1
 
 % TS2Vec
 \subsubsection{TS2Vec}
+An implemention of the model TS2Vec is done by the authors using Python. It is available under github.com/yuezhihan/ts2vec
 The paper providing TS2Vec claims the model to be prepared for multiple variables. However the anomaly detection training data was univariate \shortcite{yue_ts2vec_2022}.
 
 % Moment

@@ -1,47 +1,44 @@
 \begin{longtable}[]{@{}llllll@{}}
-\toprule
-Method Name & Author & Concept & MV & ZSL &
-Implementation\tabularnewline
-\midrule
+\toprule\noalign{}
+Method Name & Author & Concept & MV & ZSL & OSA \\
+\midrule\noalign{}
 \endhead
-INRAD & Jeong et al. & MLP & & no & good\tabularnewline
-OmniAnomaly & Su et al. & RNN & & no &
-github.com/smallcowbaby/OmniAnomaly\tabularnewline
-& Kravchik et al. & CNN & & no &\tabularnewline
-& He et al. & CNN & & no & difficult\tabularnewline
-& Zhang et al. & CL & & yes & difficult\tabularnewline
-CARLA & Darban et al. & CL & & no &\tabularnewline
-CL-TAD & Ngu et al. & CL & & yes &\tabularnewline
-COCA & Wang et al. & CL & & no &\tabularnewline
-& Lee et al. & CL & & &\tabularnewline
-& Chen et al. & CL & & no &\tabularnewline
-TS2Vec & Yue et al. & CL & & &
-github.com/yuezhihan/ts2vec\tabularnewline
-TimeAutoAD & Jiao et al. & CL & & no &\tabularnewline
-ContrastAD & Li et al. & CL & & no &\tabularnewline
-Dcdetector & Yang et al. & CL & & no &\tabularnewline
-TRL-CPC & Pranavan et al. & CL & & no &\tabularnewline
-TiCTok & Kang et al. & CL & & no &\tabularnewline
-MGCLAD & Qin et al. & CL & & no &\tabularnewline
-TriAD & Sun & CL & & no &\tabularnewline
-UCAE-TENN & Nivarthi et al. & AE & & &\tabularnewline
-MAEDAY & Schwartz et al. & AE & & &\tabularnewline
-& Pereira et al. & AE & & &\tabularnewline
-& Ramirez et al. & AE & & &\tabularnewline
-& & & & &\tabularnewline
-MOMENT & Goswami et al. & T & & yes & python library\tabularnewline
-& Li et al. & & & &\tabularnewline
-& Beggel et al. & SL & & &\tabularnewline
-& Alshaer et al. & SL & & &\tabularnewline
-& Aota et al. & & & &\tabularnewline
-TranAD & Tuli et al. & T & & &
-github.com/imperial-quore/TranAD\tabularnewline
-& Ye et al. & T & & &\tabularnewline
+\bottomrule\noalign{}
+\endlastfoot
+INRAD & Jeong et al. & MLP & & \xmark & good \\
+OmniAnomaly & Su et al. & RNN & & \xmark & \cmark \\
+& Kravchik et al. & CNN & & \xmark & \\
+& He et al. & CNN & & \xmark & difficult \\
+& Zhang et al. & CL & & \cmark & difficult \\
+CARLA & Darban et al. & CL & & \xmark & \\
+CL-TAD & Ngu et al. & CL & & \cmark & \\
+COCA & Wang et al. & CL & & \xmark & \\
+& Lee et al. & CL & & & \\
+& Chen et al. & CL & & \xmark & \\
+TS2Vec & Yue et al. & CL & \cmark & \cmark & \cmark \\
+TimeAutoAD & Jiao et al. & CL & & \xmark & \\
+ContrastAD & Li et al. & CL & & \xmark & \\
+Dcdetector & Yang et al. & CL & & \xmark & \\
+TRL-CPC & Pranavan et al. & CL & & \xmark & \\
+TiCTok & Kang et al. & CL & & \xmark & \\
+MGCLAD & Qin et al. & CL & & \xmark & \\
+TriAD & Sun & CL & & \xmark & \\
+UCAE-TENN & Nivarthi et al. & AE & & & \\
+MAEDAY & Schwartz et al. & AE & & & \\
+& Pereira et al. & AE & & & \\
+& Ramirez et al. & AE & & & \\
+& & & & & \\
+MOMENT & Goswami et al. & T & & \cmark & \cmark \\
+& Li et al. & & & & \\
+& Beggel et al. & SL & & & \\
+& Alshaer et al. & SL & & & \\
+& Aota et al. & & & & \\
+TranAD & Tuli et al. & T & & & github.com/imperial-quore/TranAD \\
+& Ye et al. & T & & & \\
 AnomalyTransformer & Xu et al. & T & & &
-github.com/thuml/Anomaly-Transformer\tabularnewline
+github.com/thuml/Anomaly-Transformer \\
 RANSynCoders & Abdulaal et al. & AE & & &
-github.com/eBay/RANSynCoders\tabularnewline
-& Li et al. & C & & &\tabularnewline
-& Zhang et al. & AE & & yes &\tabularnewline
-\bottomrule
+github.com/eBay/RANSynCoders \\
+& Li et al. & C & & & \\
+& Zhang et al. & AE & & \cmark & \\
 \end{longtable}

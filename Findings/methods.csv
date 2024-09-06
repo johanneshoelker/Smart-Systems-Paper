@@ -1,6 +1,6 @@
-Method Name,Author,Concept,MV,ZSL,Implementation
+Method Name,Author,Concept,MV,ZSL,OSA
 INRAD,Jeong et al.,MLP,,no,good
-OmniAnomaly,Su et al.,RNN,,no,github.com/smallcowbaby/OmniAnomaly
+OmniAnomaly,Su et al.,RNN,,no,yes
 ,Kravchik et al.,CNN,,no,
 ,He et al.,CNN,,no,difficult
 ,Zhang et al.,CL,,yes,difficult
@@ -9,7 +9,7 @@ CL-TAD,Ngu et al.,CL,,yes,
 COCA,Wang et al.,CL,,no,
 ,Lee et al.,CL,,,
 ,Chen et al.,CL,,no,
-TS2Vec,Yue et al.,CL,,,github.com/yuezhihan/ts2vec
+TS2Vec,Yue et al.,CL,yes,yes,yes
 TimeAutoAD,Jiao et al.,CL,,no,
 ContrastAD,Li et al. ,CL,,no,
 Dcdetector,Yang et al.,CL,,no,
@@ -22,7 +22,7 @@ MAEDAY,Schwartz et al.,AE,,,
 ,Pereira et al.,AE,,,
 ,Ramirez et al.,AE,,,
 ,,,,,
-MOMENT,Goswami et al.,T,,yes,python library
+MOMENT,Goswami et al.,T,,yes,yes
 ,Li et al.,,,,
 ,Beggel  et al.,SL,,,
 ,Alshaer  et al.,SL,,,
