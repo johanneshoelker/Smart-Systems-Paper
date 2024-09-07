@@ -313,6 +313,25 @@
 	pages = {3033--3045},
 }
 
+@article{li_dct-gan_2023,
+	title = {{DCT}-{GAN}: {Dilated} {Convolutional} {Transformer}-{Based} {GAN} for {Time} {Series} {Anomaly} {Detection}},
+	volume = {35},
+	issn = {1558-2191},
+	shorttitle = {{DCT}-{GAN}},
+	url = {https://ieeexplore.ieee.org/document/9626552/?arnumber=9626552},
+	doi = {10.1109/TKDE.2021.3130234},
+	abstract = {Time series anomaly detection (TSAD) is an essential problem faced in several fields, e.g., fault detection, fraud detection, and intrusion detection, etc. Although TSAD is a crucial problem in anomaly detection, few solutions in anomaly detection are suitable for it at present. Recently, some researchers use GAN-based methods such as TAnoGAN and TadGAN to solve TSAD problem. However, problems such as model collapse, low generalization capability and poor accuracy still exist. In this article, we proposed a Dilated Convolutional Transformer-based GAN (DCT-GAN) to enhance accuracy and improve generalization capability of the model. Specifically, DCT-GAN utilize several generators and a single discriminator to alleviate the mode collapse problem. Each generator consists of a dilated convolutional neural network and a Transformer block to obtain fine-grained and coarse-grained information of the time series, which is a useful component to improve generalization capability. We also use weight-based mechanism to balance these generators. Experiments verify the effectiveness of our method and each part of DCT-GAN.},
+	number = {4},
+	urldate = {2024-09-07},
+	journal = {IEEE Transactions on Knowledge and Data Engineering},
+	author = {Li, Yifan and Peng, Xiaoyan and Zhang, Jia and Li, Zhiyong and Wen, Ming},
+	month = apr,
+	year = {2023},
+	note = {Conference Name: IEEE Transactions on Knowledge and Data Engineering},
+	keywords = {Anomaly detection, Convolutional neural networks, Data models, Generative adversarial networks, Generators, Time series analysis, Transformers, dilated convolutional neural network, generative adversarial network, time series analysis, transformer, weight-based mechanism},
+	pages = {3632--3644},
+}
+
 @article{zhang_debiased_2024,
 	title = {Debiased {Contrastive} {Learning} for {Time}-{Series} {Representation} {Learning} and {Fault} {Detection}},
 	volume = {20},
@@ -329,6 +348,24 @@
 	month = may,
 	year = {2024},
 	pages = {7641--7653},
+}
+
+@article{wu_decompose_2023,
+	title = {Decompose {Auto}-{Transformer} {Time} {Series} {Anomaly} {Detection} for {Network} {Management}},
+	volume = {12},
+	copyright = {https://creativecommons.org/licenses/by/4.0/},
+	issn = {2079-9292},
+	url = {https://www.mdpi.com/2079-9292/12/2/354},
+	doi = {10.3390/electronics12020354},
+	abstract = {Time series anomaly detection through unsupervised methods has been an active research area in recent years due to its enormous potential for networks management. The representation and reconstruction of time series have made extraordinary progress in existing works. However, time series is known to be complex in terms of their temporal dependency and stochasticity, which makes anomaly detection difficult. To this end, we propose a novel approach based on a decomposition auto-transformer networks(DATN) for time series anomaly detection. The time series is decomposed into seasonal and trend components, and renovated as a basic inner block deep model. With this design, transformers can decompose complex time series in a progressive manner. We also design an auto-transfomer block that determines dependencies and representation aggregation at the sub-series level based on series seasonal and trend components. Moreover, the complex transformer decoder is replaced by a simple linear decoder, which makes the model more efficient. Extensive experiments on various public benchmarks demonstrate that our method has achieved state-of-the-art performance.},
+	language = {en},
+	number = {2},
+	urldate = {2024-09-07},
+	journal = {Electronics},
+	author = {Wu, Bo and Fang, Chao and Yao, Zhenjie and Tu, Yanhui and Chen, Yixin},
+	month = jan,
+	year = {2023},
+	pages = {354},
 }
 
 @inproceedings{mou_deep_2023,
@@ -759,6 +796,25 @@ Conclusions: Currently, the topic areas covered by SLRs are limited. European re
 	pages = {7--15},
 }
 
+@article{peng_tcf-trans_2023,
+	title = {{TCF}-{Trans}: {Temporal} {Context} {Fusion} {Transformer} for {Anomaly} {Detection} in {Time} {Series}},
+	volume = {23},
+	copyright = {https://creativecommons.org/licenses/by/4.0/},
+	issn = {1424-8220},
+	shorttitle = {{TCF}-{Trans}},
+	url = {https://www.mdpi.com/1424-8220/23/20/8508},
+	doi = {10.3390/s23208508},
+	abstract = {Anomaly detection tasks involving time-series signal processing have been important research topics for decades. In many real-world anomaly detection applications, no speciﬁc distributions ﬁt the data, and the characteristics of anomalies are different. Under these circumstances, the detection algorithm requires excellent learning ability of the data features. Transformers, which apply the self-attention mechanism, have shown outstanding performances in modelling long-range dependencies. Although Transformer based models have good prediction performance, they may be inﬂuenced by noise and ignore some unusual details, which are signiﬁcant for anomaly detection. In this paper, a novel temporal context fusion framework: Temporal Context Fusion Transformer (TCF-Trans), is proposed for anomaly detection tasks with applications to time series. The original feature transmitting structure in the decoder of Informer is replaced with the proposed feature fusion decoder to fully utilise the features extracted from shallow and deep decoder layers. This strategy prevents the decoder from missing unusual anomaly details while maintaining robustness from noises inside the data. Besides, we propose the temporal context fusion module to adaptively fuse the generated auxiliary predictions. Extensive experiments on public and collected transportation datasets validate that the proposed framework is effective for anomaly detection in time series. Additionally, the ablation study and a series of parameter sensitivity experiments show that the proposed method maintains high performance under various experimental settings.},
+	language = {en},
+	number = {20},
+	urldate = {2024-09-07},
+	journal = {Sensors},
+	author = {Peng, Xinggan and Li, Hanhui and Lin, Yuxuan and Chen, Yongming and Fan, Peng and Lin, Zhiping},
+	month = oct,
+	year = {2023},
+	pages = {8508},
+}
+
 @article{thill_temporal_2021,
 	title = {Temporal convolutional autoencoder for unsupervised anomaly detection in time series},
 	volume = {112},
@@ -908,6 +964,21 @@ Conclusions: Currently, the topic areas covered by SLRs are limited. European re
 	month = may,
 	year = {2022},
 	pages = {1604--1619},
+}
+
+@misc{doshi_tisat_2022,
+	title = {{TiSAT}: {Time} {Series} {Anomaly} {Transformer}},
+	shorttitle = {{TiSAT}},
+	url = {http://arxiv.org/abs/2203.05167},
+	abstract = {While anomaly detection in time series has been an active area of research for several years, most recent approaches employ an inadequate evaluation criterion leading to an inﬂated F1 score. We show that a rudimentary Random Guess method can outperform state-of-the-art detectors in terms of this popular but faulty evaluation criterion. In this work, we propose a proper evaluation metric that measures the timeliness and precision of detecting sequential anomalies. Moreover, most existing approaches are unable to capture temporal features from long sequences. Self-attention based approaches, such as transformers, have been demonstrated to be particularly efﬁcient in capturing long-range dependencies while being computationally efﬁcient during training and inference. We also propose an efﬁcient transformer approach for anomaly detection in time series and extensively evaluate our proposed approach on several popular benchmark datasets.},
+	language = {en},
+	urldate = {2024-09-07},
+	publisher = {arXiv},
+	author = {Doshi, Keval and Abudalou, Shatha and Yilmaz, Yasin},
+	month = mar,
+	year = {2022},
+	note = {arXiv:2203.05167 [cs, eess, stat]},
+	keywords = {Computer Science - Machine Learning, Electrical Engineering and Systems Science - Signal Processing, Statistics - Machine Learning},
 }
 
 @inproceedings{nivarthi_towards_2023,

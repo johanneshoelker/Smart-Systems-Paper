@@ -123,22 +123,22 @@ The paper by \shortciteA{zhang_unknown_2020} addresses the challenge of detectin
 % TODO
 \shortcite{mou_deep_2023}
 
-% TODO
+% VRQRAE TODO
 \shortcite{kieu_anomaly_2022}
 
-% TODO
+% TCN-AE TODO
 \shortcite{thill_temporal_2021}
 
 % MEGA TODO
 \shortcite{wang_multiscale_2023}
 
-% TODO
+% DAEMONTODO
 \shortcite{chen_adversarial_2023}
 
-% TODO
+% TSMAE TODO
 \shortcite{gao_tsmae_2023}
 
-% TODO
+% GRU-AE TODO
 \shortcite{gong_autoencoder-based_2022}
 
 
@@ -150,10 +150,23 @@ The paper by \shortciteA{zhang_unknown_2020} addresses the challenge of detectin
 % MOMENT
 To overcome the challenge of poorly available time series data sets \shortcite{ma_survey_2023}, the model family MOMENT tries to learn general patterns on a pile of time series data \shortcite{goswami_moment_2024}. The pile is a collection of different datasets which they assembled for their pretraining. According to the paper minimal finetuning is needed to perform well on time series tasks like anomaly detection. They published the model and made the usage easily accessible with its own python library. The constructed time serie pile consists of a widespread list of domains including weather measurements, sensor values and power consumption datasets. They also included tongue and finger movement of humans. The different tasks which the model is evaluated on are forecasting (long and short horizon), classification, anomaly detection and imputation. Except for short-horizon forecasting all tasks are managed well.
 
-% LLMs
-Based on the transformer architecture, Large Language Models (LLM) are developed and used increasingly in different applications. Known as chatbots they can help in language specific tasks. Beside that they can be used in anomaly detection and forecasting. \shortciteA{su_large_2024} examine a literature review on how LLMs perform on anomaly detection tasks concerning time series data. LLMs in anomaly detection are specifically useful when the time series data is in the form of words. THis can be the case in log analysis. Logs are generated over time and hold a lot of information which can singify errors and system failures. They conclude that LLMs have potential in detecting anomalies but challenges remain. The occurrence of hallucinations and the need for computational efficiency to name a few \shortcite{su_large_2024}.
+% DATN TODO
+\shortcite{wu_decompose_2023}
 
-A method detecting anomalies in tabular data is presented by \shortciteA{li_anomaly_2024}. In order to perform tasks that LLMs are not directly build for they generate synthetic datasets. Using these datasets LLMs and specifically GPT-4 have comparable performance with transductive learning methods \shortcite[p. 6]{li_anomaly_2024}.
+% TiSAT TODO
+\shortcite{doshi_tisat_2022}
+
+% TCF-Trans TODO
+\shortcite{peng_tcf-trans_2023}
+
+% DCT-GAN TODO
+\shortcite{li_dct-gan_2023}
+
+
+% LLMs
+Based on the transformer architecture, Large Language Models (LLM) are developed and used increasingly in different applications. Known as chatbots they can help in language specific tasks. Beside that they can be used in anomaly detection and forecasting. \shortciteA{su_large_2024} examine a literature review on how LLMs perform on anomaly detection tasks concerning time series data. LLMs in anomaly detection are specifically useful when the time series data is in the form of words. This can be the case in log analysis. Logs are generated over time and hold a lot of information which can singify errors and system failures. They conclude that LLMs have potential in detecting anomalies but challenges remain. The occurrence of hallucinations and the need for computational efficiency to name a few.
+
+A method detecting anomalies in tabular data using LLMs is presented by \shortciteA{li_anomaly_2024}. In order to perform tasks that LLMs are not directly build for they generate synthetic datasets. Using these datasets LLMs and specifically GPT-4 have comparable performance with transductive learning methods \shortcite[p. 6]{li_anomaly_2024}.
 
 % Fourier
 Using Fourier Analysis and the transformer architecture \shortciteA{ye_multivariate_2023} detect anomalies in time series data. The encoder of a transformer is used to capture temporal features of time series. They detect frequencies by using Fourier Analysis.
@@ -177,3 +190,6 @@ While both methods utilize shapelet learning, Beggel et al. focus on static data
 \shortciteA{li_clustering-based_2021} propose a method for detecting anomalies in multivariate time series by combining clustering and reconstruction techniques. The authors use a sliding window approach to generate subsequences from the multivariate time series, then apply extended fuzzy clustering to reveal the underlying structure of the subsequences. By reconstructing these subsequences with optimal cluster centers, the method detects anomalies based on how well the reconstructed data fits the original subsequences. A confidence index quantifies the level of detected anomalies. The approach is shown to effectively detect anomalies related to amplitude and shape changes in various application domains, such as healthcare and finance, and is optimized using Particle Swarm Optimization.
 
 % TODO include benchmark methods from \shortciteA[p. 19]{darban_carla_2024}
+
+% LSTM based TODO
+\shortcite{niu_lstm-based_2020}
