@@ -16,6 +16,20 @@
 	pages = {43--76},
 }
 
+@misc{liang_shapelet-based_2024,
+	title = {A {Shapelet}-based {Framework} for {Unsupervised} {Multivariate} {Time} {Series} {Representation} {Learning}},
+	url = {http://arxiv.org/abs/2305.18888},
+	doi = {10.14778/3632093.3632103},
+	abstract = {Recent studies have shown great promise in unsupervised representation learning (URL) for multivariate time series, because URL has the capability in learning generalizable representation for many downstream tasks without using inaccessible labels. However, existing approaches usually adopt the models originally designed for other domains (e.g., computer vision) to encode the time series data and rely on strong assumptions to design learning objectives, which limits their ability to perform well. To deal with these problems, we propose a novel URL framework for multivariate time series by learning time-series-specific shapelet-based representation through a popular contrasting learning paradigm. To the best of our knowledge, this is the first work that explores the shapelet-based embedding in the unsupervised general-purpose representation learning. A unified shapelet-based encoder and a novel learning objective with multi-grained contrasting and multi-scale alignment are particularly designed to achieve our goal, and a data augmentation library is employed to improve the generalization. We conduct extensive experiments using tens of real-world datasets to assess the representation quality on many downstream tasks, including classification, clustering, and anomaly detection. The results demonstrate the superiority of our method against not only URL competitors, but also techniques specially designed for downstream tasks. Our code has been made publicly available at https://github.com/real2fish/CSL.},
+	language = {en},
+	urldate = {2024-09-07},
+	author = {Liang, Zhiyu and Zhang, Jianfeng and Liang, Chen and Wang, Hongzhi and Liang, Zheng and Pan, Lujia},
+	month = aug,
+	year = {2024},
+	note = {arXiv:2305.18888 [cs]},
+	keywords = {Computer Science - Machine Learning},
+}
+
 @article{sun_survey_2021,
 	title = {A {Survey} on {Deep} {Learning} for {Data}-{Driven} {Soft} {Sensors}},
 	volume = {17},
@@ -470,6 +484,22 @@
 	abstract = {Real-time lightweight time series anomaly detection has become increasingly crucial in cybersecurity and many other domains. Its ability to adapt to unforeseen pattern changes and swiftly identify anomalies enables prompt responses and critical decision-making. While several such anomaly detection approaches have been introduced in recent years, they primarily utilize a single type of recurrent neural networks (RNNs) and have been implemented in only one deep learning framework. It is unclear how the use of different types of RNNs available in various deep learning frameworks affects the performance of these anomaly detection approaches due to the absence of comprehensive evaluations. Arbitrarily choosing a RNN variant and a deep learning framework to implement an anomaly detection approach may not reflect its true performance and could potentially mislead users into favoring one approach over another. In this paper, we aim to study the influence of various types of RNNs available in popular deep learning frameworks on real-time lightweight time series anomaly detection. We reviewed several state-of-the-art approaches and implemented a representative anomaly detection approach using well-known RNN variants supported by three widely recognized deep learning frameworks. A comprehensive evaluation is then conducted to analyze the performance of each implementation across real-world, open-source time series datasets. The evaluation results provide valuable guidance for selecting the appropriate RNN variant and deep learning framework for real-time, lightweight time series anomaly detection.},
 	language = {en},
 	author = {Lee’, Ming-Chang and Lin, Jia-Chun and Katsikas, Sokratis},
+}
+
+@inproceedings{li_ips_2022,
+	title = {{IPS}: {Instance} {Profile} for {Shapelet} {Discovery} for {Time} {Series} {Classification}},
+	shorttitle = {{IPS}},
+	url = {https://ieeexplore.ieee.org/document/9835498/?arnumber=9835498},
+	doi = {10.1109/ICDE53745.2022.00179},
+	abstract = {Time series classification (TSC) has been one of the most fundamental problems of time series data. Time series shapelets (or simply, shapelets) are discriminative subsequences that have been recently found both effective and interpretable for solving TSC. However, shapelet discovery is known to be computationally costly. Meanwhile, matrix profile has been recently proposed for efficient motif discovery and anomaly detection. Our preliminary experiment shows that a direct adoption of the matrix profile on TSC does not bring superior classification accuracy. We have identified two main issues of such an adoption: 1) discords as “shapelets”, and 2) lack of shapelet diversity. In response to these issues, we propose instance profile for shapelets, called IPS, for shapelet discovery for TSC. The main challenge is to utilize the instance profile (IP) to capture the characteristics of shapelets in a robust manner and then to discover high-quality shapelets efficiently. First, we use our IP to generate abundant shapelet candidates. We next efficiently prune candidates that do not align with the definition of shapelets using a novel distribution-aware bloom filter (DABF). Three utility functions are proposed to measure the shapelet candidates and DABF is used to efficiently compute the functions. We have conducted comprehensive experiments on IPS with 12 competitive state-of-the-art methods using UCR Archive datasets. The efficiency is on average 25 times faster than that of BSPCOVER (the current state-of-the-art method). The accuracy of IPS is comparable to or higher than that of existing work. Furthermore, we select one case study to illustrate the interpretability of the shapelets.},
+	urldate = {2024-09-07},
+	booktitle = {2022 {IEEE} 38th {International} {Conference} on {Data} {Engineering} ({ICDE})},
+	author = {Li, Guozhong and Choi, Byron and Xu, Jianliang and Bhowmick, Sourav S and Mah, Daphne Ngar-yin and Wong, Grace L.H.},
+	month = may,
+	year = {2022},
+	note = {ISSN: 2375-026X},
+	keywords = {Accuracy, Conferences, Current measurement, Data engineering, Distributed databases, Distribution-aware bloom filter, Efficiency, IP networks, Instance profile, Shape measurement, Time series analysis, Time series classification},
+	pages = {1781--1793},
 }
 
 @misc{su_large_2024,
