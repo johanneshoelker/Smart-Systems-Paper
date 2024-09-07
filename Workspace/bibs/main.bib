@@ -66,6 +66,23 @@
 	keywords = {Computer Science - Artificial Intelligence, Computer Science - Machine Learning},
 }
 
+@inproceedings{chen_adversarial_2023,
+	address = {Singapore Singapore},
+	title = {Adversarial {Autoencoder} for {Unsupervised} {Time} {Series} {Anomaly} {Detection} and {Interpretation}},
+	isbn = {978-1-4503-9407-9},
+	url = {https://dl.acm.org/doi/10.1145/3539597.3570371},
+	doi = {10.1145/3539597.3570371},
+	abstract = {In many complex systems, devices are typically monitored and generating massive multivariate time series. However, due to the complex patterns and little useful labeled data, it is a great challenge to detect anomalies from these time series data. Existing methods either rely on less regularizations, or require a large number of labeled data, leading to poor accuracy in anomaly detection. To overcome the limitations, in this paper, we propose an adversarial autoencoder anomaly detection and interpretation framework named DAEMON, which performs robustly for various datasets. The key idea is to use two discriminators to adversarially train an autoencoder to learn the normal pattern of multivariate time series, and thereafter use the reconstruction error to detect anomalies. The robustness of DAEMON is guaranteed by the regularization of hidden variables and reconstructed data using the adversarial generation method. An unsupervised approach used to detect anomalies is proposed. Moreover, in order to help operators better diagnose anomalies, DAEMON provides anomaly interpretation by computing the gradients of anomalous data. An extensive empirical study on real data offers evidence that the framework is capable of outperforming state-of-the-art methods in terms of the overall F1-score and interpretation accuracy for time series anomaly detection.},
+	language = {en},
+	urldate = {2024-09-06},
+	booktitle = {Proceedings of the {Sixteenth} {ACM} {International} {Conference} on {Web} {Search} and {Data} {Mining}},
+	publisher = {ACM},
+	author = {Chen, Xuanhao and Deng, Liwei and Zhao, Yan and Zheng, Kai},
+	month = feb,
+	year = {2023},
+	pages = {267--275},
+}
+
 @article{garg_evaluation_2022,
 	title = {An {Evaluation} of {Anomaly} {Detection} and {Diagnosis} in {Multivariate} {Time} {Series}},
 	volume = {33},
@@ -100,6 +117,21 @@
 	month = jan,
 	year = {2022},
 	pages = {281--291},
+}
+
+@inproceedings{kieu_anomaly_2022,
+	title = {Anomaly {Detection} in {Time} {Series} with {Robust} {Variational} {Quasi}-{Recurrent} {Autoencoders}},
+	url = {https://ieeexplore.ieee.org/document/9835268/?arnumber=9835268},
+	doi = {10.1109/ICDE53745.2022.00105},
+	abstract = {We propose variational quasi-recurrent autoencoders (VQRAEs) to enable robust and efficient anomaly detection in time series in unsupervised settings. The proposed VQRAEs employs a judiciously designed objective function based on robust divergences, including a, ß, and, -divergence, making it possible to separate anomalies from normal data without the reliance on anomaly labels, thus achieving robustness and fully unsupervised training. To better capture temporal dependencies in time series data, VQRAEs are built upon quasi-recurrent neural networks, which employ convolution and gating mechanisms to avoid the inefficient recursive computations used by classic recurrent neural networks. Further, VQRAEs can be extended to bi-directional Bi VQRAEs that utilize bi-directional information to further improve the accuracy. The above design choices make VQRAEs not only robust and thus accurate, but also efficient at detecting anomalies in streaming settings. Experiments on five real-world time series offer insight into the design properties of VQRAEs and demonstrate that VQRAEs are capable of outperforming state-of-the-art methods.},
+	urldate = {2024-09-06},
+	booktitle = {2022 {IEEE} 38th {International} {Conference} on {Data} {Engineering} ({ICDE})},
+	author = {Kieu, Tung and Yang, Bin and Guo, Chenjuan and Cirstea, Razvan-Gabriel and Zhao, Yan and Song, Yale and Jensen, Christian S.},
+	month = may,
+	year = {2022},
+	note = {ISSN: 2375-026X},
+	keywords = {Bidirectional control, Computational modeling, Convolution, Stochastic processes, Time series analysis, Training, Transportation},
+	pages = {1342--1354},
 }
 
 @article{schmidl_anomaly_2022,
@@ -155,6 +187,20 @@
 	language = {en},
 	author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, Łukasz and Polosukhin, Illia},
 	year = {2017},
+}
+
+@inproceedings{gong_autoencoder-based_2022,
+	title = {Autoencoder-{Based} {Anomaly} {Detection} for {Time} {Series} {Data} in {Complex} {Systems}},
+	url = {https://ieeexplore.ieee.org/document/10090260/?arnumber=10090260},
+	doi = {10.1109/APCCAS55924.2022.10090260},
+	abstract = {In this paper, we present a new anomaly detection method for time-series data in complex systems such as power grid and cellular networks. The proposed anomaly detection method is developed following unsupervised learning, where an AutoEncoder based on Gated Recurrent Units (GRU-AE) is trained to reconstruct a time-series of interest, and anomalies are detected via detecting exceptionally large reconstruction errors. A multi-timestamp stacking method is adopted to reduce the number of time steps in the GRU-AE to facilitate the training of the model and a new training scheme with random shuffling is proposed to prevent overfitting. The proposed GRU-AE based detector is applied in multiple time scales to detect different types of anomalies. Numerical results obtained via time-series data from real cellular network demonstrate the performance of the proposed method.},
+	urldate = {2024-09-06},
+	booktitle = {2022 {IEEE} {Asia} {Pacific} {Conference} on {Circuits} and {Systems} ({APCCAS})},
+	author = {Gong, Xundong and Liao, Shibo and Hu, Fei and Hu, Xiaoqing and Liu, Chunshan},
+	month = nov,
+	year = {2022},
+	keywords = {AutoEncoder, Cellular networks, Detectors, Numerical models, Power grids, Stacking, Time series analysis, Training, anomaly detection, multi-timestamp stacking, random shuffling, time series},
+	pages = {428--433},
 }
 
 @misc{darban_carla_2024,
@@ -285,6 +331,21 @@
 	pages = {7641--7653},
 }
 
+@inproceedings{mou_deep_2023,
+	title = {Deep {Autoencoding} {One}-{Class} time {Series} {Anomaly} {Detection}},
+	url = {https://ieeexplore.ieee.org/document/10095724/?arnumber=10095724},
+	doi = {10.1109/ICASSP49357.2023.10095724},
+	abstract = {Time-series Anomaly Detection(AD) is widely used in monitoring and security applications in various industries and has become a hot spot in the field of deep learning. Normality-representation-based methods perform well in certain scenarios but may ignore some aspects of the overall normality. Feature-extraction-based methods always take a process of pre-training, whose target differs from AD, leading to a decline in AD performance. In this paper, we propose a new AD method called deep Autoencoding One-Class (AOC), which learns features with AutoEncoder(AE). Meanwhile, the normal context vectors from AE are constrained into a hypersphere small enough, similar to one-class methods. With an objective function that optimizes the two assumptions simultaneously, AOC learns various aspects of normality, which is more effective for AD. Experiments on public datasets show that our method outperforms existing baseline approaches.},
+	urldate = {2024-09-06},
+	booktitle = {{ICASSP} 2023 - 2023 {IEEE} {International} {Conference} on {Acoustics}, {Speech} and {Signal} {Processing} ({ICASSP})},
+	author = {Mou, Xudong and Wang, Rui and Wang, Tiejun and Sun, Jie and Li, Bo and Wo, Tianyu and Liu, Xudong},
+	month = jun,
+	year = {2023},
+	note = {ISSN: 2379-190X},
+	keywords = {Autoen-coder, Deep learning, Industries, Linear programming, Merging, One-class classification, Security, Signal processing, Time Series Anomaly Detection, Time series analysis},
+	pages = {1--5},
+}
+
 @misc{wang_deep_2023,
 	title = {Deep {Contrastive} {One}-{Class} {Time} {Series} {Anomaly} {Detection}},
 	url = {http://arxiv.org/abs/2207.01472},
@@ -407,6 +468,23 @@
 	pages = {1--7},
 }
 
+@inproceedings{han_learning_2022,
+	address = {Washington DC USA},
+	title = {Learning {Sparse} {Latent} {Graph} {Representations} for {Anomaly} {Detection} in {Multivariate} {Time} {Series}},
+	isbn = {978-1-4503-9385-0},
+	url = {https://dl.acm.org/doi/10.1145/3534678.3539117},
+	doi = {10.1145/3534678.3539117},
+	abstract = {Anomaly detection in high-dimensional time series is typically tackled using either reconstruction- or forecasting-based algorithms due to their abilities to learn compressed data representations and model temporal dependencies, respectively. However, most existing methods disregard the relationships between features, information that would be extremely useful when incorporated into a model. In this work, we introduce Fused Sparse Autoencoder and Graph Net (FuSAGNet), which jointly optimizes reconstruction and forecasting while explicitly modeling the relationships within multivariate time series. Our approach combines Sparse Autoencoder and Graph Neural Network, the latter of which predicts future time series behavior from sparse latent representations learned by the former as well as graph structures learned through recurrent feature embedding. Experimenting on three real-world cyber-physical system datasets, we empirically demonstrate that the proposed method enhances the overall anomaly detection performance, outperforming baseline approaches. Moreover, we show that mining sparse latent patterns from high-dimensional time series improves the robustness of the graph-based forecasting model. Lastly, we conduct visual analyses to investigate the interpretability of both recurrent feature embeddings and sparse latent representations.},
+	language = {en},
+	urldate = {2024-09-06},
+	booktitle = {Proceedings of the 28th {ACM} {SIGKDD} {Conference} on {Knowledge} {Discovery} and {Data} {Mining}},
+	publisher = {ACM},
+	author = {Han, Siho and Woo, Simon S.},
+	month = aug,
+	year = {2022},
+	pages = {2977--2986},
+}
+
 @inproceedings{gangloff_leveraging_2022,
 	address = {Montreal, QC, Canada},
 	title = {Leveraging {Vector}-{Quantized} {Variational} {Autoencoder} {Inner} {Metrics} for {Anomaly} {Detection}},
@@ -487,6 +565,25 @@
 	keywords = {Computer Science - Artificial Intelligence, Computer Science - Machine Learning},
 }
 
+@article{pham_mst-vae_2022,
+	title = {{MST}-{VAE}: {Multi}-{Scale} {Temporal} {Variational} {Autoencoder} for {Anomaly} {Detection} in {Multivariate} {Time} {Series}},
+	volume = {12},
+	copyright = {https://creativecommons.org/licenses/by/4.0/},
+	issn = {2076-3417},
+	shorttitle = {{MST}-{VAE}},
+	url = {https://www.mdpi.com/2076-3417/12/19/10078},
+	doi = {10.3390/app121910078},
+	abstract = {In IT monitoring systems, anomaly detection plays a vital role in detecting and alerting unexpected behaviors timely to system operators. With the growth of signal data in both volumes and dimensions during operation, unsupervised learning turns out to be a great solution to trigger anomalies thanks to the feasibility of working well with unlabeled data. In recent years, autoencoder, an unsupervised learning technique, has gained much attention because of its robustness. Autoencoder first compresses input data to lower-dimensional latent representation, which obtains normal patterns, then the compressed data are reconstructed back to the input form to detect abnormal data. In this paper, we propose a practical unsupervised learning approach using Multi-Scale Temporal convolutional kernels with Variational AutoEncoder (MST-VAE) for anomaly detection in multivariate time series data. Our key observation is that combining short-scale and long-scale convolutional kernels to extract various temporal information of the time series can enhance the model performance. Extensive empirical studies on five real-world datasets demonstrate that MST-VAE can outperform baseline methods in effectiveness and efficiency.},
+	language = {en},
+	number = {19},
+	urldate = {2024-09-06},
+	journal = {Applied Sciences},
+	author = {Pham, Tuan-Anh and Lee, Jong-Hoon and Park, Choong-Shik},
+	month = oct,
+	year = {2022},
+	pages = {10078},
+}
+
 @article{nivarthi_multi-task_2023,
 	title = {Multi-{Task} {Representation} {Learning} for {Renewable}-{Power} {Forecasting}: {A} {Comparative} {Analysis} of {Unified} {Autoencoder} {Variants} and {Task}-{Embedding} {Dimensions}},
 	volume = {5},
@@ -504,6 +601,22 @@
 	month = sep,
 	year = {2023},
 	pages = {1214--1233},
+}
+
+@article{wang_multiscale_2023,
+	title = {Multiscale {Wavelet} {Graph} {AutoEncoder} for {Multivariate} {Time}-{Series} {Anomaly} {Detection}},
+	volume = {72},
+	issn = {1557-9662},
+	url = {https://ieeexplore.ieee.org/document/9954430/?arnumber=9954430},
+	doi = {10.1109/TIM.2022.3223142},
+	abstract = {In industrial facilities or IT systems, there are lots of multivariate time series generated from various metrics. Anomaly detection in multivariate time series is of great importance in applications such as fault diagnosis and root cause discovery. Recently, some unsupervised methods have made great progress in this task, especially the reconstruction architecture of autoencoders (AEs), learning normal distribution, and producing a significant error for anomalies. Although AEs can reconstruct subtle abnormal patterns well with the powerful generalization ability, it also leads to a high false negative. Moreover, these AE-based models ignore the dependence among variables at different time scales. In this article, we propose a novel anomaly detection framework named Multiscale wavElet Graph AE (MEGA). The main idea is to integrate discrete wavelet transform (DWT) into AE to decompose multivariate time series into multifrequency components and then reconstruct them, thereby highlighting various anomalies in specific frequency bands. Meanwhile, for anomalies caused by the changes of intervariable dependence, we introduce a dynamic graph module to capture such dependence on the decomposed multiscale frequency components. Experiments have been carried out on three public multivariate time-series anomaly detection datasets. The results demonstrate that the MEGA outperforms the state-of-the-art baselines.},
+	urldate = {2024-09-06},
+	journal = {IEEE Transactions on Instrumentation and Measurement},
+	author = {Wang, Jing and Shao, Shikuan and Bai, Yunfei and Deng, Jiaoxue and Lin, Youfang},
+	year = {2023},
+	note = {Conference Name: IEEE Transactions on Instrumentation and Measurement},
+	keywords = {Anomaly detection, Data models, Discrete wavelet transforms, Neural networks, Task analysis, Time series analysis, Time-frequency analysis, discrete wavelet transform (DWT), graph convolution, multiscale, multivariate time series},
+	pages = {1--11},
 }
 
 @article{ye_multivariate_2023,
@@ -644,6 +757,22 @@ Conclusions: Currently, the topic areas covered by SLRs are limited. European re
 	month = jan,
 	year = {2009},
 	pages = {7--15},
+}
+
+@article{thill_temporal_2021,
+	title = {Temporal convolutional autoencoder for unsupervised anomaly detection in time series},
+	volume = {112},
+	issn = {15684946},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S1568494621006724},
+	doi = {10.1016/j.asoc.2021.107751},
+	abstract = {Learning temporal patterns in time series remains a challenging task up until today. Particularly for anomaly detection in time series, it is essential to learn the underlying structure of a system’s normal behavior. Periodic or quasiperiodic signals with complex temporal patterns make the problem even more challenging: Anomalies may be a hard-to-detect deviation from the normal recurring pattern. In this paper, we present TCN-AE, a temporal convolutional network autoencoder based on dilated convolutions. Contrary to many other anomaly detection algorithms, TCN-AE is trained in an unsupervised manner. The algorithm demonstrates its efficacy on a comprehensive real-world anomaly benchmark comprising electrocardiogram (ECG) recordings of patients with cardiac arrhythmia. TCNAE significantly outperforms several other unsupervised state-of-the-art anomaly detection algorithms. Moreover, we investigate the contribution of the individual enhancements and show that each new ingredient improves the overall performance on the investigated benchmark.},
+	language = {en},
+	urldate = {2024-09-06},
+	journal = {Applied Soft Computing},
+	author = {Thill, Markus and Konen, Wolfgang and Wang, Hao and Bäck, Thomas},
+	month = nov,
+	year = {2021},
+	pages = {107751},
 }
 
 @article{he_temporal_2019,
@@ -843,6 +972,25 @@ Conclusions: Currently, the topic areas covered by SLRs are limited. European re
 	keywords = {Computer Science - Artificial Intelligence, Computer Science - Machine Learning},
 }
 
+@article{gao_tsmae_2023,
+	title = {{TSMAE}: {A} {Novel} {Anomaly} {Detection} {Approach} for {Internet} of {Things} {Time} {Series} {Data} {Using} {Memory}-{Augmented} {Autoencoder}},
+	volume = {10},
+	issn = {2327-4697},
+	shorttitle = {{TSMAE}},
+	url = {https://ieeexplore.ieee.org/document/9744555/?arnumber=9744555},
+	doi = {10.1109/TNSE.2022.3163144},
+	abstract = {With the development of communication, the Internet of Things (IoT) has been widely deployed and used in industrial manufacturing, intelligent transportation, and healthcare systems. The time-series feature of the IoT increases the data density and the data dimension, where anomaly detection is important to ensure hardware and software security. However, for the general anomaly detection methods, the anomaly may be well-reconstructed with tiny differences that are hard to discover. Measuring model complexity and the dataset feature space is a long and inefficient process. In this paper, we propose a memory-augmented autoencoder approach for detecting anomalies in IoT data, which is unsupervised, end-to-end, and not easily overgeneralized. First, a memory mechanism is introduced to suppress the generalization ability of the model, and a memory-augmented time-series autoencoder (TSMAE) is designed. Each memory item is encoded and recombined according to the similarity with the latent representation. Then, the new representation is decoded to generate the reconstructed sample, based on which the anomaly score can be obtained. Second, the addressing vector tends to be sparse by adding penalties and rectification functions to the loss. Memory modules are encouraged to extract typical normal patterns, thus inhibiting model generalization ability. Long short-term memory (LSTM) is introduced for decoding and encoding time-series data to obtain the contextual characteristics of time-series data. Finally, through experiments on the ECG and Wafer datasets, the validity of the TSMAE is verified. The rationality of the hyperparameter setting is discussed by visualizing the memory module addressing vector.},
+	number = {5},
+	urldate = {2024-09-06},
+	journal = {IEEE Transactions on Network Science and Engineering},
+	author = {Gao, Honghao and Qiu, Binyang and Barroso, Ramón J. Durán and Hussain, Walayat and Xu, Yueshen and Wang, Xinheng},
+	month = sep,
+	year = {2023},
+	note = {Conference Name: IEEE Transactions on Network Science and Engineering},
+	keywords = {Anomaly detection, Complexity theory, Data models, Decoding, Feature extraction, Internet of Things, Task analysis, autoencoder, memory augmentation, time-series classification},
+	pages = {2978--2990},
+}
+
 @inproceedings{nivarthi_unified_2022,
 	address = {Nassau, Bahamas},
 	title = {Unified {Autoencoder} with {Task} {Embeddings} for {Multi}-{Task} {Learning} in {Renewable} {Power} {Forecasting}},
@@ -890,6 +1038,20 @@ Conclusions: Currently, the topic areas covered by SLRs are limited. European re
 	year = {2023},
 	note = {arXiv:2311.11235 [cs]},
 	keywords = {Computer Science - Artificial Intelligence, Computer Science - Machine Learning},
+}
+
+@inproceedings{provotar_unsupervised_2019,
+	title = {Unsupervised {Anomaly} {Detection} in {Time} {Series} {Using} {LSTM}-{Based} {Autoencoders}},
+	url = {https://ieeexplore.ieee.org/document/9030505/?arnumber=9030505},
+	doi = {10.1109/ATIT49449.2019.9030505},
+	abstract = {Automatic anomaly detection in data mining has a wide range of applications such as fraud detection, system health monitoring, fault detection, event detection systems in sensor networks, and so on. The main challenge related to such problem is unknown nature of the anomaly. Therefore, it is impossible to use classical machine learning techniques to train the model, as we don’t have labels of time series with anomaly. For periodic time series it is advisable to use STL decomposition of the signal. In such case anomaly detection task is reduced to residuals peak detection. If time series is not periodic (for example, forex price or sound) the only way is using machine learning methods. One of the best machine learning methods is autoencoder-based anomaly detection. An autoencoder is a type of artificial neural network used to learn efficient data encodings in an unsupervised manner. The aim of an autoencoder is to learn a representation (encoding) for a set of data, typically for dimensionality reduction, by training the network to ignore signal “noise”. Unsupervised anomaly detection method based on autoencoders was tested on two types of data: various artificial signal datasets and detection of rare sound events dataset. (Abstract)},
+	urldate = {2024-09-06},
+	booktitle = {2019 {IEEE} {International} {Conference} on {Advanced} {Trends} in {Information} {Theory} ({ATIT})},
+	author = {Provotar, Oleksandr I. and Linder, Yaroslav M. and Veres, Maksym M.},
+	month = dec,
+	year = {2019},
+	keywords = {Anomaly detection, Biological neural networks, Machine learning, Market research, Support vector machines, Time series analysis, Training, anomaly detection, autoencoders, machine learning, neural network},
+	pages = {513--517},
 }
 
 @inproceedings{gangloff_unsupervised_2023,
