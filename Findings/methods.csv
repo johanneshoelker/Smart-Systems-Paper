@@ -3,6 +3,7 @@ INRAD,Jeong et al.,MLP,,no,yes
 OmniAnomaly,Su et al.,RNN,,no,yes
 CNN based method,Kravchik et al.,CNN,,no,
 CNN based method,He et al.,CNN,,no,no
+SLMR, Miao et al., CNN, yes, , 
 CL based method,Zhang et al.,CL,,yes,no
 CARLA,Darban et al.,CL,,no,
 CL-TAD,Ngu et al.,CL,,yes,
@@ -34,6 +35,7 @@ DAEMON,Chen et al.,AE,yes,yes,no
 TSMAE,Gao et al.,AE,,,
 GRU-AE,Gong et al.,AE,,,
 MSCVAE,Yokkampon et al.,AE,yes,yes,
+AE based method, Wang et al., AE, , , 
 MOMENT,Goswami et al.,T,,yes,yes
 TranAD,Tuli et al.,T,,,yes
 Transformer based method,Ye et al. ,T,,,
@@ -43,6 +45,7 @@ LLM based method,Li et al.,T,,,
 TiSAT,Doshi et al.,T,,,
 TCF-Trans,Peng et al.,T,,,
 DCT-GAN,Li et al.,T,,,
+Transformer based method, Shin et al., T, GAN,,,
 SL based method,Beggel  et al.,SL,,,
 SL based method,Alshaer  et al.,SL,,,
 SL based method,Liang et al.,SL,yes,,
@@ -50,3 +53,4 @@ IPS,Li et al.,SL,,,
 ,Li et al.,C,,,
 ,Aota  et al.,,,,
 ,Niu et al.,LSTM,,,
+MMDF, Duan et al.,MMDF,,,

@@ -31,6 +31,9 @@ This idea is used to detect cyberattacks in industiral control systems. The stud
 % TCN
 \shortciteA{he_temporal_2019} use Temporal Convolutional Networks. The core idea of the paper is to utilize TCNs, which are well-suited for sequential data due to their ability to capture temporal dependencies, to detect anomalies in time series. By training on normal patterns, the network learns to predict future values. Significant deviations between these predictions and actual observations indicate potential anomalies. The inclusion of a multivariate Gaussian model for error handling and the multi-scale feature mixture method enhances the robustness and accuracy of the anomaly detection process.
 
+% SLMR TODO
+\shortcite{miao_unsupervised_2022}
+
 \subsubsection{Contrastive Learning}
 % Paper Debiased Contrastive Learning
 Learning representations in time series data is done in several different ways. One solution according to \shortciteA{zhang_debiased_2024} is debiased contrastive learning. By comparing pairs of data points and rating the similarities as distances between the two, contrastive learning gets less dependent on labeled data. The data can be more general and the extracted representations are more robust. The pairs of data points are labeled as positive and negative pairs with a distance according to their similarities. With this distance they are put into a feature space where they form groups of data points. To minimize the bias between representations multigranularity augmented view generation and expert knowledge are used during training. The proposed framework is applied on industrial fault detection. The two data sets consist of various vibration signals of industrial machines and stiction sensors. The effectiveness of the proposed framework is demonstrated through its application to these datasets, where it shows improved performance in fault detection compared to traditional methods \shortcite{zhang_debiased_2024}.
@@ -141,6 +144,8 @@ The paper by \shortciteA{zhang_unknown_2020} addresses the challenge of detectin
 % GRU-AE TODO
 \shortcite{gong_autoencoder-based_2022}
 
+% TODO evtl auch transformer
+\shortcite{wang_attention_2022}
 
 
 \subsubsection{Transformer}
@@ -161,6 +166,9 @@ To overcome the challenge of poorly available time series data sets \shortcite{m
 
 % DCT-GAN TODO
 \shortcite{li_dct-gan_2023}
+
+% GRU-AE TODO
+\shortcite{shin_time_2023}
 
 
 % LLMs
@@ -191,7 +199,7 @@ While both methods utilize shapelet learning, Beggel et al. focus on static data
 % IPS TODO
 \shortcite{li_ips_2022}
 
-\subsubsection{Clustering}
+\subsubsection{Other}
 % Clustering
 \shortciteA{li_clustering-based_2021} propose a method for detecting anomalies in multivariate time series by combining clustering and reconstruction techniques. The authors use a sliding window approach to generate subsequences from the multivariate time series, then apply extended fuzzy clustering to reveal the underlying structure of the subsequences. By reconstructing these subsequences with optimal cluster centers, the method detects anomalies based on how well the reconstructed data fits the original subsequences. A confidence index quantifies the level of detected anomalies. The approach is shown to effectively detect anomalies related to amplitude and shape changes in various application domains, such as healthcare and finance, and is optimized using Particle Swarm Optimization.
 
@@ -199,3 +207,5 @@ While both methods utilize shapelet learning, Beggel et al. focus on static data
 
 % LSTM based TODO
 \shortcite{niu_lstm-based_2020}
+% Moving Memory Dynamic Filter TODO
+\shortcite{duan_unsupervised_2021}

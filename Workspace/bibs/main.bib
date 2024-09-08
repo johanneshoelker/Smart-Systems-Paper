@@ -115,6 +115,20 @@
 	pages = {2508--2517},
 }
 
+@misc{miao_unsupervised_2022,
+	title = {An {Unsupervised} {Short}- and {Long}-{Term} {Mask} {Representation} for {Multivariate} {Time} {Series} {Anomaly} {Detection}},
+	url = {http://arxiv.org/abs/2208.09240},
+	abstract = {Anomaly detection of multivariate time series is meaningful for system behavior monitoring. This paper proposes an anomaly detection method based on unsupervised Short- and Long-term Mask Representation learning(SLMR). The main idea is to extract short-term local dependency patterns and long-term global trend patterns by using multi-scale residual dilated convolution and Gated Recurrent Unit(GRU) respectively. Furthermore, our approach can comprehend temporal contexts and feature correlations by combining spatial-temporal masked selfsupervised representation learning and sequence split. It considers the importance of features is diﬀerent, and we introduce the attention mechanism to adjust the contribution of each feature. Finally, a forecastingbased model and a reconstruction-based model are integrated to focus on single timestamp prediction and latent representation of time series. Experiments show that the performance of our method outperforms other state-of-the-art models on three real-world datasets. Further analysis shows that our method is good at anomaly localization.},
+	language = {en},
+	urldate = {2024-09-08},
+	publisher = {arXiv},
+	author = {Miao, Qiucheng and Xu, Chuanfu and Zhan, Jun and Zhu, Dong and Wu, Chengkun},
+	month = aug,
+	year = {2022},
+	note = {arXiv:2208.09240 [cs]},
+	keywords = {Computer Science - Artificial Intelligence, Computer Science - Machine Learning},
+}
+
 @article{ramirez_rivera_anomaly_2022,
 	title = {Anomaly {Detection} {Based} on {Zero}-{Shot} {Outlier} {Synthesis} and {Hierarchical} {Feature} {Distillation}},
 	volume = {33},
@@ -201,6 +215,24 @@
 	language = {en},
 	author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, Łukasz and Polosukhin, Illia},
 	year = {2017},
+}
+
+@inproceedings{wang_attention-based_2022,
+	address = {Mexico City, Mexico},
+	title = {Attention-based {Representation} {Learning} for {Time} {Series} with {Principal} and {Residual} {Space} {Monitoring}},
+	copyright = {https://doi.org/10.15223/policy-029},
+	isbn = {978-1-66549-042-9},
+	url = {https://ieeexplore.ieee.org/document/9926721/},
+	doi = {10.1109/CASE49997.2022.9926721},
+	abstract = {The encoder-decoder network is one of the most common deep learning models for time series representation learning and anomaly detection. However, it is hard to reconstruct time series, which is complex, correlated, and lacking in common patterns. In this paper, we apply the attention mechanism to rescale convolution layers and learn representation in the principal and the residual space. To avoid the reconstruction process, we define the residual space by the omitted segments according to the attention score in the encoder. We introduce the temporal information inside the token level and use sparse penalty to improve representation learning. We apply the proposed model to anomaly classification and fault detection experiments on two datasets, i.e. multivariate bearing fault dataset and UCRArchive profile dataset. The result shows that the representation learned by the proposed model is more likely to cluster by category, especially in the residual space. Compared to the baselines and state-of-the-art models, the proposed model has higher accuracy and recall in the limitedlabeled situation, which illustrates the stability of the learned representation and its superiority in the downstream tasks.},
+	language = {en},
+	urldate = {2024-09-08},
+	booktitle = {2022 {IEEE} 18th {International} {Conference} on {Automation} {Science} and {Engineering} ({CASE})},
+	publisher = {IEEE},
+	author = {Wang, Botao and Tsung, Fugee and Yan, Hao},
+	month = aug,
+	year = {2022},
+	pages = {1833--1839},
 }
 
 @inproceedings{gong_autoencoder-based_2022,
@@ -949,6 +981,22 @@ Conclusions: Currently, the topic areas covered by SLRs are limited. European re
 	pages = {330--335},
 }
 
+@article{shin_time_2023,
+	title = {Time {Series} {Anomaly} {Detection} {Using} {Transformer}-{Based} {GAN} {With} {Two}-{Step} {Masking}},
+	volume = {11},
+	copyright = {https://creativecommons.org/licenses/by-nc-nd/4.0/},
+	issn = {2169-3536},
+	url = {https://ieeexplore.ieee.org/document/10164104/},
+	doi = {10.1109/ACCESS.2023.3289921},
+	abstract = {Time series anomaly detection is a task that determines whether an unseen signal is normal or abnormal, and it is a crucial function in various real-world applications. Typical approach is to learn normal data representation using generative models, like Generative Adversarial Network (GAN), to discriminate between normal and abnormal signals. Recently, a few studies actively adopt Transformer to model time series data, but there is no pure Transformer-based GAN framework for time series anomaly detection. As a pioneer work, we propose a new pure Transformer-based GAN framework, called AnoFormer, and its effective training strategy for better representation learning. Specifically, we improve the detection ability of our model by introducing two-step masking strategies. The first step is Random masking: we design a random mask pool to hide parts of the signal randomly. This allows our model to learn the representation of normal data. The second step is Exclusive and Entropy-based Re-masking: we propose a novel refinement step to provide feedback to accurately model the exclusive and uncertain parts in the first step. We empirically demonstrate the effectiveness of re-masking step that generates more normal-like signals robustly. Extensive experiments on various datasets show that AnoFormer significantly outperforms the state-of-the-art methods in time series anomaly detection.},
+	language = {en},
+	urldate = {2024-09-08},
+	journal = {IEEE Access},
+	author = {Shin, Ah-Hyung and Kim, Seong Tae and Park, Gyeong-Moon},
+	year = {2023},
+	pages = {74035--74047},
+}
+
 @misc{chen_time-series_2023,
 	title = {Time-series {Anomaly} {Detection} via {Contextual} {Discriminative} {Contrastive} {Learning}},
 	url = {http://arxiv.org/abs/2304.07898},
@@ -1171,6 +1219,23 @@ Conclusions: Currently, the topic areas covered by SLRs are limited. European re
 	month = oct,
 	year = {2023},
 	pages = {1620--1624},
+}
+
+@inproceedings{duan_unsupervised_2021,
+	address = {Shanghai, China},
+	title = {Unsupervised {Time} {Series} {Anomaly} {Detection} using {Moving} {Memorial} {Dynamic} {Filter}},
+	isbn = {978-988-15638-0-4},
+	url = {https://ieeexplore.ieee.org/document/9549428/},
+	doi = {10.23919/CCC52363.2021.9549428},
+	abstract = {Anomaly detection on time series data is something of great importance nowadays. From the unsupervised machine learning method like K-Means to newly developed artificial neural networks, people try very hard to give a precise detection of where the anomalies locate. In this paper, a new method, the moving memorial dynamic filter, which combines Fourier seasonality decomposition, distance transformation and anomaly determination is introduced. First, the seasonal component is split off based on Fourier transformation. Then the time series data is mapped to a center-to-center distance subsequence using a dynamic circumscribed circle filter, which could use a low dimensional series to represent high dimensional information. At last, moving memorial value at risk is introduced and serves as a threshold to determine whether a certain data point should be labeled as an anomaly. Our method is tested and evaluated using the Numenta Anomaly Benchmark, an open-sourced dataset for time series anomaly detection. The result shows that our method outperforms the competing algorithms in terms of accuracy on most profiles of the NAB with a shorter latency in time consumption.},
+	language = {en},
+	urldate = {2024-09-08},
+	booktitle = {2021 40th {Chinese} {Control} {Conference} ({CCC})},
+	publisher = {IEEE},
+	author = {Duan, Jufang and Xu, Xiangyang and Wang, Yi},
+	month = jul,
+	year = {2021},
+	pages = {3403--3408},
 }
 
 @article{kutbi_zero-shot_2021,
