@@ -57,16 +57,7 @@ In summary, representation learning can be achieved using different techniques, 
 %   \item Simplicity of factor dependencies
 % \end{itemize}
 % "We want to find properties of the data but at the same time we don't want to loose information about the input" \shortcite[S. 525]{goodfellow_deep_2016}
-\subsection{Zero Shot Learning}
-%Zero-shot learning involves training a model on certain classes and then testing its ability to recognize new, unseen classes without any retraining. In the context of anomaly detection, this means the model should be able to detect types of anomalies it has not encountered during the training phase.
-% Zero Shot derived from Transfer learning
-Zero Shot Learning (ZSL) is an extreme form of transfer learning. While transfer learning is the concept of transferring the knowledge and weights gained at one task using them at solving another task, Zero-Shot Learning means there are no samples for the other task. The transformation of knowledge can help solving tasks where there are few or no samples available. The gained knowledge is normally stored as representations in data. Representations which are abstract enough to not see a specific item but information about items which can be applicated to groups of items. This also means that ZSL is only possible because additional information has been discovered during training \shortcite[p. 536]{goodfellow_deep_2016}.
 
-% First zero shot detection
-\shortciteA{palatucci_zero-shot_2009} were the first to implement a successful Zero-Shot Detection followed by \shortciteA{socher_zero-shot_2013} who used semantic word vector representations to classify words in groups and to sort new words with an accuracy of 90\% with a fully unsupervised model.
-% Quote Definition for ZSL in \shortcite[S. 1532]{nivarthi_unified_2022}\\%TODO
-
-In summary ZSL requires the ability to detect anomalies without having seen any examples during training.
 \subsection{Anomaly Detection}
 % definition of gruhl by cause
 Several definitions of anomalies in data can be found in literature. In this paper the definition of \shortciteA[p. 54]{gruhl_novelty_2022} is used. It seperates anomaly and novelty detection as different tasks. Anomalies can be understood as outliers from the regular class. But these anomalies can vary in their cause. If there is a specific cause and the anomalies occur in its own cluster, they form a novelty. If instead the outliers randomly occur with no specific root cause, they are called noise. The cause for noise then is of a different kind and cannot be classified.
@@ -77,6 +68,14 @@ Instead of dividing anomalies by their cause the shape of anomalies can vary in 
 % definiton for this paper
 In this paper we want to focus on single time events, which are in any case anomalies. Potentially being caused by an unknown process, they cannot be classified \shortcite{gruhl_novelty_2022}. This defines our goal as an Anomaly Detection (AD) task.
 
-% ## Theoretischer Rahmen
-% Definitionen und Konzepte: Detaillierte Erklärungen zu Representation Learning, Zero Shot Learning und Anomaly Detection.
-% Methoden und Techniken: Überblick über die verschiedenen Ansätze und Methoden im Representation Learning (z.B. Autoencoder, CNNs, Word Embeddings).
+\subsection{Zero Shot Learning}
+%Definiton by Chandana
+In this paper the definition made by \shortciteA{nivarthi_unified_2022} is used. They seperate Single Task Learning, where every model is trained seperately for each task, from Multi Task Learning (MTL) where one model is trained and evaluated on several tasks. For Zero Shot Learning (ZSL) in comparison the model is trained on several tasks like in MTL but tested on completely new ones.
+
+% Zero Shot derived from Transfer learning
+Zero Shot Learning is therefore an extreme form of transfer learning. While transfer learning is the concept of transferring the knowledge and weights gained at one task using them at solving another task, Zero-Shot Learning means there are no samples for the other task. The transformation of knowledge can help solving tasks where there are few or no samples available. The gained knowledge is normally stored as representations in data. Representations which are abstract enough to not see a specific item but information about items. This also means that ZSL is only possible because additional information has been discovered during training \shortcite[p. 536]{goodfellow_deep_2016}.
+
+% First zero shot detection
+\shortciteA{palatucci_zero-shot_2009} were the first to implement a successful Zero-Shot Detection followed by \shortciteA{socher_zero-shot_2013} who used semantic word vector representations to classify words in groups and to sort new words with an accuracy of 90\% with a fully unsupervised model.
+
+Zero-shot learning involves training a model on certain classes and then testing its ability to recognize new, unseen classes without any retraining. In the context of anomaly detection, this means the model should be able to detect types of anomalies it has not encountered during the training phase.
