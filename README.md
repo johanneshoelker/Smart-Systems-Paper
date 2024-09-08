@@ -12,4 +12,10 @@ The repo is structured as follows:
 
 - **Implementation**: Holds the python scripts necessary for implementing the methods
 
-- **Findings**: Here a list of all found methods is given
+- **Findings**: Contains a list of all found methods and their exclusion criteria
+
+- **PeerReview**: All received and sent peer reviews
+
+- **Meetings**: Transcripts of the hold meetings
+
+- **Vorlesungen**: Guidelines for the course
