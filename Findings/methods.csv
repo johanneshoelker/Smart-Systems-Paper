@@ -1,9 +1,9 @@
 Method Name,Author,Concept,MV,ZSL,OSA
-INRAD,Jeong et al. Citejeong_time-series_2022},MLP,,no,yes
-OmniAnomaly,Su et al.,RNN,,no,yes
-CNN based method,Kravchik et al.,CNN,,no,
+INRAD,Jeong et al.,MLP,yes,no,yes
+OmniAnomaly,Su et al.,RNN,yes,no,yes
+CNN based method,Kravchik et al.,CNN,yes,no,no
 CNN based method,He et al.,CNN,,no,no
-SLMR, Miao et al., CNN, yes, , 
+SLMR, Miao et al.,CNN, yes, , 
 CL based method,Zhang et al.,CL,,yes,no
 CARLA,Darban et al.,CL,,no,
 CL-TAD,Ngu et al.,CL,,yes,
@@ -35,8 +35,8 @@ DAEMON,Chen et al.,AE,yes,yes,no
 TSMAE,Gao et al.,AE,,,
 GRU-AE,Gong et al.,AE,,,
 MSCVAE,Yokkampon et al.,AE,yes,yes,
-AE based method, Wang et al., AE, , , 
-MOMENT,Goswami et al.,T,,yes,yes
+AE based method, Wang et al.,AE, , , 
+MOMENT,Goswami et al.,AE,,yes,yes
 TranAD,Tuli et al.,T,,,yes
 Transformer based method,Ye et al. ,T,,,
 AnomalyTransformer,Xu et al.,T,,,yes
@@ -51,6 +51,5 @@ SL based method,Alshaer  et al.,SL,,,
 SL based method,Liang et al.,SL,yes,,
 IPS,Li et al.,SL,,,
 ,Li et al.,C,,,
-,Aota  et al.,,,,
 ,Niu et al.,LSTM,,,
 MMDF, Duan et al.,MMDF,,,
