@@ -1,7 +1,7 @@
 \section{Proof of Concept}\label{implementation}
 The best fitting strategies extracted in section \ref{application} are implemented on a small test data set in order to demonstrate how and if they work. First the used dataset ant the purpose of anomaly detection for the specific use case is described. Later the process of implemention and the results are presented.
 \subsection{Inverter data including Anomalies}
-While NLP and image processing tasks are common and a variety of data sets exists, time series data sets are not available that much \shortcite{ma_survey_2023}. Thanks to the employees of SMA a multivariate time series dataset is provided. The specific use case and the structure of the chosen data is described in this section.
+While NLP and image processing tasks are common and a variety of data sets exists, time series data sets are not available that much \cite{ma_survey_2023}. Thanks to the employees of SMA a multivariate time series dataset is provided. The specific use case and the structure of the chosen data is described in this section.
 
 % Use case for sma
 SMA developes and manufactures inverters for home and commercial use. The inverters convert direct to alternating current or vice versa depending on the use case. They also act as home managers controlling all energy flows in a power plant. Inverters are equipped with several sensors measuring the surroundings and internal states in order to maximize the efficency and to avoid system failures. Sometimes system failures appear still which raises the question if this could have been foreseen by analyzing the gathered sensor data during runtime. The first step to reach such a forecasting tool is to detect the anomalies in recorded sensor data. The implementation of the chosen methods is therefore done on inverter data provided by the company.
@@ -189,7 +189,7 @@ The values are collectively stored at a 7 minute interval over several months. 1
 % In the test data the learning data is seperate from the data including anomalies. The important thing about Zero Shot Learning is that a specific anomaly never occured like this before. In the test data, all chosen representation learning techniques are applied using the same data for learning and afterwards testing the anomaly detection with the same anomalies. According to chapter (Evaluation) the characteristics are evaluated for each RL technique chosen in the previous chapter.
 
 \subsection{Implemented Methods}
-The main goal is to detect the labeled anomalies in the SMA dataset. If the methods find the timestamp of the system failure, they perform correctly. 
+The main goal is to detect the labeled anomalies in the SMA dataset. If the methods find the timestamp of the system failure, they perform correctly.
 The code for the implementions can be found here: https://github.com/johanneshoelker/Smart-Systems-Paper/tree/main/Implementation
 
 
@@ -203,11 +203,11 @@ The code for the implementions can be found here: https://github.com/johanneshoe
 % TS2Vec
 \subsubsection{TS2Vec}
 An implemention of the model TS2Vec is done by the authors using Python. It is available under github.com/yuezhihan/ts2vec
-The paper providing TS2Vec claims the model to be prepared for multiple variables. However the anomaly detection training data was univariate \shortcite{yue_ts2vec_2022}.
+The paper providing TS2Vec claims the model to be prepared for multiple variables. However the anomaly detection training data was univariate \cite{yue_ts2vec_2022}.
 
 % Moment
 \subsubsection{Moment}
-The method Moment presented by \shortciteA{goswami_moment_2024} takes a three dimensional input tensor, containing batches, channels and time points. The maximal number of points is 512. It reconstructs the given input and returns a tensor containing the reconstructions. These reconstructions are further compared with the inputs by calulating the Mean Squared Error (MSE):
+The method Moment presented by \cite{goswami_moment_2024} takes a three dimensional input tensor, containing batches, channels and time points. The maximal number of points is 512. It reconstructs the given input and returns a tensor containing the reconstructions. These reconstructions are further compared with the inputs by calulating the Mean Squared Error (MSE):
 \begin{equation}
     \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} \left( y_i - \hat{y}_i \right)^2
 \end{equation}
@@ -215,7 +215,7 @@ The error is further normalized using the Min-Max Normalization:
 \begin{equation}
 x' = \frac{x - \text{min}(x)}{\text{max}(x) - \text{min}(x)}
 \end{equation}
-Every timestamp that exceeds a certain threshold then represents the found anomalies. 
+Every timestamp that exceeds a certain threshold then represents the found anomalies.
 
 %TODO results
 
