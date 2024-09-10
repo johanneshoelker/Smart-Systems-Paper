@@ -8,6 +8,9 @@ That the methods are not tested on Zero-Shot Scenarios in the paper they are pre
 % Multivariate Limitations
 That is not the case for multivariate data. If a method designed for time series data with a single input variable needs to be used for multiple input variables a redesign is necessary. This can be extensive or rather simple depending on the architecture. To know how much redesign is necessary every method has to be reviewed in further research.
 
+% Interdependance between multiple variables
+Some models like MOMENT are handling input variables seperately. The interconnection between the different channels is not considered directly. The influence of one variable on the other can provide informations that can be important for anomaly detection and the learned representations in general.
+
 
 The transferability between time series datasets is difficult due to the fact that the data between domains is huge \shortcite{ma_survey_2023}
   % %     Kritische Bewertung

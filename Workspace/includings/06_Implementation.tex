@@ -207,6 +207,17 @@ The paper providing TS2Vec claims the model to be prepared for multiple variable
 
 % Moment
 \subsubsection{Moment}
+The method Moment presented by \shortciteA{goswami_moment_2024} takes a three dimensional input tensor, containing batches, channels and time points. The maximal number of points is 512. It reconstructs the given input and returns a tensor containing the reconstructions. These reconstructions are further compared with the inputs by calulating the Mean Squared Error (MSE):
+\begin{equation}
+    \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} \left( y_i - \hat{y}_i \right)^2
+\end{equation}
+The error is further normalized using the Min-Max Normalization:
+\begin{equation}
+x' = \frac{x - \text{min}(x)}{\text{max}(x) - \text{min}(x)}
+\end{equation}
+Every timestamp that exceeds a certain threshold then represents the found anomalies. 
+
+%TODO results
 
 %Carla
 \subsubsection{CARLA}
