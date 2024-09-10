@@ -8,189 +8,16 @@ SMA developes and manufactures inverters for home and commercial use. The invert
 
 % Features in data
 The variables contain measurements of current and voltage of all phases in AC and the generated DC sources. Additionally temperatures, CPU usage, internal parameter settings and many other measurements are included. The total number of features is 137.
-% Features,True/False,Description
-% AMaxSpt,FALSE,
-% AcSwStt,NotAvailable,becomes low at the error timestamp
-% BCErrCnt,FALSE,
-% BrkCtlStt,TRUE,becomes obviously high
-% CapacSwStt,NotAvailable,becomes high for a long duration like more than a day
-% Cnt_AcSw,FALSE,
-% Cnt_CapacSw,TRUE,
-% Cnt_DcSw1,TRUE,
-% Cnt_DcSw2,TRUE,
-% Cnt_DcSw3,TRUE,
-% Cnt_FanCab1Tm,FALSE,
-% Cnt_FanStkTm,FALSE,
-% Cnt_FrtDet,FALSE,
-% Cnt_GfdiSw,FALSE,
-% Cnt_TotAcWhOut,FALSE,
-% Cpu1Lod,Not Sure,there is some abnormality at the error timestamps
-% Cpu2_FstStop_ErrStt,FALSE,
-% Cpu2Lod,FALSE,
-% Cpu2OpStt,NotAvailable,there is a wide gap after the error timestamps
-% DcMs_Amp_Stk1,TRUE,there is a wide gap after the error timestamps
-% DcMs_Amp_Stk2,TRUE,there is a wide gap after the error timestamps
-% DcMs_Amp_Stk3,TRUE,there is a wide gap after the error timestamps
-% DcMs_TotAmp,TRUE,there is a wide gap after the error timestamps
-% DcMs_TotWatt,TRUE,there is a wide gap after the error timestamps
-% DcMs_Vol,FALSE,
-% DcMs_Vol_NegGnd,Not Sure,high for few files  and not sure for feww files
-% DcMs_Vol_PosGnd,Not Sure,high for few files  and not sure for feww files
-% DcMs_Watt_Stk1,TRUE,becomes low at errr timestamps
-% DcMs_Watt_Stk2,TRUE,becomes low at errr timestamps
-% DcMs_Watt_Stk3,TRUE,becomes low at errr timestamps
-% DcSw1Stt,NotAvailable,becomes low at errr timestamps
-% DcSw2Stt,NotAvailable,becomes low at errr timestamps
-% DcSw3Stt,NotAvailable,becomes low at errr timestamps
-% Dcc_Err_Fpga,FALSE,
-% Dcc_Err_FpgaCom,FALSE,
-% Dcc_Err_SwWd,FALSE,
-% Dcc_FsReason,TRUE,becomes high
-% Dcc_FstStop_Exl,TRUE,becomes high
-% DrtCabTmp,FALSE,
-% DrtIgbtTmp,FALSE,
-% DrtStt,FALSE,
-% ErrBits,FALSE,
-% ErrBitsIpc1,TRUE,
-% ErrBitsIpc2,FALSE,
-% ErrLcn,FALSE,
-% ErrLcnSma,FALSE,
-% ErrNo,FALSE,
-% ErrNoSma,FALSE,
-% ErrNoSmaMem1,FALSE,
-% ErrNoSmaMem2,FALSE,
-% ErrNoSmaMem3,FALSE,
-% ErrReg_Acc1,TRUE,
-% ErrReg_Fpga_Stop,FALSE,
-% ErrReg_Stk1,FALSE,
-% ErrReg_Stk1_PhsA_Bot,FALSE,
-% ErrReg_Stk1_PhsA_Top,FALSE,
-% ErrReg_Stk1_PhsB_Bot,FALSE,
-% ErrReg_Stk1_PhsB_Top,FALSE,
-% ErrReg_Stk1_PhsC_Bot,FALSE,
-% ErrReg_Stk1_PhsC_Top,FALSE,
-% ErrReg_Stk2,FALSE,
-% ErrReg_Stk2_PhsA_Bot,FALSE,
-% ErrReg_Stk2_PhsA_Top,FALSE,
-% ErrReg_Stk2_PhsB_Bot,FALSE,
-% ErrReg_Stk2_PhsB_Top,FALSE,
-% ErrReg_Stk2_PhsC_Bot,FALSE,
-% ErrReg_Stk2_PhsC_Top,FALSE,
-% ErrReg_Stk3,FALSE,
-% ErrReg_Stk3_PhsA_Bot,FALSE,
-% ErrReg_Stk3_PhsA_Top,FALSE,
-% ErrReg_Stk3_PhsB_Bot,FALSE,
-% ErrReg_Stk3_PhsB_Top,FALSE,
-% ErrReg_Stk3_PhsC_Bot,FALSE,
-% ErrReg_Stk3_PhsC_Top,FALSE,
-% ErrVecFrmExt,TRUE,becomes high
-% FanCab_SptPct,TRUE,becomes low and wide gap
-% FanCtl_Stt,NotAvailable,becomes low and wide gap
-% FanStk_Pct,TRUE,becomes low and wide gap
-% FanStk_SptPct,TRUE,becomes low and wide gap
-% GfdiSwStt,NotAvailable,
-% GriErr1,FALSE,
-% GriErr2,FALSE,
-% GriInf,FALSE,
-% GriMs_Hz,Not Sure,
-% GriMs_V_PhsAB,FALSE,
-% GriMs_V_PhsBC,FALSE,
-% GriMs_V_PhsCA,FALSE,
-% GriMs_Vol_PsD,FALSE,
-% InfBits,FALSE,
-% InvMs_A_AcGnd,TRUE,becomes high
-% InvMs_A_Stk1_PhsA,TRUE,becomes low and wide gap
-% InvMs_A_Stk1_PhsB,TRUE,becomes low and wide gap
-% InvMs_A_Stk1_PhsC,TRUE,becomes low and wide gap
-% InvMs_A_Stk2_PhsA,TRUE,becomes low and wide gap
-% InvMs_A_Stk2_PhsB,TRUE,becomes low and wide gap
-% InvMs_A_Stk2_PhsC,TRUE,becomes low and wide gap
-% InvMs_A_Stk3_PhsA,TRUE,becomes low and wide gap
-% InvMs_A_Stk3_PhsB,TRUE,becomes low and wide gap
-% InvMs_A_Stk3_PhsC,TRUE,becomes low and wide gap
-% InvMs_A_TrmsCap,TRUE,becomes low and wide gap
-% InvMs_DclVol_Stk1,TRUE,becomes low and wide gap
-% InvMs_DclVol_Stk2,TRUE,becomes low and wide gap
-% InvMs_DclVol_Stk3,TRUE,becomes low and wide gap
-% InvMs_Eff,TRUE,becomes low and wide gap
-% InvMs_PF,TRUE,becomes low and wide gap
-% InvMs_TotA_PhsA,TRUE,becomes low and wide gap
-% InvMs_TotA_PhsB,TRUE,becomes low and wide gap
-% InvMs_TotA_PhsC,TRUE,becomes low and wide gap
-% InvMs_TotVA,TRUE,becomes low and wide gap
-% InvMs_TotVAr,TRUE,becomes low and wide gap
-% InvMs_TotW,TRUE,becomes low and wide gap
-% InvMs_V_PhsAB,TRUE,becomes low and wide gap
-% InvMs_V_PhsBC,TRUE,becomes low and wide gap
-% InvMs_V_PhsCA,TRUE,becomes low and wide gap
-% InvMs_Vol_PsD,TRUE,becomes low and wide gap
-% Mpp_PvVolSpt,TRUE,becomes low and wide gap
-% MppStt,NotAvailable,becomes high and wide gap
-% OpStt,NotAvailable,becomes high and wide gap
-% PFSpt,FALSE,
-% PvGnd_RisIso,FALSE,
-% PvGndErr,FALSE,
-% Rio_Din_FbCbSup,FALSE,
-% Rio_Dout_DeHyd,FALSE,
-% Rio_Err_Exs,FALSE,
-% Rio_Err_SwWd,FALSE,
-% Rio_FsReason,FALSE,
-% Rio_FstStop_Emg,FALSE,
-% Rio_FstStop_Exl,TRUE,becomes high and wide gap
-% Rio_FstStop_UsrSpc,FALSE,
-% Rio_KeySw,NotAvailable,becomes high and wide gap
-% RlHmdtAcc,FALSE,
-% RlHmdtDcc,FALSE,
-% RlHmdtRio,FALSE,
-% SnsErr,FALSE,
-% StbyBits,TRUE,
-% TmpCab_Acc,TRUE,
-% TmpCab_Dcc,TRUE,
-% TmpCab_Max,TRUE,
-% TmpCab_Rio,TRUE,
-% TmpCab_Spt,FALSE,
-% TmpExl,TRUE,
-% TmpStk_IgbtMax,TRUE,
-% TmpStk_IgbtSpt,FALSE,
-% TmpStk_PcbMax,TRUE,
-% TmpStk1_Igbt,TRUE,
-% TmpStk1_Igbt_PhsA_Bot,TRUE,
-% TmpStk1_Igbt_PhsA_Top,TRUE,
-% TmpStk1_Igbt_PhsB_Bot,TRUE,
-% TmpStk1_Igbt_PhsB_Top,TRUE,
-% TmpStk1_Igbt_PhsC_Bot,TRUE,
-% TmpStk1_Igbt_PhsC_Top,TRUE,
-% TmpStk2_Igbt,TRUE,
-% TmpStk2_Igbt_PhsA_Bot,TRUE,
-% TmpStk2_Igbt_PhsA_Top,TRUE,
-% TmpStk2_Igbt_PhsB_Bot,TRUE,
-% TmpStk2_Igbt_PhsB_Top,TRUE,
-% TmpStk2_Igbt_PhsC_Bot,TRUE,
-% TmpStk2_Igbt_PhsC_Top,TRUE,
-% TmpStk3_Igbt,TRUE,
-% TmpStk3_Igbt_PhsA_Bot,TRUE,
-% TmpStk3_Igbt_PhsA_Top,TRUE,
-% TmpStk3_Igbt_PhsB_Bot,TRUE,
-% TmpStk3_Igbt_PhsB_Top,TRUE,
-% TmpStk3_Igbt_PhsC_Bot,TRUE,
-% TmpStk3_Igbt_PhsC_Top,TRUE,
-% TmpTrf,FALSE,
-% TrfPro_TmpTrp,FALSE,
-% VAMaxSpt,FALSE,
-% VArSpt,FALSE,
-% VolNomSpt,FALSE,
-% WSpt,FALSE,
-% WaitGriRsReas,FALSE,
-% WaitGriTm,FALSE,
 
+% Data structure
 The values are collectively stored at a 7 minute interval over several months. 19 inverters that had system failures at some point are taken into account. These failure time stamps are known and added as an additional feature with a binary value of 1. Every other error bit is 0. The data is collected between 2018 and 2020 and the locations of the inverters cannot be provided.
 
 % TODO DEfiniton of training and test data
 % In the test data the learning data is seperate from the data including anomalies. The important thing about Zero Shot Learning is that a specific anomaly never occured like this before. In the test data, all chosen representation learning techniques are applied using the same data for learning and afterwards testing the anomaly detection with the same anomalies. According to chapter (Evaluation) the characteristics are evaluated for each RL technique chosen in the previous chapter.
 
 \subsection{Implemented Methods}
-The main goal is to detect the labeled anomalies in the SMA dataset. If the methods find the timestamp of the system failure, they perform correctly.
-The code for the implementions can be found here: https://github.com/johanneshoelker/Smart-Systems-Paper/tree/main/Implementation
+The main goal is to detect the labeled anomalies in the SMA dataset. If the methods find the timestamp of the system failure, they perform correctly. First the models are taken as is and a forward pass is applied. The given output is evaluated if the model already detects the failure time points in the inverter time series data. If possible, the model is trained afterwards using a set of 12 inverters and tested on the remaining 7 inverters. This way the Zero-Shot scenario like in \ref{theory} is created.
+The code for the implementions can be found here: \footnote{\fussy\tiny https://github.com/johanneshoelker/Smart-Systems-Paper/tree/main/Implementation}
 
 
 % Limitations TODO This paper is limited
@@ -200,14 +27,20 @@ The code for the implementions can be found here: https://github.com/johanneshoe
 % github.com/thuml/Anomaly-Transformer
 % github.com/eBay/RANSynCoders
 
+%Carla
+\subsubsection{CARLA}
+\footnote{\fussy\tiny https://github.com/zamanzadeh/CARLA}
+
 % TS2Vec
 \subsubsection{TS2Vec}
-An implemention of the model TS2Vec is done by the authors using Python. It is available under github.com/yuezhihan/ts2vec
+An implemention of the model TS2Vec is done by the authors using Python \footnote{\fussy\tiny https://github.com/zhihanyue/ts2vec}.
 The paper providing TS2Vec claims the model to be prepared for multiple variables. However the anomaly detection training data was univariate \cite{yue_ts2vec_2022}.
 
 % Moment
-\subsubsection{Moment}
-The method Moment presented by \cite{goswami_moment_2024} takes a three dimensional input tensor, containing batches, channels and time points. The maximal number of points is 512. It reconstructs the given input and returns a tensor containing the reconstructions. These reconstructions are further compared with the inputs by calulating the Mean Squared Error (MSE):
+\subsubsection{MOMENT}
+A detailed instruction on how to reproduce the outcomes of MOMENT presented by \cite{goswami_moment_2024} is provided on GitHub \footnote{\fussy\tiny https://github.com/moment-timeseries-foundation-model/moment/blob/main/tutorials/anomaly\_detection.ipynb}. The method takes a three dimensional input tensor, containing batches, channels and time points. The maximal number of points is 512. It reconstructs the given input and returns a tensor containing the reconstructions.
+
+For the implementation on SMA data the provided tutorial is used as a guide. The SMA data is preprocessed to match the requested input tensor. The reconstructions are further compared with the inputs by calulating the Mean Squared Error (MSE):
 \begin{equation}
     \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} \left( y_i - \hat{y}_i \right)^2
 \end{equation}
@@ -218,82 +51,3 @@ x' = \frac{x - \text{min}(x)}{\text{max}(x) - \text{min}(x)}
 Every timestamp that exceeds a certain threshold then represents the found anomalies.
 
 %TODO results
-
-%Carla
-\subsubsection{CARLA}
-
-% Implementation Steps for CARLA
-%
-%     Data Preparation:
-%         Partition the time series into overlapping windows with a fixed stride. Each window will be treated as an individual data sample for the model.
-%
-%     Anomaly Injection:
-%         Introduce synthetic anomalies into the dataset. This involves modifying the normal data to create anomalies such as spikes or pattern shifts. This step ensures the model is exposed to both normal and anomalous patterns during training.
-%
-%     Model Architecture:
-%         Pretext Network: Design a network that can take in the time series windows and learn meaningful representations. This typically involves a sequence of convolutional or recurrent layers followed by a projection head for contrastive learning.
-%         Contrastive Loss: Implement a contrastive loss function (e.g., InfoNCE) to train the model. The loss function should encourage the model to bring similar samples closer in the embedding space and push dissimilar samples apart.
-%
-%     Training the Pretext Stage:
-%         Train the model using the normal and injected anomaly data. Use the contrastive loss to adjust the model weights, ensuring that normal samples are clustered together and anomalies are separated.
-%
-%     Neighborhood Classification:
-%         Once the model is trained, compute the embeddings for all windows in the dataset. Identify the nearest and furthest neighbors for each window to establish a prior.
-%         Implement a classifier that uses these neighbor relationships to classify new windows as normal or anomalous. The classifier should determine if a new window is anomalous based on its distance from normal windows in the embedding space.
-%
-% Practical Implementation
-%
-% To implement CARLA, you can follow these steps using Python and libraries like PyTorch:
-%
-% python
-%
-% import torch
-% import torch.nn as nn
-% import torch.optim as optim
-%
-% class PretextNetwork(nn.Module):
-%     def __init__(self, input_size, hidden_size, output_size):
-%         super(PretextNetwork, self).__init__()
-%         self.conv1 = nn.Conv1d(input_size, hidden_size, kernel_size=3)
-%         self.conv2 = nn.Conv1d(hidden_size, hidden_size, kernel_size=3)
-%         self.fc = nn.Linear(hidden_size, output_size)
-%
-%     def forward(self, x):
-%         x = torch.relu(self.conv1(x))
-%         x = torch.relu(self.conv2(x))
-%         x = x.mean(dim=2)  # Global average pooling
-%         x = self.fc(x)
-%         return x
-%
-% def contrastive_loss(output1, output2, label, margin=1.0):
-%     distance = (output1 - output2).pow(2).sum(1)
-%     loss = label * distance + (1 - label) * torch.relu(margin - distance).pow(2)
-%     return loss.mean()
-%
-% # Example training loop
-% model = PretextNetwork(input_size=1, hidden_size=64, output_size=128)
-% optimizer = optim.Adam(model.parameters(), lr=0.001)
-%
-% for epoch in range(num_epochs):
-%     for data in dataloader:
-%         inputs, labels = data
-%         outputs = model(inputs)
-%         loss = contrastive_loss(outputs, labels)
-%
-%         optimizer.zero_grad()
-%         loss.backward()
-%         optimizer.step()
-%
-% # Neighborhood classification
-% def classify(sample, embeddings, k=5):
-%     distances = torch.cdist(sample.unsqueeze(0), embeddings)
-%     nearest_neighbors = torch.topk(distances, k, largest=False)
-%     return nearest_neighbors
-%
-% # Assuming `test_sample` is the new data point and `train_embeddings` are precomputed
-% classification = classify(test_sample, train_embeddings)
-%
-% This is a simplified example. In practice, you will need to handle data preprocessing, anomaly injection, and more sophisticated model architectures depending on your specific use case.
-%
-% For more details, you can refer to the original CARLA paper​ (ar5iv)​.
-%
