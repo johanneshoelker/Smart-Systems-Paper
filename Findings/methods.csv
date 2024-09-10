@@ -1,5 +1,5 @@
 Method Name,Author,Concept,MV,ZSL,OSA
-INRAD,Jeong et al.,MLP,,no,yes
+INRAD,Jeong et al. Citejeong_time-series_2022},MLP,,no,yes
 OmniAnomaly,Su et al.,RNN,,no,yes
 CNN based method,Kravchik et al.,CNN,,no,
 CNN based method,He et al.,CNN,,no,no
@@ -45,7 +45,7 @@ LLM based method,Li et al.,T,,,
 TiSAT,Doshi et al.,T,,,
 TCF-Trans,Peng et al.,T,,,
 DCT-GAN,Li et al.,T,,,
-Transformer based method, Shin et al., T, GAN,,,
+Transformer based method, Shin et al., T, GAN,,
 SL based method,Beggel  et al.,SL,,,
 SL based method,Alshaer  et al.,SL,,,
 SL based method,Liang et al.,SL,yes,,

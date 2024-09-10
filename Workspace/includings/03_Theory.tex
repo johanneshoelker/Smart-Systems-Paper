@@ -1,6 +1,11 @@
 \section{Definitions and Conventions}\label{theory}
 The basic expressions used in this paper are explained in the following chapter. First Representation Learning is defined and the different approaches to find representations in data are explained. A description on how to evaluate the found representations is given. Afterwards Zero Shot Learning as well as Anomaly Detection is described and explained.
 \subsection{Representation Learning}
+%Intro to RL
+% Sensors and comparable applications produce values which vary over time. Sometimes the values vary in an unforeseen way and for a short time window they may be completely random. We have to step back and observe longer time periods.
+% Sometimes it is possible for a human to see some patterns in the data when observing a long time window. In the measuring of a solar plant it is obvious that the sun rises and sets, depending on the voltage of the panels. Starting with 0 V at night the voltage is rising before noon, having its peak at midday and descending in the afternoon. This is one representation in the data. But there could be more represenations hidden, which are not likely to see. The shadow of a tree wandering over the panels happening every day or a one time event like the snow covering the plant. \\\\
+Variations in data are not always visible for a human and even less possible to label them accordingly. Like \cite{bengio_representation_2013} mentioned it is important for artificial intelligence to detect representations in data by machines. A machine should be able to extract information hidden in the low-level sensor measurings and continue working with the representations instead of the raw data. This is according to the paper the main requirement for a good representation, to be able using it as an input to a supervised predictor.
+
 % What are representations
 Representation Learning (RL) tries to detect meaningful interconnections in data relevant for further data analysis. These interconnections represent abstract information, so called background knowledge \cite{lavrac_representation_2021}.
 
@@ -15,7 +20,6 @@ RL occurs in several machine learning areas. Depending on the underlying concept
 
 % description and main goal
 In the book of \cite[p. 525]{goodfellow_deep_2016} a general detailed description of representation learning is given. They summarize that representations should make the subsequent learning tasks easier. This implies that to find the best fitting representation and the underlying representation learning technique, we need to know the task it should perform afterwards.
-
 \subsubsection{Concepts}
 % MLP
 The most straight-forward approach to detect representations are Multi Layer Perceptrons (MLP). A input vector is processed by interconnected artificial neurons. The neurons build layers starting with an input layer, followed by hidden layers with a final output layer. The produced output layer typically classifies the input and predicts the label. The difference between predicted and labeled output indicates the performance of the network. Adjusting the interconnections using weights and biases of each neuron enables a learning process. \cite{nielsen_neural_2015}
