@@ -2,10 +2,10 @@ Method Name,Author,Concept,MV,ZSL,OSA
 INRAD,Jeong et al.,MLP,yes,no,yes
 OmniAnomaly,Su et al.,RNN,yes,no,yes
 CNN based method,Kravchik et al.,CNN,yes,no,no
-CNN based method,He et al.,CNN,,no,no
-SLMR, Miao et al.,CNN, yes, , 
-CL based method,Zhang et al.,CL,,yes,no
-CARLA,Darban et al.,CL,,no,
+CNN based method,He et al.,CNN,yes,yes,no
+SLMR,Miao et al.,CNN,yes,no,no
+Debiased CL,Zhang et al.,CL,yes,yes,no
+CARLA,Darban et al.,CL,yes,yes,yes
 CL-TAD,Ngu et al.,CL,,yes,
 COCA,Wang et al.,CL,,no,
 CL based method,Lee et al.,CL,,,
