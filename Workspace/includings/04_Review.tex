@@ -77,24 +77,21 @@ In summary methods using contrastive learning are mostly not tested on Zero-Shot
 \subsubsection{Autoencoder}
 Autoencoders on the other hand are robust to unclean training datasets \cite[p. 2487]{abdulaal_practical_2021}. Due to their architecture noise is filtered from the input.
 
-A paper by \cite{provotar_unsupervised_2019} introduces an anomaly detection method using an autoencoder architecture based on Long Short-Term Memory (LSTM) networks. The core idea is that an LSTM autoencoder learns to compress and reconstruct the input time series data. During training, the model learns the normal patterns in the data by minimizing the reconstruction error. When fed new data, the model attempts to reconstruct it, and any significant reconstruction error (i.e., deviation between the original and reconstructed data) signals an anomaly. This approach is particularly effective because LSTMs are well-suited to capture temporal dependencies, making them ideal for time series data. The model works without requiring labeled datasets, making it an unsupervised solution. The authors test the model on both synthetic and real-world data, such as sound event detection, showing its applicability across different domains. The LSTM autoencoder method in this paper focuses on unsupervised anomaly detection, where it is trained to recognize anomalies by learning the normal patterns in time series data. It can effectively detect outliers based on reconstruction error but does not inherently have the capacity for ZSL.
+\cite{provotar_unsupervised_2019} introduces an anomaly detection method using an autoencoder architecture based on Long Short-Term Memory (LSTM) networks. The core idea is that an LSTM autoencoder learns to compress and reconstruct the input time series data. During training, the model learns the normal patterns in the data by minimizing the reconstruction error. When fed new data, the model attempts to reconstruct it, and any significant reconstruction error (i.e. deviation between the original and reconstructed data) signals an anomaly. This approach is particularly effective because LSTMs are well-suited to capture temporal dependencies, making them ideal for time series data. The model works without requiring labeled datasets, making it an unsupervised solution. The authors test the model on both synthetic and real-world data, such as sound event detection. It can effectively detect outliers based on reconstruction error but does not have the capacity for ZSL.
 
 %UAE-TENN
-\cite{nivarthi_multi-task_2023} are the first to use a Unified Autoencoder (UAE) for time series data, namely the power forecast of wind and solar plants. They contribute to the challenge of predicting the possible outcome of renewable energy in a newly created plant, either wind or solar. To do so a UAE is combined with a Task Embedding Neural Network (TENN) They examine the usability divided in Single-Task, Multi-Task and Zero-Shot Learning. The method was first published in \cite{nivarthi_unified_2022}. It is then extended by convolutional layers instead of the fully connected neural network layers (UCAE-TENN) and also Long Short-Term Memory layers (ULAE-TENN).
+\cite{nivarthi_multi-task_2023} are the first to use a Unified Autoencoder (UAE) for time series data, namely the power forecast of wind and solar plants. They contribute to the challenge of predicting the possible outcome of renewable energy in a newly created plant, either wind or solar. To do so a UAE is combined with a Task Embedding Neural Network (TENN). They examine the usability divided in Single-Task, Multi-Task and Zero-Shot Learning. The method was first published in \cite{nivarthi_unified_2022}. It is then extended by convolutional layers instead of the fully connected neural network layers (UCAE-TENN) and also Long Short-Term Memory layers (ULAE-TENN).
 
-% MAEDAY
-Realising few-shot anomaly detection of images is done by \cite{schwartz_maeday_2024}. The method MAEDAY can detect objects newly added to the frames. To achieve this a masked autoencoder is used who recreates the former image but without the anomaly. The difference between the initial and reconstructed images is calculated and the object then visible.
-This method is useful for its ability to detect anomalies with very few examples, making it a powerful tool in scenarios where labeled data is rare. \cite{schwartz_maeday_2024} demonstrate the effectiveness of MAEDAY in various applications, showcasing its potential for real-world anomaly detection tasks.
-% TODO why important for time series data?
+% MST-VAE
+\cite{pham_mst-vae_2022} proposes a Multi-Scale Temporal Variational Autoencoder (MST-VAE) for anomaly detection in multivariate time series data. MST-VAE combines short and long-scale convolutional kernels within a 1D CNN and a Variational Autoencoder to capture both short-term and long-term temporal patterns. The method is not directly tested in a Zero-Shot scenario. An implemention is provided by the authors \footnote{\fussy\tiny https://github.com/tuananhphamds/MST-VAE}.
 
 % VRAE based
-To detect anomalies in healthcare data a variational recurrent autoencoder is used by \cite{pereira_learning_2019}.
-The model is trained on electrocardiogram (ECG) datasets. Their method tackles the challenge of finding anomalies in unlabelled time series data. They created an unsupervised framework where the model learns to represent the data and detect anomalies without needing labeled examples.
-The model is based on Variational Recurrent Autoencoders (VRAE) and works by learning to reconstruct the input sequences. During training, they add noise to the input data, and the model tries to reconstruct the original, uncorrupted data. This helps the model learn more robust representations of the data. To detect anomalies, they cluster these learned representations and calculate the distance to identify outliers. Their approach was tested on the ECG5000 dataset and showed that it could effectively detect unusual heartbeats, performing better than previous methods that required labeled data. The model is designed to capture temporal dependencies, making it applicable for MVTSD.
+To detect anomalies in healthcare data a variational recurrent autoencoder (VRAE) is used in \cite{pereira_learning_2019}. They created an unsupervised framework where the model learns to represent the data and detect anomalies without needing labeled examples.
+The model works by learning to reconstruct the input sequences. During training, they add noise to the input data, and the model tries to reconstruct the original, uncorrupted data. This helps the model learn more robust representations of the data. To detect anomalies, they cluster these learned representations and calculate the distance to identify outliers. Their approach was tested on the ECG5000 dataset and showed that it could effectively detect unusual heartbeats, performing better than previous methods that required labeled data. The model is designed to capture temporal dependencies, making it applicable for MVTSD.
 
 %
-Another approach using VRAE involves creating synthetic anomalies to improve the detection process. In their method, they use a two-level hierarchical latent space representation. First, they distill feature descriptors of normal data points into more robust representations using autoencoders (AEs). These representations are then refined using a variational autoencoder (VAE) that creates a family of distributions. From these distributions, they select those that lie on the outskirts of the normal data as generators of synthetic anomalies.
-By generating these synthetic anomalies, they train binary classifiers to distinguish between normal and abnormal data. Their hierarchical structure for feature distillation and fusion helps create robust representations, enabling effective anomaly detection without needing actual anomalies during training. Their method performs well on several benchmarks for anomaly detection  \cite{ramirez_rivera_anomaly_2022}.
+Another approach using VRAE involves creating synthetic anomalies to improve the detection process. A two-level hierarchical latent space representation is used. First, they distill feature descriptors of normal data points into more robust representations using AEs. These representations are then refined using a VAE that creates a family of distributions. From these distributions, they select those that lie on the outskirts of the normal data as generators of synthetic anomalies.
+By generating these synthetic anomalies, they train binary classifiers to distinguish between normal and abnormal data. Their hierarchical structure for feature distillation and fusion helps create robust representations, enabling effective anomaly detection without needing actual anomalies during training \cite{ramirez_rivera_anomaly_2022}.
 
 % Unknwon CyberAttacks
 The paper by \cite{zhang_unknown_2020} addresses the challenge of detecting unknown cyberattacks by applying zero-shot learning. The proposed method maps the features of known attacks to a semantic space using a sparse autoencoder and restores them to the feature space by minimizing reconstruction errors, effectively creating a mapping between features and semantic attributes. This technique enables the model to detect previously unseen attacks by generalizing from known attack features. The method was tested on the NSL-KDD dataset, achieving an accuracy of 88.3\%, outperforming traditional approaches in detecting unknown attacks. The research highlights the feasibility and effectiveness of zero-shot learning for cybersecurity applications.
@@ -102,35 +99,46 @@ The paper by \cite{zhang_unknown_2020} addresses the challenge of detecting unkn
 % \cite{zhang_debiased_2024} point out, that AE-based methods have remaining challenges.
 % TODO what are the challenges of autoencoders?
 
-% TODO
-\cite{han_learning_2022}
+% FuSAGNet
+A method called Fused Sparse Autoencoder and Graph Net (FuSAGNet) is used for anomaly detection in multivariate time series data, specifically targeting cyber-physical systems. The method combines a Sparse Autoencoder (SAE) to learn sparse latent representations and a Graph Neural Network (GNN) to forecast future time series behavior. It captures both temporal dependencies and complex inter-feature relationships by learning graph structures from the data. This joint optimization approach aims to improve anomaly detection performance by fusing reconstruction and forecasting tasks. The method was empirically tested on three real-world datasets related to industrial systems but not in Zero-Shot Learning scenarios \cite{han_learning_2022} \footnote{\fussy\tiny https://github.com/sihohan/FuSAGNet}.
 
-% TODO
-\cite{pham_mst-vae_2022}
 
-% TODO
-\cite{mou_deep_2023}
+% deep AOC
+ Deep Autoencoding One-Class (AOC), a method for time-series anomaly detection that combines autoencoder-based reconstruction and one-class classification in a single-stage approach to better capture normal patterns. The method is evaluated on public datasets, outperforming baseline models and proving effective for detecting various types of anomalies in both univariate and multivariate time-series data. However, zero-shot learning is not tested or addressed in the proposed framework \cite{mou_deep_2023} \footnote{\fussy\tiny https://github.com/alsike22/AOC}.
 
 % VRQRAE TODO
 \cite{kieu_anomaly_2022}
+\footnote{\fussy\tiny}
 
 % TCN-AE TODO
 \cite{thill_temporal_2021}
 
+\footnote{\fussy\tiny}
+
 % MEGA TODO
 \cite{wang_multiscale_2023}
+
+\footnote{\fussy\tiny}
 
 % DAEMONTODO
 \cite{chen_adversarial_2023}
 
+\footnote{\fussy\tiny}
+
 % TSMAE TODO
 \cite{gao_tsmae_2023}
 
+\footnote{\fussy\tiny}
 % GRU-AE TODO
+
 \cite{gong_autoencoder-based_2022}
+
+\footnote{\fussy\tiny}
 
 % TODO evtl auch transformer
 \cite{wang_attention-based_2022}
+
+\footnote{\fussy\tiny}
 
 % MOMENT
 To overcome the challenge of poorly available time series data sets \cite{ma_survey_2023}, the model family MOMENT tries to learn general patterns on a pile of time series data. The pile is a collection of different datasets which they assembled for their pretraining. According to the paper minimal finetuning is needed to perform well on time series tasks like anomaly detection. They published the model and made the usage easily accessible with its own python library. The time serie datasets the model is trained on consist of domains including weather measurements, sensor values and power consumption datasets. Mulitvariate! They also included tongue and finger movement of humans. The different tasks which the model is evaluated on are forecasting (long and short horizon), classification, anomaly detection and imputation. Except for short-horizon forecasting all tasks are managed well. However it cannot detect anomalies in vertically shifted time series \cite{goswami_moment_2024}.

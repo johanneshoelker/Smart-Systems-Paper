@@ -17,15 +17,14 @@ Dddetector,Yang et al.,CL,yes,no,yes
 TRL-CPC,Pranavan et al.,CPC,yes,no,no
 TiCTok,Kang et al.,CPC,yes,no,no
 MGCLAD,Qin et al.,CL,yes,no,yes
-TriAD,Sun,CL,,no,yes
-UCAE-TENN,Nivarthi et al.,AE,,,
-MAEDAY,Schwartz et al.,AE,,,
-VRAE based method,Pereira et al.,AE,yes,yes,no
-AE based method,Ramirez et al.,AE,,,
-AE based method,Provotar et al.,AE,yes,no,no
-FuSAGNet,Han et al.,"AE, GNN",yes,,
-MSTVAE,Pham et al.,AE,yes,,
-deep AOC,Mou et al.,AE,,,
+TriAD,Sun,CL,no,no,yes
+AE based method,Provotar et al.,"AE, LSTM",yes,no,no
+UCAE-TENN,Nivarthi et al.,"UAE, LSTM",yes,yes,no
+VRAE based method,Pereira et al.,VRAE,yes,yes,no
+AE based method,Ramirez et al.,VRAE,yes,yes,no
+FuSAGNet,Han et al.,"AE, GNN",yes,no,yes
+MSTVAE,Pham et al.,"VAE, CNN",yes,no,yes
+deep AOC,Mou et al.,"AE, OCC",yes,no,yes
 AE based method,Zhang et al.,AE,,yes,
 RANSynCoders,Abdulaal et al.,AE,,,yes
 VRQRAE,Kieu et al.,AE,,,no
