@@ -12,8 +12,6 @@
 
 Notizen:
 
-
-
 - new one looks more formal 
 
 - formulation not formal 
@@ -26,25 +24,17 @@ Notizen:
 
 chrome extension catalyzex for code open source availability
 
-
-
 struktur passt soweit
 
 neat datasets from the carla paper
 
 smd data is a good starting point
 
-
-
 data set bei sma finden
 
 es muss nicht unbedingt von sma sein
 
 as many models with representation learning 
-
-
-
-
 
 @inproceedings{su2019robust,
 
@@ -59,8 +49,6 @@ pages={2828--2837},
 year={2019}
 
 }
-
-
 
 what else could be done except of autoencoders and contrastive learning
 
