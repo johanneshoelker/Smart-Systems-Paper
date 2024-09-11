@@ -16,8 +16,8 @@ ContrastAD,Li et al. ,CL,yes,no,no
 Dddetector,Yang et al.,CL,yes,no,yes
 TRL-CPC,Pranavan et al.,CPC,yes,no,no
 TiCTok,Kang et al.,CPC,yes,no,no
-MGCLAD,Qin et al.,CL,,no,
-TriAD,Sun,CL,,no,
+MGCLAD,Qin et al.,CL,yes,no,yes
+TriAD,Sun,CL,,no,yes
 UCAE-TENN,Nivarthi et al.,AE,,,
 MAEDAY,Schwartz et al.,AE,,,
 VRAE based method,Pereira et al.,AE,yes,yes,no
