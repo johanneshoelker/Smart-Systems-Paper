@@ -22,13 +22,13 @@ AE based method,Provotar et al.,"AE, LSTM",yes,no,no
 UCAE-TENN,Nivarthi et al.,"UAE, LSTM",yes,yes,no
 VRAE based method,Pereira et al.,VRAE,yes,yes,no
 AE based method,Ramirez et al.,VRAE,yes,yes,no
+Bi-VRQRAE,Kieu et al.,VRAE,yes,no,yes
 FuSAGNet,Han et al.,"AE, GNN",yes,no,yes
 MSTVAE,Pham et al.,"VAE, CNN",yes,no,yes
 deep AOC,Mou et al.,"AE, OCC",yes,no,yes
-AE based method,Zhang et al.,AE,,yes,
-RANSynCoders,Abdulaal et al.,AE,,,yes
-VRQRAE,Kieu et al.,AE,,,no
-TCN-AE,Thill et al.,AE,,,
+AE based method,Zhang et al.,AE,no,yes,no
+RANSynCoders,Abdulaal et al.,AE,yes,no,yes
+TCN-AE,Thill et al.,"AE, TCN",yes,yes,no
 MEGA,Wang et al.,AE,yes,,
 DAEMON,Chen et al.,AE,yes,yes,no
 TSMAE,Gao et al.,AE,,,

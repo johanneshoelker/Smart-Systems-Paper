@@ -93,27 +93,26 @@ The model works by learning to reconstruct the input sequences. During training,
 Another approach using VRAE involves creating synthetic anomalies to improve the detection process. A two-level hierarchical latent space representation is used. First, they distill feature descriptors of normal data points into more robust representations using AEs. These representations are then refined using a VAE that creates a family of distributions. From these distributions, they select those that lie on the outskirts of the normal data as generators of synthetic anomalies.
 By generating these synthetic anomalies, they train binary classifiers to distinguish between normal and abnormal data. Their hierarchical structure for feature distillation and fusion helps create robust representations, enabling effective anomaly detection without needing actual anomalies during training \cite{ramirez_rivera_anomaly_2022}.
 
+% VRQRAE
+Kieu et al. propose Variational Quasi-Recurrent Autoencoders (VQRAEs) for unsupervised time series anomaly detection, using robust divergences to improve resilience against noisy data. VQRAEs utilize Quasi-Recurrent Neural Networks (QRNNs) for efficient temporal dependency capture, and a bi-directional version (BiVQRAEs) enhances accuracy by processing data in both forward and backward directions. However the method was not explicitly tested on Zero-Shot Learning \cite{kieu_anomaly_2022} \footnote{\fussy\tiny https://github.com/tungk/Bi-VQRAE}.
+
+
 % Unknwon CyberAttacks
-The paper by \cite{zhang_unknown_2020} addresses the challenge of detecting unknown cyberattacks by applying zero-shot learning. The proposed method maps the features of known attacks to a semantic space using a sparse autoencoder and restores them to the feature space by minimizing reconstruction errors, effectively creating a mapping between features and semantic attributes. This technique enables the model to detect previously unseen attacks by generalizing from known attack features. The method was tested on the NSL-KDD dataset, achieving an accuracy of 88.3\%, outperforming traditional approaches in detecting unknown attacks. The research highlights the feasibility and effectiveness of zero-shot learning for cybersecurity applications.
-% TODO how to implement on other time series data tasks?
-% \cite{zhang_debiased_2024} point out, that AE-based methods have remaining challenges.
-% TODO what are the challenges of autoencoders?
+The paper by \cite{zhang_unknown_2020} addresses the challenge of detecting unknown cyberattacks by applying zero-shot learning. The proposed method maps the features of known attacks to a semantic space using a sparse autoencoder and restores them to the feature space by minimizing reconstruction errors, effectively creating a mapping between features and semantic attributes. This technique enables the model to detect previously unseen attacks by generalizing from known attack features. The research highlights the feasibility and effectiveness of zero-shot learning for cybersecurity applications.
 
 % FuSAGNet
 A method called Fused Sparse Autoencoder and Graph Net (FuSAGNet) is used for anomaly detection in multivariate time series data, specifically targeting cyber-physical systems. The method combines a Sparse Autoencoder (SAE) to learn sparse latent representations and a Graph Neural Network (GNN) to forecast future time series behavior. It captures both temporal dependencies and complex inter-feature relationships by learning graph structures from the data. This joint optimization approach aims to improve anomaly detection performance by fusing reconstruction and forecasting tasks. The method was empirically tested on three real-world datasets related to industrial systems but not in Zero-Shot Learning scenarios \cite{han_learning_2022} \footnote{\fussy\tiny https://github.com/sihohan/FuSAGNet}.
 
-
 % deep AOC
- Deep Autoencoding One-Class (AOC), a method for time-series anomaly detection that combines autoencoder-based reconstruction and one-class classification in a single-stage approach to better capture normal patterns. The method is evaluated on public datasets, outperforming baseline models and proving effective for detecting various types of anomalies in both univariate and multivariate time-series data. However, zero-shot learning is not tested or addressed in the proposed framework \cite{mou_deep_2023} \footnote{\fussy\tiny https://github.com/alsike22/AOC}.
+Deep Autoencoding One-Class (AOC), a method for time-series anomaly detection that combines autoencoder-based reconstruction and one-class classification in a single-stage approach to better capture normal patterns. The method is evaluated on public datasets, outperforming baseline models and proving effective for detecting various types of anomalies in both univariate and multivariate time-series data. However, zero-shot learning is not tested or addressed in the proposed framework \cite{mou_deep_2023} \footnote{\fussy\tiny https://github.com/alsike22/AOC}.
 
-% VRQRAE TODO
-\cite{kieu_anomaly_2022}
-\footnote{\fussy\tiny}
+% RANSynCoders
+Another paper presents a method named RANSynCoders for detecting anomalies in asynchronous multivariate time series by combining spectral analysis with autoencoders. It leverages spectral analysis to synchronize the features, followed by multiple autoencoders using random feature subsets to detect anomalies via majority voting. This approach improves performance on high-dimensional, asynchronous data by reducing false positives and providing better localization of anomalies. The method in the paper does not specifically mention being tested in zero-shot scenarios \cite{abdulaal_practical_2021}. An implemention of the method is provided by the authors \footnote{\fussy\tiny https://github.com/eBay/RANSynCoders}.
 
-% TCN-AE TODO
-\cite{thill_temporal_2021}
+% TCN-AE
+Another proposed method is using a Temporal Convolutional Network Autoencoder (TCN-AE) designed for unsupervised anomaly detection in multivariate time series data. It employs dilated convolutions to capture long-range dependencies and compresses time series into representations using an autoencoder. The method detects anomalies by evaluating reconstruction errors, as anomalies are expected to have significantly higher reconstruction errors compared to normal patterns \cite{thill_temporal_2021}. A Repository with a minimal working example can be found provided by the author but no implementation on new datasets is provided \footnote{\fussy\tiny https://github.com/MarkusThill/bioma-tcn-ae}.
 
-\footnote{\fussy\tiny}
+
 
 % MEGA TODO
 \cite{wang_multiscale_2023}
@@ -142,6 +141,9 @@ A method called Fused Sparse Autoencoder and Graph Net (FuSAGNet) is used for an
 
 % MOMENT
 To overcome the challenge of poorly available time series data sets \cite{ma_survey_2023}, the model family MOMENT tries to learn general patterns on a pile of time series data. The pile is a collection of different datasets which they assembled for their pretraining. According to the paper minimal finetuning is needed to perform well on time series tasks like anomaly detection. They published the model and made the usage easily accessible with its own python library. The time serie datasets the model is trained on consist of domains including weather measurements, sensor values and power consumption datasets. Mulitvariate! They also included tongue and finger movement of humans. The different tasks which the model is evaluated on are forecasting (long and short horizon), classification, anomaly detection and imputation. Except for short-horizon forecasting all tasks are managed well. However it cannot detect anomalies in vertically shifted time series \cite{goswami_moment_2024}.
+
+% \cite{zhang_debiased_2024} point out, that AE-based methods have remaining challenges.
+% TODO what are the challenges of autoencoders?
 
 \subsubsection{Transformer}
 % AnomalyTransformer
