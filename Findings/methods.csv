@@ -29,10 +29,10 @@ deep AOC,Mou et al.,"AE, OCC",yes,no,yes
 AE based method,Zhang et al.,AE,no,yes,no
 RANSynCoders,Abdulaal et al.,AE,yes,no,yes
 TCN-AE,Thill et al.,"AE, TCN",yes,yes,no
-MEGA,Wang et al.,AE,yes,,
+MEGA,Wang et al.,"AE, GCN",yes,yes,yes
 DAEMON,Chen et al.,AE,yes,yes,no
-TSMAE,Gao et al.,AE,,,
-GRU-AE,Gong et al.,AE,,,
+TSMAE,Gao et al.,"AE, LSTM",yes,no,no
+GRU-AE,Gong et al.,"AE, GRU",yes,no,no
 MSCVAE,Yokkampon et al.,AE,yes,yes,
 AE based method, Wang et al.,AE, , , 
 MOMENT,Goswami et al.,AE,,yes,yes

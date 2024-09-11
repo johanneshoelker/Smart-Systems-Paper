@@ -40,9 +40,16 @@ The code for the implementions can be found here: \footnote{\fussy\tiny https://
 An implemention of the model TS2Vec is done by the authors using Python \footnote{\fussy\tiny https://github.com/zhihanyue/ts2vec}.
 The paper providing TS2Vec claims the model to be prepared for multiple variables. However the anomaly detection training data was univariate \cite{yue_ts2vec_2022}.
 
+% MEGA
+\subsubsection{MEGA}
+\footnote{\fussy\tiny https://github.com/jingwang2020/MEGA \label{test}}
+
+\subsubsection{DAEMON}
+The authors of the method DAEMON published python scripts for replicating the results on all datasets they used. However, no explanation on how to use the method for entirely new datasets can be found on this link \ref{foot_daemon}.
+
 % Moment
 \subsubsection{MOMENT}
-A detailed instruction on how to reproduce the outcomes of MOMENT presented by \cite{goswami_moment_2024} is provided on GitHub \footnote{\fussy\tiny https://github.com/moment-timeseries-foundation-model/moment/blob/main/tutorials/anomaly\_detection.ipynb}. The method takes a three dimensional input tensor, containing batches, channels and time points. The maximal number of points is 512. It reconstructs the given input and returns a tensor containing the reconstructions.
+A detailed instruction on how to reproduce the outcomes of MOMENT presented by \cite{goswami_moment_2024} is provided on GitHub \ref{foot_moment}. The method takes a three dimensional input tensor, containing batches, channels and time points. The maximal number of points is 512. It reconstructs the given input and returns a tensor containing the reconstructions.
 
 For the implementation on SMA data the provided tutorial is used as a guide. The SMA data is preprocessed to match the requested input tensor. The reconstructions are further compared with the inputs by calulating the Mean Squared Error (MSE):
 \begin{equation}

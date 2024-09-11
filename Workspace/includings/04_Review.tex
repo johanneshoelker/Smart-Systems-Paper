@@ -1,7 +1,7 @@
 \section{Representation Learning Methods}\label{review}
-In this chapter any found paper proposing a RL strategy used for time series data with adaptability on anomaly detection tasks is presented. Here the inclusion criteria as described in \ref{criteria} are applied.
+In this chapter any found paper proposing a RL strategy used for time series data with adaptability on anomaly detection tasks is presented. For the literature research the inclusion criteria as described in \ref{criteria} are applied.
 
-The different RL strategies are listed, explained and compared. The strategies are organized by their underlying concept. We begin with straight-forward methods which are based on one concept and increase the complexity throughout the chapter. In the end methods that use combinations of different concepts are presented.
+The different RL strategies explained focusing on the compliance of the exclusion criteria. The strategies are organized by their underlying concept. We begin with straight-forward methods which are based on one concept and increase the complexity throughout the chapter. In the end methods that use combinations of different concepts are presented.
 \subsubsection{MLP}
 % INRAD
 Using a simple MLP is a straight-forward way to learn representations and to detect anomalies in time series data \cite{nielsen_neural_2015}. The input variable for the MLP are time points and the output variable represents the value at these time points. The model is trained to learn this mapping. With the trained model, the values in a live scenario are predicted and the difference to the actual values is measured. If this representation error exceeds a certain threshold, an anomaly is found. A method called INRAD, Implicit Neural Representation of Time-Series Data is using this concept. The method takes multiple variables as input and the model is trained with data including anomalies. It is not suitable for Zero-Shot Learning \cite{jeong_time-series_2022}.
@@ -79,6 +79,9 @@ Autoencoders on the other hand are robust to unclean training datasets \cite[p. 
 
 \cite{provotar_unsupervised_2019} introduces an anomaly detection method using an autoencoder architecture based on Long Short-Term Memory (LSTM) networks. The core idea is that an LSTM autoencoder learns to compress and reconstruct the input time series data. During training, the model learns the normal patterns in the data by minimizing the reconstruction error. When fed new data, the model attempts to reconstruct it, and any significant reconstruction error (i.e. deviation between the original and reconstructed data) signals an anomaly. This approach is particularly effective because LSTMs are well-suited to capture temporal dependencies, making them ideal for time series data. The model works without requiring labeled datasets, making it an unsupervised solution. The authors test the model on both synthetic and real-world data, such as sound event detection. It can effectively detect outliers based on reconstruction error but does not have the capacity for ZSL.
 
+% TSMAE
+Time Series Memory-Augmented Autoencoder (TSMAE), a anomaly detection method for IoT time-series data integrates a memory module to suppress overgeneralization by storing normal patterns and reconstructing time-series data with Long Short-Term Memory (LSTM) networks to capture temporal dependencies. Anomalies are detected by comparing the reconstruction error between the original and generated sequences, enhancing anomaly detection effectiveness. This method is tested on multivariate time series data, but no explicit mention of zero-shot testing was found \cite{gao_tsmae_2023}.
+
 %UAE-TENN
 \cite{nivarthi_multi-task_2023} are the first to use a Unified Autoencoder (UAE) for time series data, namely the power forecast of wind and solar plants. They contribute to the challenge of predicting the possible outcome of renewable energy in a newly created plant, either wind or solar. To do so a UAE is combined with a Task Embedding Neural Network (TENN). They examine the usability divided in Single-Task, Multi-Task and Zero-Shot Learning. The method was first published in \cite{nivarthi_unified_2022}. It is then extended by convolutional layers instead of the fully connected neural network layers (UCAE-TENN) and also Long Short-Term Memory layers (ULAE-TENN).
 
@@ -114,33 +117,25 @@ Another proposed method is using a Temporal Convolutional Network Autoencoder (T
 
 
 
-% MEGA TODO
-\cite{wang_multiscale_2023}
+% MEGA
+A framework called Multiscale Wavelet Graph AutoEncoder (MEGA) presented in \cite{wang_multiscale_2023} for anomaly detection in multivariate time series. It integrates Discrete Wavelet Transform (DWT) to decompose time series into different frequency components, reconstructing them to highlight anomalies across scales. Additionally, a dynamic graph convolution network is employed to model inter-variable relationships at different scales, enhancing the detection of anomalies caused by changes in variable dependencies.
+This method is tested in a zero-shot scenario and explicitly takes multivariate time series as input. The code can be found provided by the authors \footnote{\fussy\tiny https://github.com/jingwang2020/MEGA}.
 
-\footnote{\fussy\tiny}
+% DAEMON
+The method proposed in \cite{chen_adversarial_2023} introduces DAEMON, an adversarial autoencoder framework designed for unsupervised multivariate time-series anomaly detection and interpretation. The model employs two adversarial training processes: one to align the hidden variable’s posterior distribution with a prior and another to minimize the difference between original and reconstructed data. This improves robustness and avoids overfitting while anomalies are detected based on reconstruction errors. There is no mentioning of testing in a zero-shot scenario.
+Replicating the results of the paper is possible due to the open source availability mentioned in the paper
+\footnote{\fussy\tiny https://github.com/Sherlock-C/DAEMON \label{foot_daemon}}.
 
-% DAEMONTODO
-\cite{chen_adversarial_2023}
 
-\footnote{\fussy\tiny}
-
-% TSMAE TODO
-\cite{gao_tsmae_2023}
-
-\footnote{\fussy\tiny}
-% GRU-AE TODO
-
-\cite{gong_autoencoder-based_2022}
-
-\footnote{\fussy\tiny}
+% GRU-AE
+The method proposed in \cite{gong_autoencoder-based_2022} utilizes a Gated Recurrent Unit-based Autoencoder (GRU-AE) to detect anomalies in time-series data by reconstructing sequences and identifying large reconstruction errors as anomalies. It incorporates an attention mechanism to enhance performance and applies multi-timestamp stacking to reduce time steps for better training efficiency. The model is tested on real-world datasets from cellular networks, detecting anomalies at both single-day and multi-day scales. The method is applied to multivariate time-series data, but no mention of a zero-shot scenario is made.
 
 % TODO evtl auch transformer
 \cite{wang_attention-based_2022}
-
 \footnote{\fussy\tiny}
 
 % MOMENT
-To overcome the challenge of poorly available time series data sets \cite{ma_survey_2023}, the model family MOMENT tries to learn general patterns on a pile of time series data. The pile is a collection of different datasets which they assembled for their pretraining. According to the paper minimal finetuning is needed to perform well on time series tasks like anomaly detection. They published the model and made the usage easily accessible with its own python library. The time serie datasets the model is trained on consist of domains including weather measurements, sensor values and power consumption datasets. Mulitvariate! They also included tongue and finger movement of humans. The different tasks which the model is evaluated on are forecasting (long and short horizon), classification, anomaly detection and imputation. Except for short-horizon forecasting all tasks are managed well. However it cannot detect anomalies in vertically shifted time series \cite{goswami_moment_2024}.
+To overcome the challenge of poorly available time series data sets \cite{ma_survey_2023}, the model family MOMENT tries to learn general patterns on a pile of time series data. The pile is a collection of different datasets which they assembled for their pretraining. According to the paper minimal finetuning is needed to perform well on time series tasks like anomaly detection. They published the model and made the usage easily accessible with its own python library. The time serie datasets the model is trained on consist of domains including weather measurements, sensor values and power consumption datasets. They also included tongue and finger movement of humans. The different tasks which the model is evaluated on are forecasting (long and short horizon), classification, anomaly detection and imputation. Except for short-horizon forecasting all tasks are managed well. However it cannot detect anomalies in vertically shifted time series \cite{goswami_moment_2024}. The method is available as a Jupyter Notebook on Github \footnote{\fussy\tiny https://github.com/moment-timeseries-foundation-model/moment/blob/main/tutorials/anomaly\_detection.ipynb \label{foot_moment}}.
 
 % \cite{zhang_debiased_2024} point out, that AE-based methods have remaining challenges.
 % TODO what are the challenges of autoencoders?
