@@ -1,5 +1,8 @@
 \section{Definitions and Conventions}\label{theory}
 The basic expressions used in this paper are explained in the following chapter. First Representation Learning is defined and the different approaches to find representations in data are explained. A description on how to evaluate the found representations is given. Afterwards Zero Shot Learning as well as Anomaly Detection is described and explained.
+
+% TODO put formulas for a time series and the anomalies. maybe some anomaly score too
+
 \subsection{Representation Learning}
 %Intro to RL
 % Sensors and comparable applications produce values which vary over time. Sometimes the values vary in an unforeseen way and for a short time window they may be completely random. We have to step back and observe longer time periods.
@@ -74,6 +77,12 @@ Several definitions of anomalies in data can be found in literature. In this pap
 
 % definiton by shape
 Instead of dividing anomalies by their cause the shape of anomalies can vary in several ways. In real measurement data any shape is possible and it is totally unpredictable \cite{schwartz_maeday_2024}. For training purposes anomaly injection is crucial. Then the anomalies are simulated as point anomalies or subsequence anomalies. Point anomalies occur once and can be global or contextual. Subsequence anomalies on the other hand change the values in a given time window or on long term. They can be divided in seasonal, shapelet and trend anomalies. Seasonal and shapelet anomalies change the values in a limited time window, trend anomalies are changing all following values \cite[p. 9]{darban_carla_2024}. %Seasonal in time direction, shapelet the amplitudes
+\begin{figure}[h!] % 'h!' tries to place the figure here
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/carla_anomalies.png}
+  \caption{Classification of diefferent anomalies \cite{darban_carla_2024}}
+  \label{fig_anomaly_carla}
+\end{figure}
 
 % definiton for this paper
 In this paper we want to focus on single time events, which are in any case anomalies. Potentially being caused by an unknown process, they cannot be classified \cite{gruhl_novelty_2022}. This defines our goal as an Anomaly Detection (AD) task.

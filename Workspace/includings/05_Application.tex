@@ -2,12 +2,11 @@
 In this chapter the found articles are filtered using the exclusion criteria defined in chapter \ref{criteria}. By excluding methods that haven't been tested with multiple input variables we answer RQ2. Methods that are not tested in Zero-Shot Learning Scenarios are also excluded which covers RQ4.
 
 More precisely we want to know by the defined filter process which of the proposed RL types are best suited for Zero Shot Anomaly Detection in multi-variate time series data. In this chapter a selection of appropriate methods for Time Series Data Anomaly Detection out of \ref{review} is extracted.
-% TODO put formulas for a time series and the anomalies. maybe some anomaly score too
 
+% TODO table like in gruhl
  % table
- In order to achieve a successful implementation in the following chapter only models which are available and well documented are chosen for further examination.
+ In order to achieve a successful implementation in the following chapter only models which are available and well documented are chosen for further examination. Representation learning methodologies matching the inclusion criteria and their classification by exclusion criteria are listed in table \ref{tab_rl_methods}
  \begin{table}
-   \caption{Representation learning methodologies matching the inclusion criteria and their classification by exclusion criteria. Single Letter abbreviations are introduced for Transformer (T) and Clustering (C) concerning the underlying concept. The check boxes show if the method is tested with multiple input variables (MV), tested on zero shot learning (ZSL) or have open source availability (OSA). legend: yes: \cmark, no: \xmark, no
-information: -.}\label{tab_rl_methods}
+   \caption{Abbreviations: Transformer (T), Clustering (C), multiple input variables (MV), open source availability (OSA). Legend: yes: \cmark, no: \xmark, no information: -.}\label{tab_rl_methods}
    \include{includings/methods.tex}
  \end{table}
