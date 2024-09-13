@@ -49,7 +49,7 @@ The authors of the method DAEMON published python scripts for replicating the re
 
 % Moment
 \subsubsection{MOMENT}
-A detailed instruction on how to reproduce the outcomes of MOMENT presented by \cite{goswami_moment_2024} is provided on GitHub \ref{foot_moment}. The method takes a three dimensional input tensor, containing batches, channels and time points. The maximal number of points is 512. It reconstructs the given input and returns a tensor containing the reconstructions.
+A detailed instruction on how to reproduce the outcomes of MOMENT presented by \cite{goswami_moment_2024} is provided on this GitHub link \ref{foot_moment}. The method takes a three dimensional input tensor, containing batches, channels and time points. The maximal number of points is 512. It reconstructs the given input and returns a tensor containing the reconstructions.
 
 For the implementation on SMA data the provided tutorial is used as a guide. The SMA data is preprocessed to match the requested input tensor. The reconstructions are further compared with the inputs by calulating the Mean Squared Error (MSE):
 \begin{equation}
@@ -61,4 +61,7 @@ x' = \frac{x - \text{min}(x)}{\text{max}(x) - \text{min}(x)}
 \end{equation}
 Every timestamp that exceeds a certain threshold then represents the found anomalies.
 
-%TODO results
+% Results
+One sensor needs to be excludedbecause the values didn't change.
+With an untrained model no anomalies are found.
+
