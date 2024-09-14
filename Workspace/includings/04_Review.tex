@@ -79,8 +79,9 @@ Autoencoders on the other hand are robust to unclean training datasets \cite[p. 
 
 \cite{provotar_unsupervised_2019} introduces an anomaly detection method using an autoencoder architecture based on Long Short-Term Memory (LSTM) networks. The core idea is that an LSTM autoencoder learns to compress and reconstruct the input time series data. During training, the model learns the normal patterns in the data by minimizing the reconstruction error. When fed new data, the model attempts to reconstruct it, and any significant reconstruction error (i.e. deviation between the original and reconstructed data) signals an anomaly. This approach is particularly effective because LSTMs are well-suited to capture temporal dependencies, making them ideal for time series data. The model works without requiring labeled datasets, making it an unsupervised solution. The authors test the model on both synthetic and real-world data, such as sound event detection. It can effectively detect outliers based on reconstruction error but does not have the capacity for ZSL.
 
-% TSMAE
-Time Series Memory-Augmented Autoencoder (TSMAE), a anomaly detection method for IoT time-series data integrates a memory module to suppress overgeneralization by storing normal patterns and reconstructing time-series data with Long Short-Term Memory (LSTM) networks to capture temporal dependencies. Anomalies are detected by comparing the reconstruction error between the original and generated sequences, enhancing anomaly detection effectiveness. This method is tested on multivariate time series data, but no explicit mention of zero-shot testing was found \cite{gao_tsmae_2023}.
+% Other LSTM based
+Other methods that use LSTM networks are found in literature. All of them are designed for multivariate time series data but are not tested on Zero-Shot Learning. The authors did not provide instructions on how to replicate the outcomes
+\cite{yookampon_robust_2022} \cite{gao_tsmae_2023} \cite{niu_lstm-based_2020}.
 
 %UAE-TENN
 \cite{nivarthi_multi-task_2023} are the first to use a Unified Autoencoder (UAE) for time series data, namely the power forecast of wind and solar plants. They contribute to the challenge of predicting the possible outcome of renewable energy in a newly created plant, either wind or solar. To do so a UAE is combined with a Task Embedding Neural Network (TENN). They examine the usability divided in Single-Task, Multi-Task and Zero-Shot Learning. The method was first published in \cite{nivarthi_unified_2022}. It is then extended by convolutional layers instead of the fully connected neural network layers (UCAE-TENN) and also Long Short-Term Memory layers (ULAE-TENN).
@@ -89,7 +90,7 @@ Time Series Memory-Augmented Autoencoder (TSMAE), a anomaly detection method for
 \cite{pham_mst-vae_2022} proposes a Multi-Scale Temporal Variational Autoencoder (MST-VAE) for anomaly detection in multivariate time series data. MST-VAE combines short and long-scale convolutional kernels within a 1D CNN and a Variational Autoencoder to capture both short-term and long-term temporal patterns. The method is not directly tested in a Zero-Shot scenario. An implemention is provided by the authors \footnote{\fussy\tiny github.com/tuananhphamds/MST-VAE}.
 
 % MSCVAE
-Another method using VAE introduces a Multi-Scale Convolutional Variational Autoencoder (MSCVAE) for unsupervised anomaly detection in multivariate time-series data. It constructs multi-scale attribute matrices to capture system states at different time steps and uses a convolutional variational autoencoder to extract spatial features, while an attention-based ConvLSTM captures temporal patterns. Anomalies are detected by comparing the original and reconstructed matrices, and a novel ERR-based threshold strategy is employed for optimal performance. The article does not mention Zero-Shot Learning and neither provides an open source implementation \cite{yookampon_robust_2022}.
+% Another method using VAE introduces a Multi-Scale Convolutional Variational Autoencoder (MSCVAE) for unsupervised anomaly detection in multivariate time-series data. It constructs multi-scale attribute matrices to capture system states at different time steps and uses a convolutional variational autoencoder to extract spatial features, while an attention-based ConvLSTM captures temporal patterns. Anomalies are detected by comparing the original and reconstructed matrices, and a novel ERR-based threshold strategy is employed for optimal performance. The article does not mention Zero-Shot Learning and neither provides an open source implementation .
 
 % VRAE based
 To detect anomalies in healthcare data a variational recurrent autoencoder (VRAE) is used in \cite{pereira_learning_2019}. They created an unsupervised framework where the model learns to represent the data and detect anomalies without needing labeled examples.
@@ -117,8 +118,6 @@ Another paper presents a method named RANSynCoders for detecting anomalies in as
 
 % TCN-AE
 Another proposed method is using a Temporal Convolutional Network Autoencoder (TCN-AE) designed for unsupervised anomaly detection in multivariate time series data. It employs dilated convolutions to capture long-range dependencies and compresses time series into representations using an autoencoder. The method detects anomalies by evaluating reconstruction errors, as anomalies are expected to have significantly higher reconstruction errors compared to normal patterns \cite{thill_temporal_2021}. A Repository with a minimal working example can be found provided by the author but no implementation on new datasets is provided \footnote{\fussy\tiny github.com/MarkusThill/bioma-tcn-ae}.
-
-
 
 % MEGA
 A framework called Multiscale Wavelet Graph AutoEncoder (MEGA) presented in \cite{wang_multiscale_2023} for anomaly detection in multivariate time series. It integrates Discrete Wavelet Transform (DWT) to decompose time series into different frequency components, reconstructing them to highlight anomalies across scales. Additionally, a dynamic graph convolution network is employed to model inter-variable relationships at different scales, enhancing the detection of anomalies caused by changes in variable dependencies.
@@ -184,23 +183,19 @@ In contrast, \cite{alshaer_detecting_2020} propose a method combining matrix pro
 
 % shapelet summary
 While both methods utilize shapelet learning, Beggel et al. focus on static datasets and robust feature representation, whereas Alshaer et al. emphasize real-time detection in dynamic, streaming environments.
-% TODO search for GAN based methods
 
-% SL based TODO
-\cite{liang_shapelet-based_2024}
+%IPS
+The IPS (Instance Profile for Shapelet Discovery) method addresses time series classification by using shapelets-discriminative subsequences of time series. This method was tested extensively on various datasets but was not explicitly tested in a zero-shot scenario \cite{li_ips_2022}.
 
-% IPS TODO
-\cite{li_ips_2022}
+% SL based
+The method proposed in the paper focuses on using shapelet-based representations for unsupervised learning of multivariate time series. It employs contrastive learning, multi-scale alignment, and a shapelet transformer to enhance MVTSDno representations without requiring labeled data. The method was tested in scenarios where labeled data is sparse or unavailable (partially labeled scenarios), but it does not appear to be tested explicitly in a traditional zero-shot setting
+\cite{liang_shapelet-based_2024} \footnote{\fussy\tiny github.com/real2fish/CSL}.
 
-\subsubsection{Other}
+\subsubsection{Combinations}
 % Clustering
-\cite{li_clustering-based_2021} propose a method for detecting anomalies in multivariate time series by combining clustering and reconstruction techniques. The authors use a sliding window approach to generate subsequences from the multivariate time series, then apply extended fuzzy clustering to reveal the underlying structure of the subsequences. By reconstructing these subsequences with optimal cluster centers, the method detects anomalies based on how well the reconstructed data fits the original subsequences. A confidence index quantifies the level of detected anomalies. The approach is shown to effectively detect anomalies related to amplitude and shape changes in various application domains, such as healthcare and finance, and is optimized using Particle Swarm Optimization.
+\cite{li_clustering-based_2021} propose a method for detecting anomalies in multivariate time series by combining clustering and reconstruction techniques. The authors use a sliding window approach to generate subsequences from the multivariate time series, then apply extended fuzzy clustering to reveal the underlying structure of the subsequences. By reconstructing these subsequences with optimal cluster centers, the method detects anomalies based on how well the reconstructed data fits the original subsequences. A confidence index quantifies the level of detected anomalies. The method does not seem to have been explicitly tested in a zero-shot scenario.
 
-% TODO include benchmark methods from \cite[p. 19]{darban_carla_2024}
-
-% LSTM based TODO
-\cite{niu_lstm-based_2020}
-% Moving Memory Dynamic Filter TODO
+% Moving Memory Dynamic Filter
 \cite{duan_unsupervised_2021}
 
 %DCFF-MTAD
