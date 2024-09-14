@@ -16,16 +16,8 @@ The values are collectively stored at a 7 minute interval over several months. 1
 % In the test data the learning data is seperate from the data including anomalies. The important thing about Zero Shot Learning is that a specific anomaly never occured like this before. In the test data, all chosen representation learning techniques are applied using the same data for learning and afterwards testing the anomaly detection with the same anomalies. According to chapter (Evaluation) the characteristics are evaluated for each RL technique chosen in the previous chapter.
 
 \subsection{Implemented Methods}
-The main goal is to detect the labeled anomalies in the SMA dataset. If the methods find the timestamp of the system failure, they perform correctly. First the models are taken as is and a forward pass is applied. The given output is evaluated if the model already detects the failure time points in the inverter time series data. If possible, the model is trained afterwards using a set of 12 inverters and tested on the remaining 7 inverters. This way the Zero-Shot scenario like in \ref{theory} is created.
+The main goal is to detect the labeled anomalies in the SMA dataset. If the methods find the timestamp of the system failure, they perform correctly. First the models are taken as is and a forward pass is applied. The given output is evaluated if the model already detects the failure time points in the inverter time series data. If possible, the model is trained afterwards using a set of 12 inverters and tested on the remaining 7 inverters. This way the Zero-Shot scenario like in section \ref{theory} is created.
 The code for the implementions can be found here: \footnote{\fussy\tiny https://github.com/johanneshoelker/Smart-Systems-Paper/tree/main/Implementation}
-
-
-% Limitations TODO This paper is limited
-% TODO Include Link to code repo
-% github.com/imperial-quore/TranAD
-%
-% github.com/thuml/Anomaly-Transformer
-% github.com/eBay/RANSynCoders
 
 %Carla
 \subsubsection{CARLA}
@@ -37,7 +29,7 @@ The code for the implementions can be found here: \footnote{\fussy\tiny https://
 
 % TS2Vec
 \subsubsection{TS2Vec}
-An implemention of the model TS2Vec is done by the authors using Python \footnote{\fussy\tiny https://github.com/zhihanyue/ts2vec}.
+An implemention of the model TS2Vec is done by the authors using Python available on link \ref{foot_ts2vec}.
 The paper providing TS2Vec claims the model to be prepared for multiple variables. However the anomaly detection training data was univariate \cite{yue_ts2vec_2022}.
 
 % MEGA
@@ -62,6 +54,6 @@ x' = \frac{x - \text{min}(x)}{\text{max}(x) - \text{min}(x)}
 Every timestamp that exceeds a certain threshold then represents the found anomalies.
 
 % Results
-One sensor needs to be excludedbecause the values didn't change.
-With an untrained model no anomalies are found.
+One sensor needed to be excluded because the values didn't change.
+With an untrained model no anomalies are found. 
 
