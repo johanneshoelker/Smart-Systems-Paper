@@ -39,16 +39,17 @@ MOMENT,Goswami et al.,AE,yes,yes,yes
 TranAD,Tuli et al.,T,yes,no,yes
 AnomalyTransformer,Xu et al.,T,yes,no,yes
 TiSAT,Doshi et al.,T,yes,no,yes
-TCF-Trans,Peng et al.,T,,,
-DCT-GAN,Li et al.,"T, GAN",,,
-Transformer based method,Shin et al.,"T, GAN",,,
-LLM based method,Li et al.,"T, LLM",no,yes,
+TCF-Trans,Peng et al.,T,yes,no,no
+DCT-GAN,Li et al.,"T, GAN",yes,no,no
+AnoFormer,Shin et al.,"T, GAN",yes,no,no
+LLM based method,Li et al.,"T, LLM",no,yes,no
 DATN,Wu et al.,"T, LLM",yes,no,no
-Transformer based method,Ye et al. ,"T, Fourier",,,
-SL based method,Beggel  et al.,SL,,,
-SL based method,Alshaer  et al.,SL,,,
+Transformer based method,Ye et al. ,"T, Fourier",yes,no,no
+SL based method,Beggel  et al.,SL,no,no,no
+SL based method,Alshaer  et al.,SL,no,no,no
 SL based method,Liang et al.,SL,yes,,
 IPS,Li et al.,SL,,,
 ,Li et al.,C,,,
 ,Niu et al.,LSTM,,,
 MMDF,Duan et al.,MMDF,,,
+DCFF-MTAD,Xu et al.,DCFF,yes,,
