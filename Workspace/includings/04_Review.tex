@@ -196,7 +196,7 @@ The method proposed in the paper focuses on using shapelet-based representations
 \cite{li_clustering-based_2021} propose a method for detecting anomalies in multivariate time series by combining clustering and reconstruction techniques. The authors use a sliding window approach to generate subsequences from the multivariate time series, then apply extended fuzzy clustering to reveal the underlying structure of the subsequences. By reconstructing these subsequences with optimal cluster centers, the method detects anomalies based on how well the reconstructed data fits the original subsequences. A confidence index quantifies the level of detected anomalies. The method does not seem to have been explicitly tested in a zero-shot scenario.
 
 % Moving Memory Dynamic Filter
-\cite{duan_unsupervised_2021}
+A Fourier transformation isolates seasonal components in a method called Moving Memory Dynamic Filter (MMDF). While the distance transformation captures both the data values and their temporal dependencies. Anomalies are detected when the center-to-center distance exceeds the threshold. The authors primarily discuss the proposed method in the context of univariate time series anomaly detection and do not explicitly mention its applicability to MVTSD \cite{duan_unsupervised_2021}.
 
 %DCFF-MTAD
-\cite{xu_dcff-mtad_2023}
+In contrast, the method DCFF-MTAD, a multivariate time-series anomaly detection method. It leverages a dual-channel feature extraction that combines spatial short-time Fourier transformation for spatial features and a graph attention network for temporal features. These features are then fused using a Gated Recurrent Unit for robust anomaly detection. THe method is not tested on Zero-Shot Learning and is not available as open source \cite{xu_dcff-mtad_2023}.

@@ -51,5 +51,5 @@ SL based method,Alshaer  et al.,SL,no,no,no
 SL based method,Liang et al.,SL,yes,no,yes
 IPS,Li et al.,SL,no,no,no
 Clustering based,Li et al.,C,yes,no,no
-MMDF,Duan et al.,MMDF,,,
-DCFF-MTAD,Xu et al.,DCFF,yes,,
+MMDF,Duan et al.,MMDF,no,no,no
+DCFF-MTAD,Xu et al.,DCFF,yes,no,no
