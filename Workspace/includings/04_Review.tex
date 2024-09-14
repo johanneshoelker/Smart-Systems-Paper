@@ -143,20 +143,21 @@ To overcome the challenge of poorly available time series data sets \cite{ma_sur
 % TODO what are the challenges of autoencoders?
 
 \subsubsection{Transformer}
+%TODO intro for transformers
+
 % AnomalyTransformer
-\cite{xu_anomaly_2022} use a Transformer architecture to detect anomalies on three different datasets. \footnote{\fussy\tiny github.com/thuml/Anomaly-Transformer}
+A method called "Anomaly Transformer", which detects anomalies in time series by comparing a time point’s learned associations with a Gaussian-based prior association to compute the Association Discrepancy. The model uses a minimax strategy to amplify the difference between normal and anomalous points based on this discrepancy. The method is tested in a zero-shot scenario and supports multivariate time series as input \cite{xu_anomaly_2022} \footnote{\fussy\tiny github.com/thuml/Anomaly-Transformer}.
 
 %TranAD
-\cite{tuli_tranad_2022}
-\footnote{\fussy\tiny github.com/imperial-quore/TranAD}
+TranAD is a transformer-based model designed for anomaly detection in multivariate time-series data. It leverages self-attention mechanisms and adversarial training to enhance both accuracy and training stability. The method includes meta-learning to perform well even in low-data scenarios. The paper does not explicitly mention testing the method in a zero-shot learning scenario \cite{tuli_tranad_2022} \footnote{\fussy\tiny github.com/imperial-quore/TranAD}.
 
-% DATN TODO
-\cite{wu_decompose_2023}
+% DATN
+The proposed method, Decompose Auto-Transformer Network (DATN), focuses on time-series anomaly detection by decomposing the input into seasonal and trend components, followed by an auto-attention mechanism for feature extraction. The method takes multivariate input, where the decomposition and attention mechanisms operate on multivariate time-series data. The paper does not mention zero-shot learning explicitly \cite{wu_decompose_2023}.
 
-% TiSAT TODO
-\cite{doshi_tisat_2022}
+% TiSAT
+Time Series Anomaly Transformer (TiSAT), introduces a transformer-based approach that captures long-range temporal dependencies in time-series anomaly detection using a probabilistic attention mechanism, which improves computational efficiency by focusing on key query-value pairs. The model takes multivariate input and applies non-parametric k-nearest neighbors (kNN) for anomaly detection. The paper does not mention zero-shot learning, too \cite{doshi_tisat_2022} \footnote{\fussy\tiny github.com/kevaldoshi17/TiSAT}.
 
-% TCF-Trans TODO
+% TCF-Trans
 \cite{peng_tcf-trans_2023}
 
 % DCT-GAN TODO
@@ -166,10 +167,9 @@ To overcome the challenge of poorly available time series data sets \cite{ma_sur
 \cite{shin_time_2023}
 
 
-% LLMs
-Based on the transformer architecture, Large Language Models (LLM) are developed and used increasingly in different applications. Known as chatbots they can help in language specific tasks. Beside that they can be used in anomaly detection and forecasting. \cite{su_large_2024} examine a literature review on how LLMs perform on anomaly detection tasks concerning time series data. LLMs in anomaly detection are specifically useful when the time series data is in the form of words. This can be the case in log analysis. Logs are generated over time and hold a lot of information which can singify errors and system failures. They conclude that LLMs have potential in detecting anomalies but challenges remain. The occurrence of hallucinations and the need for computational efficiency to name a few.
 
-A method detecting anomalies in tabular data using LLMs is presented by \cite{li_anomaly_2024}. In order to perform tasks that LLMs are not directly build for they generate synthetic datasets. Using these datasets LLMs and specifically GPT-4 have comparable performance with transductive learning methods \cite[p. 6]{li_anomaly_2024}.
+% LLM
+A method detecting anomalies in tabular data also using LLMs is presented in \cite{li_anomaly_2024}. In order to perform tasks that LLMs are not directly build for they generate synthetic datasets. Using these datasets LLMs and specifically GPT-4 have comparable performance with transductive learning methods \cite[p. 6]{li_anomaly_2024}. Concerning different batches, the method is tested in ZSL. The model is trained on some batches and evaluated on new ones. Due to the fact that the prompt contains data of one variable, the method is not used for multivariate time series.
 
 % Fourier
 Using Fourier Analysis and the transformer architecture \cite{ye_multivariate_2023} detect anomalies in time series data. The encoder of a transformer is used to capture temporal features of time series. They detect frequencies by using Fourier Analysis.

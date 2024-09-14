@@ -33,22 +33,22 @@ MEGA,Wang et al.,"AE, GCN",yes,yes,yes
 DAEMON,Chen et al.,AE,yes,yes,no
 TSMAE,Gao et al.,"AE, LSTM",yes,no,no
 GRU-AE,Gong et al.,"AE, GRU",yes,no,no
-MSCVAE,Yokkampon et al.,AE,yes,yes,
-AE based method, Wang et al.,AE, , , 
-MOMENT,Goswami et al.,AE,,yes,yes
-TranAD,Tuli et al.,T,,,yes
-Transformer based method,Ye et al. ,T,,,
-AnomalyTransformer,Xu et al.,T,,,yes
-DATN,Wu et al.,T,,,
-LLM based method,Li et al.,T,,,
-TiSAT,Doshi et al.,T,,,
+MSCVAE,Yokkampon et al.,VAE,yes,yes,no
+AE based method,Wang et al.,AE,yes,yes,no
+MOMENT,Goswami et al.,AE,yes,yes,yes
+TranAD,Tuli et al.,T,yes,no,yes
+AnomalyTransformer,Xu et al.,T,yes,no,yes
+TiSAT,Doshi et al.,T,yes,no,yes
 TCF-Trans,Peng et al.,T,,,
-DCT-GAN,Li et al.,T,,,
-Transformer based method, Shin et al., T, GAN,,
+DCT-GAN,Li et al.,"T, GAN",,,
+Transformer based method,Shin et al.,"T, GAN",,,
+LLM based method,Li et al.,"T, LLM",no,yes,
+DATN,Wu et al.,"T, LLM",yes,no,no
+Transformer based method,Ye et al. ,"T, Fourier",,,
 SL based method,Beggel  et al.,SL,,,
 SL based method,Alshaer  et al.,SL,,,
 SL based method,Liang et al.,SL,yes,,
 IPS,Li et al.,SL,,,
 ,Li et al.,C,,,
 ,Niu et al.,LSTM,,,
-MMDF, Duan et al.,MMDF,,,
+MMDF,Duan et al.,MMDF,,,

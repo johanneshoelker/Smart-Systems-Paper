@@ -44,6 +44,9 @@ Autoencoders are another important method in representation learning. An autoenc
 % Transformers
 Transformers, initially developed for natural language processing tasks, have become a powerful tool in representation learning. They use self-attention mechanisms to weigh the significance of each part of the input data differently, enabling the model to capture long-range dependencies. The dependencies represent abstract and valuable infromation \cite{vaswani_attention_2017}.
 
+% LLMs
+Based on the transformer architecture, Large Language Models (LLM) are developed and used increasingly in different applications. Known as chatbots they can help in language specific tasks. Beside that they can be used in anomaly detection and forecasting. \cite{su_large_2024} examine a literature review on how LLMs perform on anomaly detection tasks concerning time series data. LLMs in anomaly detection are specifically useful when the time series data is in the form of words. This can be the case in log analysis. Logs are generated over time and hold a lot of information which can detect errors and system failures. They conclude that LLMs have potential in detecting anomalies but challenges remain. The occurrence of hallucinations and the need for computational efficiency to name a few.
+
 %Another advanced form of representation learning is Generative Adversarial Networks (GANs). GANs consist of two neural networks, a generator and a discriminator, that are trained simultaneously. The generator creates data samples, while the discriminator evaluates them against real data samples. Through this adversarial process, the generator learns to produce increasingly realistic data, leading to rich and high-quality representations useful for data augmentation and creative tasks.\\\\
 % Summary RL
 In summary, representation learning can be achieved using different techniques, each suitable for different types of data and tasks. From neural networks and autoencoders to transformers, these methods provide the tools necessary to transform raw data into meaningful representations that facilitate further analysis and learning.
@@ -67,7 +70,7 @@ In summary, representation learning can be achieved using different techniques, 
 
 \subsection{Anomaly Detection}
 % definition of gruhl by cause
-Several definitions of anomalies in data can be found in literature. In this paper the definition of \cite[p. 54]{gruhl_novelty_2022} is used. It seperates anomaly and novelty detection as different tasks. Anomalies can be understood as outliers from the regular class. But these anomalies can vary in their cause. If there is a specific cause and the anomalies occur in its own cluster, they form a novelty. If instead the outliers randomly occur with no specific root cause, they are called noise. The cause for noise then is of a different kind and cannot be classified. Figure \ref{fig_anomaly_gruhl} visualizes the different 
+Several definitions of anomalies in data can be found in literature. In this paper the definition of \cite[p. 54]{gruhl_novelty_2022} is used. It seperates anomaly and novelty detection as different tasks. Anomalies can be understood as outliers from the regular class. But these anomalies can vary in their cause. If there is a specific cause and the anomalies occur in its own cluster, they form a novelty. If instead the outliers randomly occur with no specific root cause, they are called noise. The cause for noise then is of a different kind and cannot be classified. Figure \ref{fig_anomaly_gruhl} visualizes the different
 \begin{figure}[h!] % 'h!' tries to place the figure here
   \centering
   \includegraphics[width=0.8\textwidth]{images/gruhl_anomaly_definition.png}
