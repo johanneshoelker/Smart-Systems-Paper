@@ -2,28 +2,26 @@
 The presented paper has a few limitations which are discussed in this chapter. Additionally ideas for further research are given.
 
 % Zero-Shot Limitation
-Some methods are not tested in Zero-Shot Scenarios in the article they are presented. The authors didn't focus on Zero-Shot Learning and didn't use appropriate datasets for this use case.  This doesn't mean they can not perform well on ZSL. Further research in generating ZSL scenarios with benchmark datasets need to be done with the these methods.
-
+Some of the found methods are not tested in Zero-Shot Scenarios in the article they are presented. The authors didn't focus on Zero-Shot Learning and didn't use appropriate datasets for this use case.  This doesn't mean they can not perform well on ZSL. Further research in generating ZSL scenarios with benchmark datasets need to be done with these methods.
 
 % Multivariate Limitations
-That is not the case for multivariate data. If a method designed for time series data with a single input variable needs to be used for multiple input variables a redesign is necessary. This can be extensive or rather simple depending on the architecture. To know how much redesign is necessary every method has to be reviewed in further research. However, nearly all of the found methods are trained and tested with MVTSD.
+In comparison the adaptability of univariate methods for multivariate data is restricted. If a method designed for time series data with a single input variable needs to be used for multiple input variables a redesign is necessary. This can be extensive or rather simple depending on the architecture. To know how much redesign is necessary every method has to be reviewed in further research. However, nearly all of the found methods are trained and tested with MVTSD.
 
 % Interdependance between multiple variables
 Some models like MOMENT are handling input variables seperately. The interconnection between the different channels is not considered directly. The influence of one variable on the other can provide informations that may be important for anomaly detection and the learned representations in general.
 
-
-The transferability between time series datasets is difficult due to the fact that the data between domains is huge \cite{ma_survey_2023}
-  % %     Kritische Bewertung
-% Stärken und Schwächen: Analyse der Vor- und Nachteile der verschiedenen Ansätze und Methoden.
-% Forschungslücken: Identifikation von Lücken in der bestehenden Literatur und Vorschläge für zukünftige Forschung.
+%Datasets
+Another important evaluation point is the selection of datasets. The transferability between time series datasets is difficult due to the fact that the data between domains is huge \cite{ma_survey_2023}. Time series can have a similar shape across different domains but that does not have to be true in general. For a good model fitting to the specfic context, it should be trained on similar data. THis way robust representations can be learned that hold information about the specific domain.
 
 % timestamp of the anomaly in the mideel \cite !
 
 % Selection Process
-The model selection could have been more systematically. Several models were excluded that could possibly be adapted to the presented use case. A model selection process with generating synthetic anomalies simplifies the search for an appropriate dataset. Such a model selection process for zero shot anomaly detection is presented by \cite{fung_model_2024}.
+The model selection in this paper could have been more systematically. Several models were excluded that could possibly be adapted to the presented use case. A model selection process with generating synthetic anomalies simplifies the search for an appropriate dataset. Such a model selection process for zero shot anomaly detection is presented in \cite{fung_model_2024}.
+
+% Exclusion criteria
+Not only the methods available as open source should be implemented and tested. Methods without a code example provided by the authors can be implemented based on the architecture presented in the paper.
 
 % Limitations on implementation
-The implemention is done without further analysis of the results. The correctness of the detection can be rated and compared.
+Testing pretrained models that are not trained on the domain of inverter data is an interesting attempt, which could potentially have an advantageous outcome. This way domains that have no data available can be tested on anomalies. However in this case it is not ensured to find all anomalies successfully. For robust representations that contain information about the data, they need to be trained and finetuned for the specfifc use case in future works.
 
-%
-Not only the methods available as open source should be implemented and tested. Methods without a code example provided by the authors can be implemented based on the architecture presented in the paper.
+Additionally the implemention is done without further analysis of the results. The correctness of the detection can be rated and compared in future works.

@@ -17,15 +17,11 @@ The values are collectively stored at a 7 minute interval over several months. 1
 
 \subsection{Implemented Methods}
 The main goal is to detect the labeled anomalies in the SMA dataset. If the methods find the timestamp of the system failure, they perform correctly. First the models are taken as is and a forward pass is applied. The given output is evaluated if the model already detects the failure time points in the inverter time series data. If possible, the model is trained afterwards using a set of 12 inverters and tested on the remaining 7 inverters. This way the Zero-Shot scenario like in section \ref{theory} is created.
-The code for the implementions can be found here: \footnote{\fussy\tiny https://github.com/johanneshoelker/Smart-Systems-Paper/tree/main/Implementation}
+The code for the implementions can be found on link \footnote{\fussy\tiny https://github.com/johanneshoelker/Smart-Systems-Paper/tree/main/Implementation}.
 
 %Carla
 \subsubsection{CARLA}
-\footnote{\fussy\tiny https://github.com/zamanzadeh/CARLA}
-
-
-\subsubsection{COCA}
-\footnote{\fussy\tiny https://github.com/ruiking04/COCA}
+link \ref{foot_carla}
 
 % TS2Vec
 \subsubsection{TS2Vec}
@@ -34,10 +30,7 @@ The paper providing TS2Vec claims the model to be prepared for multiple variable
 
 % MEGA
 \subsubsection{MEGA}
-\footnote{\fussy\tiny https://github.com/jingwang2020/MEGA \label{test}}
-
-\subsubsection{DAEMON}
-The authors of the method DAEMON published python scripts for replicating the results on all datasets they used. However, no explanation on how to use the method for entirely new datasets can be found on this link \ref{foot_daemon}.
+link \ref{foot_mega}
 
 % Moment
 \subsubsection{MOMENT}
