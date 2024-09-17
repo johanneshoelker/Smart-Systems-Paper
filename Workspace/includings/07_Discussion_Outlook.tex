@@ -1,15 +1,15 @@
-\section{Conclusion}\label{discussion}
-\subsection{Discussion}
-The presented paper has a few limitations which are discussed in this section.
+\section{Discussion and Future Work}\label{discussion}
+The presented paper has a few limitations which are discussed in this chapter. Additionally ideas for further research are given.
 
 % Zero-Shot Limitation
-That the methods are not tested on Zero-Shot Scenarios in the paper they are presented doesn't mean they can not perform well on them.  Further research and test with the most promising models need to be done in the future.
+Some methods are not tested in Zero-Shot Scenarios in the article they are presented. The authors didn't focus on Zero-Shot Learning and didn't use appropriate datasets for this use case.  This doesn't mean they can not perform well on ZSL. Further research in generating ZSL scenarios with benchmark datasets need to be done with the these methods.
+
 
 % Multivariate Limitations
-That is not the case for multivariate data. If a method designed for time series data with a single input variable needs to be used for multiple input variables a redesign is necessary. This can be extensive or rather simple depending on the architecture. To know how much redesign is necessary every method has to be reviewed in further research. However, nearly all of the found methods are trained and tested wiht mutlivariate time serie data.
+That is not the case for multivariate data. If a method designed for time series data with a single input variable needs to be used for multiple input variables a redesign is necessary. This can be extensive or rather simple depending on the architecture. To know how much redesign is necessary every method has to be reviewed in further research. However, nearly all of the found methods are trained and tested with MVTSD.
 
 % Interdependance between multiple variables
-Some models like MOMENT are handling input variables seperately. The interconnection between the different channels is not considered directly. The influence of one variable on the other can provide informations that can be important for anomaly detection and the learned representations in general.
+Some models like MOMENT are handling input variables seperately. The interconnection between the different channels is not considered directly. The influence of one variable on the other can provide informations that may be important for anomaly detection and the learned representations in general.
 
 
 The transferability between time series datasets is difficult due to the fact that the data between domains is huge \cite{ma_survey_2023}
@@ -18,8 +18,6 @@ The transferability between time series datasets is difficult due to the fact th
 % Forschungslücken: Identifikation von Lücken in der bestehenden Literatur und Vorschläge für zukünftige Forschung.
 
 % timestamp of the anomaly in the mideel \cite !
-\subsection{Future Work}
-This section presents ideas for further research.
 
 % Selection Process
 The model selection could have been more systematically. Several models were excluded that could possibly be adapted to the presented use case. A model selection process with generating synthetic anomalies simplifies the search for an appropriate dataset. Such a model selection process for zero shot anomaly detection is presented by \cite{fung_model_2024}.
