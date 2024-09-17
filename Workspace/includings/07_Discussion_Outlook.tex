@@ -24,4 +24,6 @@ Not only the methods available as open source should be implemented and tested. 
 % Limitations on implementation
 Testing pretrained models that are not trained on the domain of inverter data is an interesting attempt, which could potentially have an advantageous outcome. This way domains that have no data available can be tested on anomalies. However in this case it is not ensured to find all anomalies successfully. For robust representations that contain information about the data, they need to be trained and finetuned for the specfifc use case in future works.
 
-Additionally the implemention is done without further analysis of the results. The correctness of the detection can be rated and compared in future works.
+During the research on how to use the methods for entirely new datasets, several difficulties occured. The code provided by the authors was mainly provided for replicating the found results. Given scripts took the main benchmark datasets that were mentioned in the paper as an input. Preparing entirely new datasets in order to train and use the models was impossible because of the missing knowledge of their software architecture. Providing additional data preprocessing guidelines is necessary for further development.
+
+Additionally the implemention in this paper is done without further analysis of the results. The correctness of the detection can be rated and compared in future works.
