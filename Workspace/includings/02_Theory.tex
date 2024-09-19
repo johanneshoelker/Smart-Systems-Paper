@@ -68,7 +68,7 @@ In summary, representation learning can be achieved using different techniques, 
 % \end{itemize}
 % "We want to find properties of the data but at the same time we don't want to loose information about the input" \cite[S. 525]{goodfellow_deep_2016}
 
-\subsection{Anomaly Detection}
+\subsection{Anomalies in Time Series}
 % definition of gruhl by cause
 Several definitions of anomalies in data can be found in literature. In this paper the definition of \cite[p. 54]{gruhl_novelty_2022} is used. It seperates anomaly and novelty detection as different tasks. Anomalies can be understood as outliers from the regular class. But these anomalies can vary in their cause. If there is a specific cause and the anomalies occur in its own cluster, they form a novelty. If instead the outliers randomly occur with no specific root cause, they are called noise. The cause for noise then is of a different kind and cannot be classified. Figure \ref{fig_anomaly_gruhl} visualizes the different
 \begin{figure}[h!] % 'h!' tries to place the figure here
@@ -89,7 +89,6 @@ Instead of dividing anomalies by their cause the shape of anomalies can vary in 
 
 % definiton for this paper
 In this paper we want to focus on single time events, which are in any case anomalies because they cannot form its own cluster. This defines our goal as an Anomaly Detection (AD) task.
-
 \subsection{Zero Shot Learning}
 %Definiton by Chandana
 In this paper the definition made by \cite{nivarthi_unified_2022} is used. They seperate Single Task Learning, where every model is trained seperately for each task, from Multi Task Learning (MTL) where one model is trained and evaluated on several tasks. For Zero Shot Learning (ZSL) in comparison the model is trained on several tasks like in MTL but tested on completely new ones.
