@@ -8,14 +8,16 @@ Supervisor: **Chandana Priya Nivarthi**
 
 The repo is structured as follows:
 
-- **Workspace**: Contains the latex code to generatethe paper
+- **Workspace**: Latex code to generate the paper
 
-- **Implementation**: Holds the python scripts necessary for implementing the methods
+- **Implementation**: Python scripts necessary for implementing the methods
 
-- **Findings**: Contains a list of all found methods and their exclusion criteria
+- **Findings**: CSV list of all found methods and their exclusion criteria
 
 - **PeerReview**: All received and sent peer reviews
 
 - **Meetings**: Transcripts of the hold meetings
 
 - **Vorlesungen**: Guidelines for the course
+
+- **Presentation**: Guidelines for the course
