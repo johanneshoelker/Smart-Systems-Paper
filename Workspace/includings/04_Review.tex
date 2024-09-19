@@ -1,7 +1,7 @@
 \section{Representation Learning Methods}\label{review}
 In this chapter any found paper proposing a RL strategy used for time series data with adaptability on anomaly detection tasks is presented. For the literature research the inclusion criteria as described in \autoref{criteria} are applied.
 
-The different RL strategies are explained focusing on compliance of the exclusion criteria. The strategies are organized by their underlying concept. We begin with straight-forward methods which are based on one concept and increase the complexity throughout the chapter. In the end combinations of different concepts are presented.
+The different RL strategies are explained focusing on compliance of the exclusion criteria. The strategies are organized by their underlying concept. First straight-forward methods which are based on one concept are presented and the complexity increases throughout the chapter. In the end combinations of different concepts are presented.
 \subsubsection{MLP}
 % INRAD
 Using a simple MLP is a straight-forward way to learn representations and to detect anomalies in time series data \cite{nielsen_neural_2015}. The input variable for the MLP are time points and the output variable represents the value at these time points. The model is trained to learn this mapping. With the trained model, the values in a live scenario are predicted and the difference to the actual values is measured. If the difference exceeds a certain threshold, an anomaly is found. A method called INRAD, Implicit Neural Representation of Time-Series Data is using this concept. The method takes multiple variables as input and the model is trained with data including anomalies. It is not suitable for Zero-Shot Learning \cite{jeong_time-series_2022}.
@@ -195,5 +195,5 @@ The method proposed in the paper focuses on using shapelet-based representations
 % Moving Memory Dynamic Filter
 A Fourier transformation isolates seasonal components in a method called Moving Memory Dynamic Filter (MMDF). While the distance transformation captures both the data values and their temporal dependencies. Anomalies are detected when the center-to-center distance exceeds the threshold. The authors primarily discuss the proposed method in the context of univariate time series anomaly detection and do not explicitly mention its applicability to MVTSD \cite{duan_unsupervised_2021}.
 
-%DCFF-MTAD
+%DCFF-MTAD 
 In contrast, the method DCFF-MTAD, a multivariate time-series anomaly detection method. It leverages a dual-channel feature extraction that combines spatial short-time Fourier transformation for spatial features and a graph attention network for temporal features. These features are then fused using a Gated Recurrent Unit for robust anomaly detection. THe method is not tested on Zero-Shot Learning and is not available as open source \cite{xu_dcff-mtad_2023}.

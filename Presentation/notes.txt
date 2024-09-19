@@ -1,5 +1,6 @@
 Table:
 Rising complexity
+ZSL: Even if the methods are not tested on in a ZSL scenario, they may be used for this.
 
 Impl:
 I was able to do successful forward passes with a multivariate time series dataset provided by SMA.
