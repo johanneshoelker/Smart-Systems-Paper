@@ -4,7 +4,7 @@ This repo is meant to pass the course **Seminar Smart Systems** in Mechatronic E
 
 Topic: **Representation Learning for Zero-Shot Anomaly Detection** 
 
-Supervisor: **Chandana Priya Nivarthi**
+Supervisor: **M Mgt. Chandana Priya Nivarthi**
 
 The repo is structured as follows:
 
