@@ -32,7 +32,7 @@ AE based method,Zhang et al.,AE,no,yes,no
 RANSynCoders,Abdulaal et al.,AE,yes,no,yes
 TCN-AE,Thill et al.,"AE, TCN",yes,yes,no
 MEGA,Wang et al.,"AE, GCN",yes,yes,yes
-DAEMON,Chen et al.,AE,yes,yes,no
+DAEMON,Chen et al.,AE,yes,yes,yes
 GRU-AE,Gong et al.,"AE, GRU",yes,no,no
 MSCVAE,Yokkampon et al.,VAE,yes,yes,no
 AE based method,Wang et al.,AE,yes,yes,no

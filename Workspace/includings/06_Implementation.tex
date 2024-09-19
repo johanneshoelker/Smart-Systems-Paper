@@ -25,13 +25,15 @@ An implemention of the model CARLA is done by the authors using Python available
 
 % TS2Vec
 \subsubsection{TS2Vec}
-An implemention of the model TS2Vec is done by the authors using Python available on link \ref{foot_ts2vec}.
-The paper providing TS2Vec claims the model to be prepared for multiple variables. However the anomaly detection training data was univariate
-THe test results were reproduced but it wos not possible  \cite{yue_ts2vec_2022}.
+An implemention of the model TS2Vec is done by the authors using Python which is available on link \ref{foot_ts2vec}. A function for preprocessing the data to fit as an input for the model was written.
+Using the function a successful forward pass was made. The learned representations can be used for further evaluation.
 
 % MEGA
 \subsubsection{MEGA}
 According to \cite{wang_multiscale_2023} the model MEGA is trained and evaluated on three different datasets. The code for reproduction is provided by the authors. They implement the model using Python on link \ref{foot_mega}. No further information on how to adapt the model on new datasets is given but the scripts are adapted to run successfully with SMA data as multivariate input. The output was not further reviewed.
+
+\subsubsection{DAEMON}
+The authors of the method DAEMON published python scripts for replicating the results on all datasets they used \cite{chen_adversarial_2023}. However, no explanation on how to use the method for entirely new datasets can be found on this link \ref{foot_daemon}.
 
 % Moment
 \subsubsection{MOMENT}
