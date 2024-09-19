@@ -5,7 +5,7 @@ The file impl_moment.ipynb is an extension of the tutorial anomaly_detection.ipy
 The evaluation on the model is presented on inverter 0. According to the solution all other inverters are tested the same way.
 
 ## MEGA
-The main_mutiwave.py script found in here github.com/jingwang2020/MEGA is used to evaluate on the SMA dataset.
+The main_mutiwave.py script provided by the authors in this [repo](github.com/jingwang2020/MEGA) is used to evaluate on the SMA dataset.
 In order to run the script it needs to be added into the cloned repository of MEGA. Additionally, the SMA dataset as well as the smadata.py need to be added into the cloned repo.
 Following this a successfull evaluation can be achieved.
 

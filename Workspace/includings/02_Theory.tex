@@ -1,8 +1,5 @@
 \section{Definitions and Conventions}\label{theory}
 The basic expressions used in this paper are explained in the following chapter. First Representation Learning is defined and the different approaches to find representations of data are explained. A description on how to evaluate the found representations is given. Afterwards Zero Shot Learning as well as Anomaly Detection is described and explained.
-
-% TODO put formulas for a time series and the anomalies. maybe some anomaly score too
-
 \subsection{Representation Learning}
 %Intro to RL
 % Sensors and comparable applications produce values which vary over time. Sometimes the values vary in an unforeseen way and for a short time window they may be completely random. We have to step back and observe longer time periods.
@@ -69,6 +66,9 @@ In summary, representation learning can be achieved using different techniques, 
 % "We want to find properties of the data but at the same time we don't want to loose information about the input" \cite[S. 525]{goodfellow_deep_2016}
 
 \subsection{Anomalies in Time Series}
+% TODO what is a time series? 
+% TODO put formulas for a time series and the anomalies.
+
 % definition of gruhl by cause
 Several definitions of anomalies in data can be found in literature. In this paper the definition of \cite[p. 54]{gruhl_novelty_2022} is used. It seperates anomaly and novelty detection as different tasks. Anomalies can be understood as outliers from the regular class. But these anomalies can vary in their cause. If there is a specific cause and the anomalies occur in its own cluster, they form a novelty. If instead the outliers randomly occur with no specific root cause, they are called noise. The cause for noise then is of a different kind and cannot be classified. Figure \ref{fig_anomaly_gruhl} visualizes the different
 \begin{figure}[h!] % 'h!' tries to place the figure here
