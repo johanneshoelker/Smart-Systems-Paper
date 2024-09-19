@@ -70,7 +70,7 @@ In summary, representation learning can be achieved using different techniques, 
 % TODO put formulas for a time series and the anomalies.
 
 % definition of gruhl by cause
-Several definitions of anomalies in data can be found in literature. In this paper the definition of \cite[p. 54]{gruhl_novelty_2022} is used. It seperates anomaly and novelty detection as different tasks. Anomalies can be understood as outliers from the regular class. But these anomalies can vary in their cause. If there is a specific cause and the anomalies occur in its own cluster, they form a novelty. If instead the outliers randomly occur with no specific root cause, they are called noise. The cause for noise then is of a different kind and cannot be classified. Figure \ref{fig_anomaly_gruhl} visualizes the different
+Several definitions of anomalies in data can be found in literature. In this paper the definition of \cite[p. 54]{gruhl_novelty_2022} is used. It seperates anomaly and novelty detection as different tasks. Anomalies can be understood as outliers from the regular class. But these anomalies can vary in their cause. If there is a specific cause and the anomalies occur in its own cluster, they form a novelty. If instead the outliers randomly occur with no specific root cause, they are called noise. The cause for noise then is of a different kind and cannot be classified. Figure \autoref{fig_anomaly_gruhl} visualizes the different
 \begin{figure}[h!] % 'h!' tries to place the figure here
   \centering
   \includegraphics[width=0.8\textwidth]{images/gruhl_anomaly_definition.png}
@@ -79,7 +79,7 @@ Several definitions of anomalies in data can be found in literature. In this pap
 \end{figure}
 
 % definiton by shape
-Instead of dividing anomalies by their cause the shape of anomalies can vary in several ways. In real measurement data of any shape is possible and it is totally unpredictable \cite{schwartz_maeday_2024}. For training purposes anomaly injection is crucial. Then the anomalies are simulated as point anomalies or subsequence anomalies. Point anomalies occur once and can be global or contextual. Subsequence anomalies on the other hand change the values in a given time window or on long term. They can be divided in seasonal, shapelet and trend anomalies (see figure \ref{fig_anomaly_carla}). Seasonal and shapelet anomalies change the values in a limited time window, trend anomalies are changing all following values \cite[p. 9]{darban_carla_2024}. %Seasonal in time direction, shapelet the amplitudes
+Instead of dividing anomalies by their cause the shape of anomalies can vary in several ways. In real measurement data of any shape is possible and it is totally unpredictable \cite{schwartz_maeday_2024}. For training purposes anomaly injection is crucial. Then the anomalies are simulated as point anomalies or subsequence anomalies. Point anomalies occur once and can be global or contextual. Subsequence anomalies on the other hand change the values in a given time window or on long term. They can be divided in seasonal, shapelet and trend anomalies (see \autoref{fig_anomaly_carla}). Seasonal and shapelet anomalies change the values in a limited time window, trend anomalies are changing all following values \cite[p. 9]{darban_carla_2024}. %Seasonal in time direction, shapelet the amplitudes
 \begin{figure}[h!] % 'h!' tries to place the figure here
   \centering
   \includegraphics[width=0.8\textwidth]{images/carla_anomalies.png}

@@ -1,5 +1,5 @@
 \section{Proof of Concept}\label{implementation}
-The best fitting strategies extracted in section \ref{application} are implemented on a small test data set in order to demonstrate how and if they work. First the used dataset ant the purpose of anomaly detection for the specific use case is described. Later the process of implemention and the results are presented.
+The best fitting strategies extracted in \autoref{application} are implemented on a small test data set in order to demonstrate how and if they work. First the used dataset ant the purpose of anomaly detection for the specific use case is described. Later the process of implemention and the results are presented.
 \subsection{Inverter data including Anomalies}
 While NLP and image processing tasks are common and a variety of data sets exists, time series data sets are not available that much \cite{ma_survey_2023}. Thanks to the employees of SMA a multivariate time series dataset is provided. The specific use case and the structure of the chosen data is described in this section.
 
@@ -16,28 +16,28 @@ The values are collectively stored at a 7 minute interval over several months. 1
 % In the test data the learning data is seperate from the data including anomalies. The important thing about Zero Shot Learning is that a specific anomaly never occured like this before. In the test data, all chosen representation learning techniques are applied using the same data for learning and afterwards testing the anomaly detection with the same anomalies. According to chapter (Evaluation) the characteristics are evaluated for each RL technique chosen in the previous chapter.
 
 \subsection{Implemented Methods}
-The main goal is to detect the labeled anomalies in the SMA dataset. If the methods find the timestamp of the system failure, they perform correctly. First the models are taken as is and a forward pass is applied. The given output is evaluated if the model already detects the failure time points in the inverter time series data. If possible, the model is trained afterwards using a set of 12 inverters and tested on the remaining 7 inverters. This way the Zero-Shot scenario like in section \ref{theory} is created.
+The main goal is to detect the labeled anomalies in the SMA dataset. If the methods find the timestamp of the system failure, they perform correctly. First the models are taken as is and a forward pass is applied. The given output is evaluated if the model already detects the failure time points in the inverter time series data. If possible, the model is trained afterwards using a set of 12 inverters and tested on the remaining 7 inverters. This way the Zero-Shot scenario like in \autoref{theory} is created.
 The code for the implementions can be found on link \footnote{\fussy\tiny github.com/johanneshoelker/Smart-Systems-Paper/tree/main/Implementation}.
 
 %Carla
 \subsubsection{CARLA}
-An implemention of the model CARLA is done by the authors using Python available on link \ref{foot_carla}. The repository contains scripts for replicating the results, but no further information on how to adapt the model on new datasets is given.
+An implemention of the model CARLA is done by the authors using Python available on \autoref{foot_carla}. The repository contains scripts for replicating the results, but no further information on how to adapt the model on new datasets is given.
 
 % TS2Vec
 \subsubsection{TS2Vec}
-An implemention of the model TS2Vec is done by the authors using Python which is available on link \ref{foot_ts2vec}. A function for preprocessing the data to fit as an input for the model was written.
+An implemention of the model TS2Vec is done by the authors using Python which is available on \autoref{foot_ts2vec}. A function for preprocessing the data to fit as an input for the model was written.
 Using the function a successful forward pass was made. The learned representations can be used for further evaluation.
 
 % MEGA
 \subsubsection{MEGA}
-According to \cite{wang_multiscale_2023} the model MEGA is trained and evaluated on three different datasets. The code for reproduction is provided by the authors. They implement the model using Python on link \ref{foot_mega}. No further information on how to adapt the model on new datasets is given but the scripts are adapted to run successfully with SMA data as multivariate input. The output was not further reviewed.
+According to \cite{wang_multiscale_2023} the model MEGA is trained and evaluated on three different datasets. The code for reproduction is provided by the authors. They implement the model using Python on \autoref{foot_mega}. No further information on how to adapt the model on new datasets is given but the scripts are adapted to run successfully with SMA data as multivariate input. The output was not further reviewed.
 
 \subsubsection{DAEMON}
-The authors of the method DAEMON published python scripts for replicating the results on all datasets they used \cite{chen_adversarial_2023}. However, no explanation on how to use the method for entirely new datasets can be found on this link \ref{foot_daemon}.
+The authors of the method DAEMON published python scripts for replicating the results on all datasets they used \cite{chen_adversarial_2023}. However, no explanation on how to use the method for entirely new datasets can be found on this \autoref{foot_daemon}.
 
 % Moment
 \subsubsection{MOMENT}
-A detailed instruction on how to reproduce the outcomes of MOMENT presented by \cite{goswami_moment_2024} is provided on this GitHub link \ref{foot_moment}. The method takes a three dimensional input tensor, containing batches, channels and time points. The maximal number of points is 512. It reconstructs the given input and returns a tensor containing the reconstructions.
+A detailed instruction on how to reproduce the outcomes of MOMENT presented by \cite{goswami_moment_2024} is provided on this GitHub \autoref{foot_moment}. The method takes a three dimensional input tensor, containing batches, channels and time points. The maximal number of points is 512. It reconstructs the given input and returns a tensor containing the reconstructions.
 
 For the implementation on SMA data the provided tutorial is used as a guide. The SMA data is preprocessed to match the requested input tensor. The reconstructions are further compared with the inputs by calulating the Mean Squared Error (MSE):
 \begin{equation}

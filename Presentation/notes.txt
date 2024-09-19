@@ -1,2 +1,10 @@
-I can give access to the repository with the implementations. 
+Table:
+Rising complexity
+
+Impl:
+I was able to do successful forward passes with a multivariate time series dataset provided by SMA.
+However, I didn't find any anomalies due to different reasons. (Time, Resources)
+I can give access to the repository with the implementations upon your request
+
+TODO add a frame to daemon
 
