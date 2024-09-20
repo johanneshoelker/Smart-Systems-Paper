@@ -3,9 +3,5 @@ image:
 
 tasks:
   - name: LaTeX auto-rebuild
-    command: >
-      while find . -name '*.tex' | xargs inotifywait -qqre modify .; do \
-        cd Workspace
-        ./latex_build.sh; \
-      done
+    command: ./latex_auto_build.sh
   - name: Terminal
