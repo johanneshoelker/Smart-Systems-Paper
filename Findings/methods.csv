@@ -19,6 +19,7 @@ TiCTok,Kang et al.,CPC,yes,no,no
 MGCLAD,Qin et al.,CL,yes,no,yes
 TriAD,Sun,CL,no,no,yes
 AE based method,Provotar et al.,"AE, LSTM",yes,no,no
+LATAM,Nivarthi et al.,"AE,LSTM",yes,no,no
 LSTM-based VAE-GAN,Niu et al.,"AE, LSTM",yes,no,no
 TSMAE,Gao et al.,"AE, LSTM",yes,no,no
 UCAE-TENN,Nivarthi et al.,"UAE, LSTM",yes,yes,no

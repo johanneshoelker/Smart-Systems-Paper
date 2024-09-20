@@ -37,7 +37,7 @@ While CL-TAD is not explicitly designed as a zero-shot learning method, its use 
 % COCA
 To succeed on Zero-Shot Anomaly Detection, One-Class Classification (OCC) can be useful.
 By gathering all "normal" values into a single class the outliers are directly detected if they are outside of it.
-The COCA (Contrastive One-Class Anomaly Detection) method combines contrastive learning with OCC to improve anomaly detection in multivariate time-series data. By treating original and reconstructed representations as positive pairs, it optimizes a contrastive one-class loss function that enhances the detection of anomalies while preventing common issues like hypersphere collapse. Although COCA is designed for self-supervised anomaly detection, its ability to learn from unlabeled data suggests potential applicability in zero-shot learning scenarios, though this has not been explicitly tested \cite{wang_deep_2023}. An implementation script is provided by the authors \footnote{\fussy\tiny github.com/ruiking04/COCA}.
+The COCA (Contrastive One-Class Anomaly Detection) method combines contrastive learning with OCC to improve anomaly detection in MVTSD. By treating original and reconstructed representations as positive pairs, it optimizes a contrastive one-class loss function that enhances the detection of anomalies while preventing common issues. Although COCA is designed for self-supervised anomaly detection, its ability to learn from unlabeled data suggests potential applicability in zero-shot learning scenarios, though this has not been explicitly tested \cite{wang_deep_2023}. An implementation script is provided by the authors \footnote{\fussy\tiny github.com/ruiking04/COCA}.
 
 %
 The paper by \cite{lee_time_2023} presents an approach for detecting anomalies also using OCC in industrial time series data, which typically lacks labels for supervised learning. They combine OCC with contrastive learning to define a new objective function that can simultaneously learn from both models. This method enhances feature extraction while preserving temporal characteristics. The paper demonstrates the method's effectiveness through high anomaly detection performance on datasets with similar normal and anomalous data forms, highlighting its potential in industrial applications.
@@ -76,6 +76,10 @@ In summary methods using contrastive learning are mostly not tested on Zero-Shot
 Autoencoders on the other hand are robust to unclean training datasets \cite[p. 2487]{abdulaal_practical_2021}. Due to their architecture noise is filtered from the input.
 
 \cite{provotar_unsupervised_2019} introduces an anomaly detection method using an autoencoder architecture based on Long Short-Term Memory (LSTM) networks. The core idea is that an LSTM autoencoder learns to compress and reconstruct the input time series data. During training, the model learns the normal patterns in the data by minimizing the reconstruction error. When fed new data, the model attempts to reconstruct it, and any significant reconstruction error (i.e. deviation between the original and reconstructed data) signals an anomaly. This approach is particularly effective because LSTMs are well-suited to capture temporal dependencies, making them ideal for time series data. The model works without requiring labeled datasets, making it an unsupervised solution. The authors test the model on both synthetic and real-world data, such as sound event detection. It can effectively detect outliers based on reconstruction error but does not have the capacity for ZSL.
+
+% LATAM TODO 
+% include 
+\cite{nivarthi_towards_2023}
 
 % Other LSTM based
 Other methods that use LSTM networks are found in literature. All of them are designed for multivariate time series data but are not tested on Zero-Shot Learning. The authors did not provide instructions on how to replicate the outcomes
