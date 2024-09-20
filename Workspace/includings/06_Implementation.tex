@@ -1,5 +1,5 @@
 \section{Proof of Concept}\label{implementation}
-The best fitting strategies extracted in \autoref{application} are implemented on a small test data set in order to demonstrate how and if they work. First the used dataset ant the purpose of anomaly detection for the specific use case is described. Later the process of implemention and the results are presented.
+The best fitting strategies extracted in \autoref{application} are implemented on a small test data set in order to demonstrate how and if they work. First the used dataset ant the purpose of AD for the specific use case is described. Later the process of implemention and the results are presented.
 \subsection{Inverter data including Anomalies}
 While NLP and image processing tasks are common and a variety of data sets exists, time series data sets are not available that much \cite{ma_survey_2023}. Thanks to the employees of SMA a multivariate time series dataset is provided. The specific use case and the structure of the chosen data is described in this section.
 
@@ -13,7 +13,7 @@ The variables contain measurements of current and voltage of all phases in AC an
 The values are collectively stored at a 7 minute interval over several months. 19 inverters that had system failures at some point are taken into account. These failure time stamps are known and added as an additional feature with a binary value of 1. Every other error bit is 0. The data is collected between 2018 and 2020 and the locations of the inverters cannot be provided.
 
 % TODO DEfiniton of training and test data
-% In the test data the learning data is seperate from the data including anomalies. The important thing about Zero Shot Learning is that a specific anomaly never occured like this before. In the test data, all chosen representation learning techniques are applied using the same data for learning and afterwards testing the anomaly detection with the same anomalies. According to chapter (Evaluation) the characteristics are evaluated for each RL technique chosen in the previous chapter.
+% In the test data the learning data is seperate from the data including anomalies. The important thing about Zero Shot Learning is that a specific anomaly never occured like this before. In the test data, all chosen representation learning techniques are applied using the same data for learning and afterwards testing the AD with the same anomalies. According to chapter (Evaluation) the characteristics are evaluated for each RL technique chosen in the previous chapter.
 
 \subsection{Implemented Methods}
 The main goal is to detect the labeled anomalies in the SMA dataset. If the methods find the timestamp of the system failure, they perform correctly. First the models are taken as is and a forward pass is applied. The given output is evaluated if the model already detects the failure time points in the inverter time series data. If possible, the model is trained afterwards using a set of 12 inverters and tested on the remaining 7 inverters. This way the Zero-Shot scenario like in \autoref{theory} is created.
