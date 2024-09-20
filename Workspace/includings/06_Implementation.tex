@@ -17,15 +17,11 @@ The values are collectively stored at a 7 minute interval over several months. 1
 
 \subsection{Implemented Methods}
 The main goal is to detect the labeled anomalies in the SMA dataset. If the methods find the timestamp of the system failure, they perform correctly. First the models are taken as is and a forward pass is applied. The given output is evaluated if the model already detects the failure time points in the inverter time series data. If possible, the model is trained afterwards using a set of 12 inverters and tested on the remaining 7 inverters. This way the Zero-Shot scenario like in \autoref{theory} is created.
-The code for the implementions can be found on link \footnote{\fussy\tiny github.com/johanneshoelker/Smart-Systems-Paper/tree/main/Implementation}.
-
-%Carla
-\subsubsection{CARLA}
-An implemention of the model CARLA is done by the authors using Python available on \autoref{foot_carla}. The repository contains scripts for replicating the results, but no further information on how to adapt the model on new datasets is given.
+The code for the implementions can be found on link \footnote{\fussy\tiny github.com/johanneshoelker/Smart-Systems-Paper/tree/main/Implementation \label{foot_impl}}.
 
 % TS2Vec
 \subsubsection{TS2Vec}
-An implemention of the model TS2Vec is done by the authors using Python which is available on \autoref{foot_ts2vec}. A function for preprocessing the data to fit as an input for the model was written.
+An implemention of the model TS2Vec is done by the authors using Python which is available in \autoref{foot_ts2vec}. A function for preprocessing the data to fit as an input for the model is available in \autoref{foot_impl}.
 Using the function a successful forward pass was made. The learned representations can be used for further evaluation.
 
 % MEGA
