@@ -19,10 +19,9 @@ TiCTok,Kang et al.,CPC,yes,no,no
 MGCLAD,Qin et al.,CL,yes,no,yes
 TriAD,Sun et al.,CL,no,no,yes
 AE based method,Provotar et al.,"AE, LSTM",yes,no,no
-LATAM,Nivarthi et al.,"AE,LSTM",yes,no,no
+LATAM,Nivarthi et al.,"AE,LSTM",yes,no,yes
 LSTM-based VAE-GAN,Niu et al.,"AE, LSTM",yes,no,no
 TSMAE,Gao et al.,"AE, LSTM",yes,no,no
-UCAE-TENN,Nivarthi et al.,"UAE, LSTM",yes,yes,no
 VRAE based method,Pereira et al.,VRAE,yes,yes,no
 AE based method,Ramirez et al.,VRAE,yes,yes,no
 Bi-VRQRAE,Kieu et al.,VRAE,yes,no,yes
