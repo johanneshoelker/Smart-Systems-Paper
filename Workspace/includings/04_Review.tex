@@ -132,39 +132,40 @@ The method proposed in \cite{wang_attention-based_2022} presents an attention-ba
 % MOMENT
 To overcome the challenge of poorly available time series data sets \cite{ma_survey_2023}, the model family MOMENT tries to learn general patterns on a pile of time series data. The pile is a collection of different datasets which they assembled for their pretraining. According to the paper minimal finetuning is needed to perform on multivariate time series tasks like AD. They published the model and made the usage easily accessible with its own python library \footnote{\fussy\tiny github.com/moment-timeseries-foundation-model/moment/blob/main/tutorials/anomaly\_detection.ipynb \label{foot_moment}}. The time series datasets the model is trained on consist of domains including weather measurements, sensor values and power consumption datasets. They also included tongue and finger movement of humans. The different tasks which the model is evaluated on are forecasting (long and short horizon), classification, AD and imputation. Except for short-horizon forecasting all tasks are managed well. However it cannot detect anomalies in vertically shifted time series \cite{goswami_moment_2024}.
 
-% \cite{zhang_debiased_2024} point out, that AE-based methods have remaining challenges.
-% TODO what are the challenges of autoencoders?
+A variety of methods based on AEs can be found. But AE-based methods have remaining challenges. AEs are able to detect anomalies in general but they cannot identify the type of faulty samples \cite{zhang_debiased_2024}.
 
 \subsubsection{Transformer}
-%TODO intro for transformers
+Transformers on the other hand, learn the dependence of time points instead of reconstructing the input. This can possibly lead to representations that hold information about the shape of the anomalies.
 
 % AnomalyTransformer
-A method called "Anomaly Transformer", which detects anomalies in time series by comparing a time point’s learned associations with a Gaussian-based prior association to compute the Association Discrepancy. The model uses a minimax strategy to amplify the difference between normal and anomalous points based on this discrepancy. The method is tested in a zero-shot scenario and supports multivariate time series as input \cite{xu_anomaly_2022} \footnote{\fussy\tiny github.com/thuml/Anomaly-Transformer}.
+A method called "Anomaly Transformer", which detects anomalies in time series by comparing a time point’s learned associations with a Gaussian-based prior association to compute a Association Discrepancy. The model uses a minimax strategy to amplify the difference between normal and anomalous points based on this discrepancy. The method is not tested in a zero-shot scenario but supports multivariate time series as input \cite{xu_anomaly_2022} \footnote{\fussy\tiny github.com/thuml/Anomaly-Transformer}.
 
 %TranAD
-TranAD is a transformer-based model designed for AD in MVTSD. It leverages self-attention mechanisms and adversarial training to enhance both accuracy and training stability. The method includes meta-learning to perform well even in low-data scenarios. The paper does not explicitly mention testing the method in a ZSL scenario \cite{tuli_tranad_2022} \footnote{\fussy\tiny github.com/imperial-quore/TranAD}.
+TranAD is a transformer-based model designed for AD in MVTSD. It uses an adversarial training to enhance both accuracy and training stability. The paper does not explicitly mention testing the method in a ZSL scenario \cite{tuli_tranad_2022} \footnote{\fussy\tiny github.com/imperial-quore/TranAD}.
 
 % DATN
-The proposed method, Decompose Auto-Transformer Network (DATN), focuses on time series AD by decomposing the input into seasonal and trend components, followed by an auto-attention mechanism for feature extraction. The method takes multivariate input, where the decomposition and attention mechanisms operate on MVTSD. The paper does not mention ZSL explicitly \cite{wu_decompose_2023}.
+A proposed method, Decompose Auto-Transformer Network (DATN), focuses on time series AD by decomposing the input into seasonal and trend components, followed by an auto-attention mechanism for feature extraction. The method takes multivariate input, where the decomposition and attention mechanisms operate on MVTSD. The paper does not mention ZSL explicitly \cite{wu_decompose_2023}.
 
 % TiSAT
-Time Series Anomaly Transformer (TiSAT), introduces a transformer-based approach that captures long-range temporal dependencies in time series AD using a probabilistic attention mechanism, which improves computational efficiency by focusing on key query-value pairs. The model takes multivariate input and applies non-parametric k-nearest neighbors (kNN) for AD. The paper does not mention ZSL, too \cite{doshi_tisat_2022} \footnote{\fussy\tiny github.com/kevaldoshi17/TiSAT}.
+Time Series Anomaly Transformer (TiSAT), introduces a transformer-based approach that captures long-range temporal dependencies in time series AD using a probabilistic attention mechanism, which improves computational efficiency by focusing on key query-value pairs. The model takes multivariate input but the authors do not mention ZSL \cite{doshi_tisat_2022} \footnote{\fussy\tiny github.com/kevaldoshi17/TiSAT}.
 
 % TCF-Trans
 The TCF-Trans method enhances AD in MVTSD by using a feature fusion decoder that combines shallow and deep layers to capture important anomaly details while resisting noise. It also introduces a temporal context fusion module to adaptively merge predictions for more robust results. Although the method was tested on various datasets, it is not explicitly evaluated in a strict zero-shot scenario \cite{peng_tcf-trans_2023}.
 
 % DCT-GAN
-The DCT-GAN method proposed in \cite{li_dct-gan_2023} integrates Dilated Convolutional Networks with Transformers within a GAN framework to enhance the detection of anomalies in time series data, improving generalization and accuracy. It employs multiple generators and a single discriminator, using a weight-based mechanism to balance contributions from different generators, which capture coarse-grained and fine-grained information. There is no specific mention in the document about testing the method on ZSL tasks.
-
+The DCT-GAN method proposed in \cite{li_dct-gan_2023} integrates Dilated Convolutional Networks with Transformers within a GAN framework to enhance the detection of anomalies in time series data, improving generalization and accuracy. There is no specific mention in the document about testing the method on ZSL tasks.
 
 % AnoFormer
-The AnoFormer method is a Transformer-based GAN framework for unsupervised multivariate time series AD, utilizing a two-step masking strategy to improve normal data representation and AD. The model masks parts of the data randomly, then re-masks uncertain regions based on entropy to refine its focus. While the method excels in unsupervised learning, it is not explicitly tested in a ZSL scenario \cite{shin_time_2023}.
+The AnoFormer method is a Transformer-based GAN framework for unsupervised multivariate time series AD, utilizing a two-step masking strategy to improve normal data representation and AD. The model masks parts of the data randomly, then remasks uncertain regions based on entropy to refine its focus. While the method excels in unsupervised learning, it is not explicitly tested in a ZSL scenario \cite{shin_time_2023}.
 
 % LLM
-A method detecting anomalies in tabular data also using LLMs is presented in \cite{li_anomaly_2024}. In order to perform tasks that LLMs are not directly build for they generate synthetic datasets. Using these datasets LLMs and specifically GPT-4 have comparable performance with transductive learning methods \cite[p. 6]{li_anomaly_2024}. Concerning different batches, the method is tested in ZSL. The model is trained on some batches and evaluated on new ones. Due to the fact that the prompt contains data of one variable, the method is not used for multivariate time series.
+A method detecting anomalies in tabular data using Large Language Models (LLM) is presented in \cite{li_anomaly_2024}. In order to perform tasks that LLMs are not directly build for they generate synthetic datasets. Using these datasets LLMs and specifically GPT-4 have comparable performance with transductive learning methods \cite[p. 6]{li_anomaly_2024}. Concerning different batches, the method is tested in ZSL. The model is trained on some batches and evaluated on new ones. Due to the fact that the prompt contains data of one variable, the method is not used for multivariate time series.
+
+% LLMs in general
+\cite{su_large_2024} examine a literature review on how LLMs perform on anomaly detection tasks concerning time series data. LLMs in anomaly detection are specifically useful when the time series data is in the form of words. This can be the case in log analysis. Logs are generated over time and hold a lot of information which can detect errors and system failures. They conclude that LLMs have potential in detecting anomalies but challenges remain. The occurrence of hallucinations and the need for computational efficiency to name a few.
 
 % Fourier
-Using Fourier Analysis and the transformer architecture \cite{ye_multivariate_2023} detect anomalies in time series data. The encoder of a transformer is used to capture temporal features of time series. They detect frequencies by using Fourier Analysis.
+Using Fourier Analysis and the transformer architecture is emplloyed in  \cite{ye_multivariate_2023} to detect anomalies in time series data. The encoder of a transformer is used to capture temporal features of time series. They detect frequencies by using Fourier Analysis.
 
 \subsubsection{Shapelet Learning}
 % Shapelets: Shapelets are short, representative subsequences extracted from time series data.
