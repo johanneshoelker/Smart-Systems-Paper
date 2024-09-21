@@ -5,7 +5,7 @@ CNN based method,Kravchik et al.,CNN,yes,no,no
 CNN based method,He et al.,CNN,yes,no,no
 SLMR,Miao et al.,CNN,yes,no,no
 Debiased CL,Zhang et al.,CL,yes,yes,no
-CARLA,Darban et al.,CL,yes,yes,no
+CARLA,Darban et al.,CL,yes,yes,yes
 CL-TAD,Ngu et al.,CL,yes,no,yes
 COCA,Wang et al.,"CL, OCC",yes,no,yes
 CL based method,Lee et al.,"CL, OCC",yes,yes,no
@@ -48,8 +48,8 @@ DATN,Wu et al.,"T, LLM",yes,no,no
 Transformer based method,Ye et al. ,"T, Fourier",yes,no,no
 SL based method,Beggel  et al.,SL,no,no,no
 SL based method,Alshaer  et al.,SL,no,no,no
-SL based method,Liang et al.,SL,yes,no,yes
 IPS,Li et al.,SL,no,no,no
+CSL,Liang et al.,"SL, CL, T",yes,no,yes
 Clustering based,Li et al.,C,yes,no,no
 MMDF,Duan et al.,MMDF,no,no,no
-DCFF-MTAD,Xu et al.,DCFF,yes,no,no
+DCFF-MTAD,Xu et al.,"GAN, Fourier",yes,no,no
