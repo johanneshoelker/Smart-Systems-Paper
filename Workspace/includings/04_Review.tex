@@ -170,21 +170,17 @@ Using Fourier Analysis and the transformer architecture is emplloyed in  \cite{y
 \subsubsection{Shapelet Learning}
 % Shapelets: Shapelets are short, representative subsequences extracted from time series data.
 % Shapelet Learning: Extraction, Evaluation and Selection of shapelets. Medling
-\cite{beggel_time_2019} address the problem of detecting anomalies in time series data using a novel unsupervised method based on shapelet learning. Their method learns representative features that describe the shape of time series data from the normal class and simultaneously learns to accurately detect anomalies. The objective function encourages the learning of a feature representation in which normal time series lie within a compact hypersphere, while anomalous observations lie outside the decision boundary. This is achieved through a block-coordinate descent procedure.
+\cite{beggel_time_2019} address the problem of detecting anomalies in time series data using a novel unsupervised method based on shapelet learning. Their method learns representative features that describe the shape of time series data from the normal class and simultaneously learns to accurately detect anomalies. The objective function encourages the learning of a feature representation in which normal time series lie within a compact hypersphere, while anomalous observations lie outside the decision boundary.
 The advantage of their approach is that it can efficiently detect anomalies in unseen test data without retraining the model, by reusing the learned feature representation. Experimental results on multiple benchmark datasets demonstrate the robustness and reliability of the method in detecting anomalous time series. They suggest to extend their method on multivariate time series in future works.
 
 % Alshaer
-In contrast, \cite{alshaer_detecting_2020} propose a method combining matrix profiles with shapelet learning to handle streaming time series data. The matrix profile efficiently identifies potential anomalies in real-time, and shapelet learning characterizes these anomalies. This approach is particularly suited for environments requiring immediate AD. The authors provide code examples for implementation in their paper but furhter open source repositories were not found. As the previous work they didn't use the method for multivariate time series and suggest expanding the method for this.
-
-% shapelet summary
-While both methods utilize shapelet learning, Beggel et al. focus on static datasets and robust feature representation, whereas Alshaer et al. emphasize real-time detection in dynamic, streaming environments.
+In contrast, \cite{alshaer_detecting_2020} propose a method combining matrix profiles with shapelet learning to handle streaming time series data. The matrix profile efficiently identifies potential anomalies in real-time, and shapelet learning characterizes these anomalies. This approach is particularly suited for environments requiring immediate AD. The authors provide code examples for implementation in their paper but further open source repositories were not found. As the previous work they didn't use the method for multivariate time series and suggest expanding the method for this.
 
 %IPS
 The IPS (Instance Profile for Shapelet Discovery) method addresses time series classification by using shapelets-discriminative subsequences of time series. This method was tested extensively on various datasets but was not explicitly tested in a zero-shot scenario \cite{li_ips_2022}.
 
 % SL based
-The method proposed in the paper focuses on using shapelet-based representations for unsupervised learning of multivariate time series. It employs CL, multi-scale alignment, and a shapelet transformer to enhance MVTSDno representations without requiring labeled data. The method was tested in scenarios where labeled data is sparse or unavailable (partially labeled scenarios), but it does not appear to be tested explicitly in a traditional zero-shot setting
-\cite{liang_shapelet-based_2024} \footnote{\fussy\tiny github.com/real2fish/CSL}.
+The method proposed in \cite{liang_shapelet-based_2024} focuses on using shapelet-based representations for unsupervised learning of multivariate time series. It employs CL, multi-scale alignment, and a shapelet transformer. The method was tested in scenarios where labeled data is sparse or unavailable, but it does not appear to be tested explicitly in a traditional zero-shot setting \footnote{\fussy\tiny github.com/real2fish/CSL}.
 
 \subsubsection{Combinations}
 % Clustering
@@ -194,4 +190,4 @@ The method proposed in the paper focuses on using shapelet-based representations
 A Fourier transformation isolates seasonal components in a method called Moving Memory Dynamic Filter (MMDF). While the distance transformation captures both the data values and their temporal dependencies. Anomalies are detected when the center-to-center distance exceeds the threshold. The authors primarily discuss the proposed method in the context of univariate time series AD and do not explicitly mention its applicability to MVTSD \cite{duan_unsupervised_2021}.
 
 %DCFF-MTAD
-In contrast, the method DCFF-MTAD, a multivariate time series AD method. It leverages a dual-channel feature extraction that combines spatial short-time Fourier transformation for spatial features and a graph attention network for temporal features. These features are then fused using a Gated Recurrent Unit for robust AD. THe method is not tested on ZSL and is not available as open source \cite{xu_dcff-mtad_2023}.
+In contrast, the method DCFF-MTAD, a multivariate time series AD method uses a dual-channel feature extraction that combines spatial short-time Fourier transformation for spatial features and a graph attention network for temporal features. These features are then fused using a Gated Recurrent Unit for robust AD. The method is not tested on ZSL and is not available as open source \cite{xu_dcff-mtad_2023}.
