@@ -17,7 +17,7 @@ Dddetector,Yang et al.,CL,yes,no,yes
 TRL-CPC,Pranavan et al.,CPC,yes,no,no
 TiCTok,Kang et al.,CPC,yes,no,no
 MGCLAD,Qin et al.,CL,yes,no,yes
-TriAD,Sun,CL,no,no,yes
+TriAD,Sun et al.,CL,no,no,yes
 AE based method,Provotar et al.,"AE, LSTM",yes,no,no
 LATAM,Nivarthi et al.,"AE,LSTM",yes,no,no
 LSTM-based VAE-GAN,Niu et al.,"AE, LSTM",yes,no,no
